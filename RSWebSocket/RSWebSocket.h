@@ -40,8 +40,7 @@
 
 
 
-enum 
-{
+enum {
     WebSocketCloseStatusNormal = 1000, //indicates a normal closure, meaning whatever purpose the 
     //connection was established for has been fulfilled
     WebSocketCloseStatusEndpointGone = 1001, //indicates that an endpoint is "going away", such as a 
@@ -66,8 +65,7 @@ enum
 };
 typedef NSUInteger WebSocketCloseStatus;
 
-enum 
-{
+enum {
     WebSocketReadyStateConnecting = 0, //The connection has not yet been established.
     WebSocketReadyStateOpen = 1, //The WebSocket connection is established and communication is possible.
     WebSocketReadyStateClosing = 2, //The connection is going through the closing handshake.

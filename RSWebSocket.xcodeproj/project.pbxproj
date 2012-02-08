@@ -15,8 +15,6 @@
 		9B19FC8E14D615E100D8F2CB /* RSWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B19FC7014D615E100D8F2CB /* RSWebSocket.framework */; };
 		9B19FC9414D615E100D8F2CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B19FC9214D615E100D8F2CB /* InfoPlist.strings */; };
 		9B19FC9714D615E100D8F2CB /* RSWebSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FC9614D615E100D8F2CB /* RSWebSocketTests.m */; };
-		9B19FCA414D6168200D8F2CB /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCA214D6168200D8F2CB /* AsyncSocket.h */; };
-		9B19FCA514D6168200D8F2CB /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FCA314D6168200D8F2CB /* AsyncSocket.m */; };
 		9B19FCB414D6168C00D8F2CB /* HandshakeHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCA614D6168B00D8F2CB /* HandshakeHeader.h */; };
 		9B19FCB514D6168C00D8F2CB /* HandshakeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FCA714D6168B00D8F2CB /* HandshakeHeader.m */; };
 		9B19FCB614D6168C00D8F2CB /* MutableQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCA814D6168B00D8F2CB /* MutableQueue.h */; };
@@ -29,6 +27,8 @@
 		9B19FCDB14D61F2000D8F2CB /* RSWebSocketFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FCD514D61F2000D8F2CB /* RSWebSocketFragment.m */; };
 		9B19FCDC14D61F2000D8F2CB /* RSWebSocketMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCD614D61F2000D8F2CB /* RSWebSocketMessage.h */; };
 		9B19FCDD14D61F2000D8F2CB /* RSWebSocketMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FCD714D61F2000D8F2CB /* RSWebSocketMessage.m */; };
+		9BBE945814E08CCB006A5D21 /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BBE945614E08CCB006A5D21 /* AsyncSocket.h */; };
+		9BBE945914E08CCB006A5D21 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE945714E08CCB006A5D21 /* AsyncSocket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +58,6 @@
 		9B19FC9314D615E100D8F2CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9B19FC9514D615E100D8F2CB /* RSWebSocketTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSWebSocketTests.h; sourceTree = "<group>"; };
 		9B19FC9614D615E100D8F2CB /* RSWebSocketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSWebSocketTests.m; sourceTree = "<group>"; };
-		9B19FCA214D6168200D8F2CB /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
-		9B19FCA314D6168200D8F2CB /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
 		9B19FCA614D6168B00D8F2CB /* HandshakeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandshakeHeader.h; sourceTree = "<group>"; };
 		9B19FCA714D6168B00D8F2CB /* HandshakeHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandshakeHeader.m; sourceTree = "<group>"; };
 		9B19FCA814D6168B00D8F2CB /* MutableQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutableQueue.h; sourceTree = "<group>"; };
@@ -72,6 +70,8 @@
 		9B19FCD514D61F2000D8F2CB /* RSWebSocketFragment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSWebSocketFragment.m; sourceTree = "<group>"; };
 		9B19FCD614D61F2000D8F2CB /* RSWebSocketMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSWebSocketMessage.h; sourceTree = "<group>"; };
 		9B19FCD714D61F2000D8F2CB /* RSWebSocketMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSWebSocketMessage.m; sourceTree = "<group>"; };
+		9BBE945614E08CCB006A5D21 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = CocoaAsyncSocket/RunLoop/AsyncSocket.h; sourceTree = "<group>"; };
+		9BBE945714E08CCB006A5D21 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = CocoaAsyncSocket/RunLoop/AsyncSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +148,8 @@
 		9B19FC7A14D615E100D8F2CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9B19FCA214D6168200D8F2CB /* AsyncSocket.h */,
-				9B19FCA314D6168200D8F2CB /* AsyncSocket.m */,
+				9BBE945614E08CCB006A5D21 /* AsyncSocket.h */,
+				9BBE945714E08CCB006A5D21 /* AsyncSocket.m */,
 				9B19FCA614D6168B00D8F2CB /* HandshakeHeader.h */,
 				9B19FCA714D6168B00D8F2CB /* HandshakeHeader.m */,
 				9B19FCA814D6168B00D8F2CB /* MutableQueue.h */,
@@ -211,13 +211,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B19FCA414D6168200D8F2CB /* AsyncSocket.h in Headers */,
 				9B19FCB414D6168C00D8F2CB /* HandshakeHeader.h in Headers */,
 				9B19FCB614D6168C00D8F2CB /* MutableQueue.h in Headers */,
 				9B19FCB814D6168C00D8F2CB /* NSData+Base64.h in Headers */,
 				9B19FCD814D61F2000D8F2CB /* RSWebSocketConnectConfig.h in Headers */,
 				9B19FCDA14D61F2000D8F2CB /* RSWebSocketFragment.h in Headers */,
 				9B19FCDC14D61F2000D8F2CB /* RSWebSocketMessage.h in Headers */,
+				9BBE945814E08CCB006A5D21 /* AsyncSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,13 +328,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B19FC8214D615E100D8F2CB /* RSWebSocket.m in Sources */,
-				9B19FCA514D6168200D8F2CB /* AsyncSocket.m in Sources */,
 				9B19FCB514D6168C00D8F2CB /* HandshakeHeader.m in Sources */,
 				9B19FCB714D6168C00D8F2CB /* MutableQueue.m in Sources */,
 				9B19FCB914D6168C00D8F2CB /* NSData+Base64.m in Sources */,
 				9B19FCD914D61F2000D8F2CB /* RSWebSocketConnectConfig.m in Sources */,
 				9B19FCDB14D61F2000D8F2CB /* RSWebSocketFragment.m in Sources */,
 				9B19FCDD14D61F2000D8F2CB /* RSWebSocketMessage.m in Sources */,
+				9BBE945914E08CCB006A5D21 /* AsyncSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

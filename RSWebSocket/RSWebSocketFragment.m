@@ -60,20 +60,16 @@
     return self.opCode == MessageOpCodeContinuation || self.opCode == MessageOpCodeText || self.opCode == MessageOpCodeBinary;
 }
 
-- (BOOL) isValid
-{
-    if (self.messageLength > 0)
-    {
+- (BOOL) isValid {
+    if (self.messageLength > 0) {
         return payloadStart + payloadLength == [fragment length];
     }
     
     return NO;
 }
 
-- (BOOL) canBeParsed
-{
-    if (self.messageLength > 0)
-    {
+- (BOOL) canBeParsed {
+    if (self.messageLength > 0) {
         return [fragment length] >= (payloadStart + payloadLength);
     }
     
@@ -102,23 +98,17 @@
 
 
 #pragma mark Parsing
-- (void) parseContent
-{
-    if ([self.fragment length] >= payloadStart + payloadLength)
-    {
+- (void) parseContent {
+    if ([self.fragment length] >= payloadStart + payloadLength) {
         //set payload
-        if (self.hasMask) 
-        {
+        if (self.hasMask) {
             self.payloadData = [self unmask:self.mask data:self.fragment range:NSMakeRange(payloadStart, payloadLength)];
-        }
-        else
-        {
+        } else {
             self.payloadData = [self.fragment subdataWithRange:NSMakeRange(payloadStart, payloadLength)];
         }
         
         //trim fragment, if necessary
-        if ([self.fragment length] > self.messageLength)
-        {
+        if ([self.fragment length] > self.messageLength) {
             self.fragment = [NSMutableData dataWithData:[self.fragment subdataWithRange:NSMakeRange(0, self.messageLength)]];
         }
     }
@@ -208,14 +198,12 @@
     }
 }
 
-- (void) buildFragment
-{
+- (void) buildFragment {
     NSMutableData* temp = [NSMutableData data];
     
     //build fin & reserved
     unsigned char byte = 0x0;
-    if (self.isFinal)
-    {
+    if (self.isFinal) {
         byte = 0x80;
     }
     
@@ -230,20 +218,15 @@
     
     //payload length
     unsigned long long fullPayloadLength = [self.payloadData length];
-    if (fullPayloadLength <= 125)
-    {
+    if (fullPayloadLength <= 125) {
         byte |= (fullPayloadLength & 0xFF);
         [temp appendBytes:&byte length:1];
-    }
-    else if (fullPayloadLength <= INT16_MAX)
-    {
+    } else if (fullPayloadLength <= UINT16_MAX) {
         byte |= 126;
         [temp appendBytes:&byte length:1];
         short shortLength = htons(fullPayloadLength & 0xFFFF);
         [temp appendBytes:&shortLength length:2];
-    }
-    else if (fullPayloadLength <= INT64_MAX)
-    {
+    } else if (fullPayloadLength <= UINT64_MAX) {
         byte |= 127;
         [temp appendBytes:&byte length:1];
         unsigned long long longLength = htonll(fullPayloadLength);
@@ -343,8 +326,7 @@
     return self;
 }
 
-- (id) initWithData:(NSData*) aData
-{
+- (id) initWithData:(NSData*) aData {
     self = [super init];
     if (self)
     {
@@ -359,8 +341,7 @@
     return self;
 }
 
-- (id) init
-{
+- (id) init {
     self = [super init];
     if (self)
     {
@@ -369,8 +350,7 @@
     return self;
 }
 
-- (void) dealloc
-{
+- (void) dealloc {
     [payloadData release];
     [fragment release];
     

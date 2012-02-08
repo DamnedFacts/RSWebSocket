@@ -63,7 +63,7 @@
 
 #pragma mark WebSocketDelegate
 - (void) didOpen {
-    NSLog(@"Did open");
+    NSLog(@"Did open connection");
 }
 
 - (void) didClose:(NSUInteger) aStatusCode message:(NSString*) aMessage error:(NSError*) aError {
@@ -78,7 +78,9 @@
 }
 
 - (void) didReceiveTextMessage: (NSString*) aMessage {
-    NSLog(@"Did receive text message:%@", aMessage);
+    //NSLog(@"Did receive text message:%@",aMessage);
+    NSLog(@"Did receive text message");
+
     if (aMessage){
         response = [aMessage copy];
     }
@@ -86,7 +88,8 @@
 }
 
 - (void) didReceiveBinaryMessage: (NSData*) aMessage {
-    NSLog(@"Did receive binary message:%@", aMessage);
+    //NSLog(@"Did receive binary message:%@", aMessage);
+    [self.ws sendBinary: aMessage];
 }
 
 
@@ -96,7 +99,7 @@
 }
 
 - (void)tearDown {        
-    RSWebSocketConnectConfig* config = [RSWebSocketConnectConfig configWithURLString:@"ws://localhost:9001/updateReports?agent='UnittWebSocket'" 
+    RSWebSocketConnectConfig* config = [RSWebSocketConnectConfig configWithURLString:@"ws://localhost:9001/updateReports?agent='RSWebSocket'" 
                                                                           origin:nil 
                                                                        protocols:nil
                                                                      tlsSettings:nil 
@@ -105,8 +108,9 @@
                                                                       extensions:nil ];
     ws = [[RSWebSocket webSocketWithConfig:config delegate:self] retain];
     [self.ws open];
-    [self waitForSeconds:5.0];
-    
+    [self waitForSeconds:3.0];
+    // Connection is closed automatically by peer.
+    //[self.ws close:0 message:nil];
     [ws release];
     [response release];
     [super tearDown];
@@ -127,9 +131,10 @@
 - (void) testCases {
     int i;
     NSString *testurl;
-    
-    for (i = 1; i<=5; i++) {
-        testurl = [@"ws://localhost:9001/runCase?case=" stringByAppendingFormat:@"%d&agent='UnittWebSocket'",i];
+    for (i = 36; i<=45; i++) {
+        NSLog(@"Calling Autobahn WebSocket test case %d", i);
+        
+        testurl = [@"ws://localhost:9001/runCase?case=" stringByAppendingFormat:@"%d&agent='RSWebSocket'",i];
         
         RSWebSocketConnectConfig* config = [RSWebSocketConnectConfig configWithURLString:testurl 
                                                                               origin:nil
