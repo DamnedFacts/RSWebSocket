@@ -443,6 +443,7 @@ WebSocketWaitingState waitingState;
 - (void) handlePing:(NSData*) aMessage {
     if (!isClosing) {
         [self sendMessage:aMessage messageWithOpCode:MessageOpCodePong];
+    
         if ([delegate respondsToSelector:@selector(didSendPong:)]) {
             [delegate didSendPong:aMessage];
         }
@@ -465,8 +466,8 @@ WebSocketWaitingState waitingState;
     }
     
     
-    NSLog(@"handleMessageData:%ld",fragment.fragment.length);
-    [fragment.fragment writeToFile:@"/tmp/bytes.txt" atomically:TRUE];
+//    NSLog(@"handleMessageData:%ld",fragment.fragment.length);
+//    [fragment.fragment writeToFile:@"/tmp/bytes.txt" atomically:TRUE];
     
     
     //parse the data, if possible
@@ -474,6 +475,8 @@ WebSocketWaitingState waitingState;
         [fragment parseContent];
         if (fragment.isValid) {
             [self handleCompleteFragment:fragment];
+        } else {
+            [self close:WebSocketCloseStatusProtocolError message:nil];
         }
     }
     

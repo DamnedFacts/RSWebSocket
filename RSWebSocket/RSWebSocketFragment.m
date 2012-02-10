@@ -20,6 +20,8 @@
 
 #import "RSWebSocketFragment.h"
 
+#define WS_PAYLOAD_OFFSET 14 // 14 bytes offset in header to get to the payload data
+
 #ifndef htonll
 #define htonll(x) __DARWIN_OSSwapInt64(x) 
 #endif
@@ -30,14 +32,19 @@
 
 @implementation RSWebSocketFragment
 
+// Start Header
 @synthesize isFinal;
-@synthesize mask;
+@synthesize hasRSV1;
+@synthesize hasRSV2;
+@synthesize hasRSV3;
 @synthesize opCode;
+@synthesize hasMask;
+@synthesize messageLength;
+@synthesize mask;
 @synthesize payloadData;
+// End Header
 @synthesize payloadType;
 @synthesize fragment;
-@synthesize messageLength;
-
 
 #pragma mark Properties
 - (BOOL) hasMask
@@ -62,7 +69,47 @@
 
 - (BOOL) isValid {
     if (self.messageLength > 0) {
-        return payloadStart + payloadLength == [fragment length];
+        BOOL isValidState = TRUE;
+        isValidState &= (payloadStart + payloadLength == [fragment length]);
+        isValidState &= !hasRSV1; // FIXME This state can be valid if negotiated by an extension.
+        isValidState &= !hasRSV2; // FIXME This state can be valid if negotiated by an extension.
+        isValidState &= !hasRSV3; // FIXME This state can be valid if negotiated by an extension.
+        // FIXME check that we receive a valid opcode
+        
+        
+        switch (self.opCode) {
+            case MessageOpCodeContinuation:
+                break;
+            case MessageOpCodeText:
+                break;
+            case MessageOpCodeBinary:
+                break;
+            case MessageOpCodeClose:
+                break;
+            case MessageOpCodePing:
+                if (payloadLength > 125) isValidState &= FALSE; // Pings must not be > 125 bytes.
+                if (!isFinal) isValidState &= FALSE; // Pings must not be fragmented.
+                break;
+            case MessageOpCodePong:
+                break;
+            case MessageOpCodeReserved1:
+            case MessageOpCodeReserved2:
+            case MessageOpCodeReserved3:
+            case MessageOpCodeReserved4:
+            case MessageOpCodeReserved5:
+            case MessageOpCodeReserved6:
+            case MessageOpCodeReserved7:
+            case MessageOpCodeReserved8:
+            case MessageOpCodeReserved9:
+            case MessageOpCodeReserved10:
+                isValidState &= FALSE; // Autobahn tests that we fail on reserved opcodes.
+                break;
+            default:
+                isValidState &= FALSE; // Unknown opcode
+                break;
+        }
+        
+        return isValidState;
     }
     
     return NO;
@@ -114,89 +161,91 @@
     }
 }
 
-- (void) parseHeader
-{
-    //get header data bits
-    NSUInteger bufferLength = 14;
-    if ([self.fragment length] < bufferLength)
-    {
-        bufferLength = [self.fragment length];
-    }
-    unsigned char buffer[bufferLength];
-    [self.fragment getBytes:&buffer length:bufferLength];
+- (void) parseHeader {
+    /***
+     Base Framing for WebSocket Protocol
+     
+     0                   1                   2                   3
+     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+     +-+-+-+-+-------+-+-------------+-------------------------------+
+     |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
+     |I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
+     |N|V|V|V|       |S|             |   (if payload len==126/127)   |
+     | |1|2|3|       |K|             |                               |
+     +-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
+     |     Extended payload length continued, if payload len == 127  |
+     + - - - - - - - - - - - - - - - +-------------------------------+
+     |                               |Masking-key, if MASK set to 1  |
+     +-------------------------------+-------------------------------+
+     | Masking-key (continued)       |          Payload Data         |
+     +-------------------------------- - - - - - - - - - - - - - - - +
+     :                     Payload Data continued ...                :
+     + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+     |                     Payload Data continued ...                |
+     +---------------------------------------------------------------+
+     ***/
     
-    //determine opcode
-    if (bufferLength > 0) 
-    {
-        int index = 0;
-        self.isFinal = buffer[index] & 0x80;
-        self.opCode = buffer[index++] & 0x0F;
-        
-        //handle data depending on opcode
-        switch (self.opCode) 
-        {
-            case MessageOpCodeText:
-                self.payloadType = PayloadTypeText;
-                break;
-            case MessageOpCodeBinary:
-                self.payloadType = PayloadTypeBinary;
-                break;
-        }
-        
-        //handle content, if any     
-        if (bufferLength > 1)
-        {
-            //do we have a mask
-            BOOL hasMask = buffer[index] & 0x80;
-            
-            //get payload length
-            unsigned long long dataLength = buffer[index++] & 0x7F;
-            if (dataLength == 126)
-            {
-                //exit if we are missing bytes
-                if (bufferLength < 4)
-                {
-                    return;
-                }
-                
-                unsigned short len;
-                memcpy(&len, &buffer[index], sizeof(len));
-                index += sizeof(len);
-                dataLength = ntohs(len);
-            }
-            else if (dataLength == 127)
-            {
-                //exit if we are missing bytes
-                if (bufferLength < 10)
-                {
-                    return;
-                }
-                
-                unsigned long long len;
-                memcpy(&len, &buffer[index], sizeof(len));
-                index += sizeof(len);
-                dataLength = ntohll(len);                   
-            }
-            
-            //if applicable, set mask value
-            if (hasMask)
-            {              
-                //exit if we are missing bytes
-                if (bufferLength < index + 4)
-                {
-                    return;
-                }
-                
-                //grab mask
-                self.mask = buffer[index] << 24 | buffer[index+1] << 16 | buffer[index+2] << 8 | buffer[index+3];
-                index += 4;
-            }
-            
-            payloadStart = index;
-            payloadLength = dataLength;
-        }
+    //get header data bits        
+    NSUInteger bufferLength =  WS_PAYLOAD_OFFSET;
+    if ([self.fragment length] < WS_PAYLOAD_OFFSET) {
+        bufferLength = [self.fragment length];
+    } 
+    
+    unsigned char *buffer = (unsigned char *) [self.fragment bytes];
+    
+    int index = 0;    
+    
+    self.isFinal  = (buffer[index] & (1 << 7)) >> 7;   // Test for Final frame bit
+    self.hasRSV1  = (buffer[index] & (1 << 6)) >> 6;   // Test for Reserve bit 1
+    self.hasRSV2  = (buffer[index] & (1 << 5)) >> 5;   // Test for Reserve bit 2
+    self.hasRSV3  = (buffer[index] & (1 << 4)) >> 4;   // Test for Reserve bit 3
+    self.opCode   = buffer[index++] & 0x0F; // Pull out Opcode, bits 4-7.
+    self.hasMask  = (buffer[index] & (1 << 7)) >> 7;
+    NSLog(@"Frame header [FIN: %d] [RSV1: %d] [RSV2: %d] [RSV3: %d] [Opcode: %ld] [Mask: %d]", isFinal,hasRSV1,hasRSV2,hasRSV3,opCode,hasMask);
+       
+    switch (self.opCode) {
+        case MessageOpCodeText:
+            self.payloadType = PayloadTypeText;
+            break;
+        case MessageOpCodeBinary:
+            self.payloadType = PayloadTypeBinary;
+            break;
+        // FIXME Pings can have 'application data'. Is this text, binary or what?
     }
+    
+    
+    // We check the 7 bit data length field. Valid values:
+    // 0 - 125: that is the payload length.  
+    // 126:     the following 2 bytes interpreted as a
+    //          16-bit unsigned integer are the payload length.
+    // 127:     the following 8 bytes interpreted as a 64-bit unsigned integer
+    unsigned long long dataLength = buffer[index++] & 0x7F;
+        
+    // Multibyte length quantities are expressed in network byte order.
+    // Therefore we switch them to our host byte order.
+    if (dataLength == 126) {            
+            unsigned short len; // 16-bit value for data length
+            memcpy(&len, &buffer[index], sizeof(len));
+            index += sizeof(len);
+            dataLength = ntohs(len);
+    } else if (dataLength == 127) {
+            unsigned long long len; // 64-bit value for data length
+            memcpy(&len, &buffer[index], sizeof(len));
+            index += sizeof(len);
+            dataLength = ntohll(len);                   
+    }
+        
+    // If applicable, set masking key 
+    // (we would be in a server mode receiving a client's masked packet if it were set).
+    if (hasMask) {              
+        self.mask = buffer[index] << 24 | buffer[index+1] << 16 | buffer[index+2] << 8 | buffer[index+3];
+        index += 4;
+    }
+
+    payloadStart = index;
+    payloadLength = dataLength;
 }
+
 
 - (void) buildFragment {
     NSMutableData* temp = [NSMutableData data];
@@ -332,7 +381,10 @@
     {
         self.opCode = MessageOpCodeIllegal;
         self.fragment = [NSMutableData dataWithData:aData];
+
+
         [self parseHeader];
+        
         if (self.messageLength <= [aData length])
         {
             [self parseContent];

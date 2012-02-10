@@ -131,7 +131,7 @@
 - (void) testCases {
     int i;
     NSString *testurl;
-    for (i = 36; i<=45; i++) {
+    for (i = 1; i<=50; i++) {
         NSLog(@"Calling Autobahn WebSocket test case %d", i);
         
         testurl = [@"ws://localhost:9001/runCase?case=" stringByAppendingFormat:@"%d&agent='RSWebSocket'",i];
@@ -145,7 +145,8 @@
                                                                           extensions:nil ];
         ws = [[RSWebSocket webSocketWithConfig:config delegate:self] retain];
         [self.ws open];
-        [self waitForSeconds:5.0];
+        // FIXME: We should have some sort of event loop?
+        [self waitForSeconds:2.0];
     }
 }
 

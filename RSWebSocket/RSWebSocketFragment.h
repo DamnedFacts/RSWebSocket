@@ -27,9 +27,19 @@ enum
     MessageOpCodeContinuation = 0x0,
     MessageOpCodeText = 0x1,
     MessageOpCodeBinary = 0x2,
+    MessageOpCodeReserved1 = 0x3,
+    MessageOpCodeReserved2 = 0x4,
+    MessageOpCodeReserved3 = 0x5,
+    MessageOpCodeReserved4 = 0x6,
+    MessageOpCodeReserved5 = 0x7,
     MessageOpCodeClose = 0x8,
     MessageOpCodePing = 0x9,
-    MessageOpCodePong = 0xA
+    MessageOpCodePong = 0xA,
+    MessageOpCodeReserved6 = 0xB,
+    MessageOpCodeReserved7 = 0xC,
+    MessageOpCodeReserved8 = 0xD,
+    MessageOpCodeReserved9 = 0xE,
+    MessageOpCodeReserved10 = 0xF
 };
 typedef NSInteger MessageOpCode;
 
@@ -51,33 +61,42 @@ enum
 typedef NSInteger PayloadLength;
 
 
-@interface RSWebSocketFragment : NSObject 
-{
-    BOOL isFinal;
-    int mask;
-    NSUInteger payloadStart;
-    NSUInteger payloadLength;
-    PayloadType payloadType;
-    NSData* payloadData;
-    MessageOpCode opCode;
-    NSMutableData* fragment;
+@interface RSWebSocketFragment : NSObject {
+    BOOL            isFinal;
+    BOOL            hasRSV1;
+    BOOL            hasRSV2;
+    BOOL            hasRSV3;
+    MessageOpCode   opCode;
+    BOOL            hasMask;
+    NSUInteger      payloadLength;
+    int             mask;
+    NSUInteger      payloadStart;
+    PayloadType     payloadType;
+    NSData*         payloadData;
+    NSMutableData*  fragment;
 }
 
-@property (nonatomic,assign) BOOL isFinal;
-@property (nonatomic,readonly) BOOL hasMask;
-@property (nonatomic,readonly) BOOL isControlFrame;
-@property (nonatomic,readonly) BOOL isDataFrame;
-@property (nonatomic,readonly) BOOL isValid;
-@property (nonatomic,readonly) BOOL canBeParsed;
-@property (nonatomic,readonly) BOOL isHeaderValid;
-@property (nonatomic,assign) int mask;
-@property (nonatomic,assign) MessageOpCode opCode;
-@property (nonatomic,retain) NSData* payloadData;
-@property (nonatomic,assign) PayloadType payloadType;
-@property (nonatomic,retain) NSMutableData* fragment;
-@property (nonatomic,readonly) NSUInteger messageLength;
+// Specific header tests
+@property (nonatomic,assign) BOOL           isFinal;
+@property (nonatomic,assign) BOOL           hasRSV1;
+@property (nonatomic,assign) BOOL           hasRSV2;
+@property (nonatomic,assign) BOOL           hasRSV3;
+@property (nonatomic,assign) MessageOpCode  opCode;
+@property (nonatomic,assign) BOOL         hasMask;
+@property (nonatomic,readonly) NSUInteger   messageLength;
+@property (nonatomic,assign) int            mask;
+@property (nonatomic,retain) NSData*        payloadData;
 
-@property (nonatomic,readonly) BOOL isDataValid;
+@property (nonatomic,readonly) BOOL         isControlFrame;
+@property (nonatomic,readonly) BOOL         isDataFrame;
+
+@property (nonatomic,readonly) BOOL         isValid;
+@property (nonatomic,readonly) BOOL         isHeaderValid;
+@property (nonatomic,readonly) BOOL         isDataValid;
+@property (nonatomic,readonly) BOOL         canBeParsed;
+
+@property (nonatomic,retain) NSMutableData* fragment;
+@property (nonatomic,assign) PayloadType    payloadType;
 
 - (int) generateMask;
 - (NSData*) mask:(int) aMask data:(NSData*) aData;
