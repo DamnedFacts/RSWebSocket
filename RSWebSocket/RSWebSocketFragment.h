@@ -93,6 +93,7 @@ typedef NSInteger PayloadLength;
 @property (nonatomic,readonly) BOOL         isValid;
 @property (nonatomic,readonly) BOOL         isHeaderValid;
 @property (nonatomic,readonly) BOOL         isDataValid;
+@property (nonatomic,readonly) BOOL         isFrameComplete;
 @property (nonatomic,readonly) BOOL         canBeParsed;
 
 @property (nonatomic,retain) NSMutableData* fragment;

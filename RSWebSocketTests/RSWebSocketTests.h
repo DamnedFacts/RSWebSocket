@@ -6,13 +6,6 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
-
-//@interface RSWebSocketTests : SenTestCase
-//
-//@end
-
-
 //
 //  UnittWebSocketClient10Tests.h
 //  UnittWebSocketClient
@@ -36,17 +29,39 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import "RSWebSocket.h"
 
+typedef enum  {
+    WSTestStateGetCounts = 0,
+    WSTestStateRunAutobahnTestCases = 1,
+    WSTestStateClosing = 2,
+} RSWebSocketTestState;
 
-@interface RSWebSocketTests : SenTestCase  <RSWebSocketDelegate>
-{
-@private
+
+
+
+@interface RSWebSocketTests : SenTestCase <RSWebSocketDelegate> {
+@package
     RSWebSocket* ws;
     NSString* response;
+    RSWebSocketTestState test_states;
 }
 
 @property (nonatomic, readonly) RSWebSocket* ws;
 @property (nonatomic, readonly) NSString* response;
 
++ (void)addTestsForAutobahn:(NSUInteger)indexValue 
+                      toTestSuite:(SenTestSuite *)testSuite;
 - (void) waitForSeconds: (NSTimeInterval) aSeconds;
+@end
 
+
+
+
+@interface RSWebSocketAutobahnTests : RSWebSocketTests {    
+    NSUInteger testSuiteIndex;
+    NSUInteger testCasesCount;
+}
+
+@property (nonatomic)           NSUInteger testSuiteIndex;
+
+- (NSUInteger) getCaseCount;
 @end

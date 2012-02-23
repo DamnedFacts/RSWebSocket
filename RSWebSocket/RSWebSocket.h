@@ -41,35 +41,41 @@
 
 
 enum {
-    WebSocketCloseStatusNormal = 1000, //indicates a normal closure, meaning whatever purpose the 
-    //connection was established for has been fulfilled
+    WebSocketCloseStatusNormal = 1000,  // Indicates a normal closure, meaning whatever purpose the 
+                                        // connection was established for has been fulfilled
+    
     WebSocketCloseStatusEndpointGone = 1001, //indicates that an endpoint is "going away", such as a 
-    //server going down, or a browser having navigated away from 
-    //a page
+                                             //server going down, or a browser having navigated away from a page
+    
     WebSocketCloseStatusProtocolError = 1002, //indicates that an endpoint is terminating the connection 
-    //due to a protocol error
+                                              //due to a protocol error
+    
     WebSocketCloseStatusInvalidDataType = 1003, //indicates that an endpoint is terminating the connection
-    //because it has received a type of data it cannot accept 
-    //(e.g. an endpoint that understands only text data MAY 
-    //send this if it receives a binary message)
+                                                //because it has received a type of data it cannot accept 
+                                                //(e.g. an endpoint that understands only text data MAY 
+                                                //send this if it receives a binary message)
+    
     WebSocketCloseStatusMessageTooLarge = 1004, //indicates that an endpoint is terminating the connection
-    //because it has received a message that is too large
+                                                //because it has received a message that is too large
+    
     WebSocketCloseStatusNormalButMissingStatus = 1005, //designated for use in applications expecting a status code 
-    //to indicate that no status code was actually present
+                                                       //to indicate that no status code was actually present
+    
     WebSocketCloseStatusAbnormalButMissingStatus = 1006, //designated for use in	applications expecting a status code
-    //to indicate that the connection was closed abnormally, e.g.
-    //without sending or receiving a Close control frame.
+                                                         //to indicate that the connection was closed abnormally, e.g.
+                                                         //without sending or receiving a Close control frame.
+    
     WebSocketCloseStatusInvalidUtf8 = 1007 //indicates that an endpoint is terminating the connection because it has 
-    //received data that was supposed to be UTF-8 (such as in a text frame) that 
-    //was in fact not valid UTF-8
+                                           //received data that was supposed to be UTF-8 (such as in a text frame) that 
+                                           //was in fact not valid UTF-8
 };
 typedef NSUInteger WebSocketCloseStatus;
 
 enum {
-    WebSocketReadyStateConnecting = 0, //The connection has not yet been established.
-    WebSocketReadyStateOpen = 1, //The WebSocket connection is established and communication is possible.
-    WebSocketReadyStateClosing = 2, //The connection is going through the closing handshake.
-    WebSocketReadyStateClosed = 3 //The connection has been closed or could not be opened
+    WebSocketReadyStateConnecting   = 0,  // The connection has not yet been established.
+    WebSocketReadyStateOpen         = 1,  // The WebSocket connection is established and communication is possible.
+    WebSocketReadyStateClosing      = 2,  // The connection is going through the closing handshake.
+    WebSocketReadyStateClosed       = 3   // The connection has been closed or could not be opened
 };
 typedef NSUInteger RSWebSocketReadyState;
 

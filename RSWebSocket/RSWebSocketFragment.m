@@ -45,6 +45,7 @@
 // End Header
 @synthesize payloadType;
 @synthesize fragment;
+@synthesize isFrameComplete;
 
 #pragma mark Properties
 - (BOOL) hasMask
@@ -67,10 +68,14 @@
     return self.opCode == MessageOpCodeContinuation || self.opCode == MessageOpCodeText || self.opCode == MessageOpCodeBinary;
 }
 
+- (BOOL) isFrameComplete {
+    return (self.messageLength == [fragment length]);
+}
+
 - (BOOL) isValid {
     if (self.messageLength > 0) {
         BOOL isValidState = TRUE;
-        isValidState &= (payloadStart + payloadLength == [fragment length]);
+        isValidState &=  (self.messageLength == [fragment length]);
         isValidState &= !hasRSV1; // FIXME This state can be valid if negotiated by an extension.
         isValidState &= !hasRSV2; // FIXME This state can be valid if negotiated by an extension.
         isValidState &= !hasRSV3; // FIXME This state can be valid if negotiated by an extension.
@@ -87,10 +92,9 @@
             case MessageOpCodeClose:
                 break;
             case MessageOpCodePing:
+            case MessageOpCodePong:
                 if (payloadLength > 125) isValidState &= FALSE; // Pings must not be > 125 bytes.
                 if (!isFinal) isValidState &= FALSE; // Pings must not be fragmented.
-                break;
-            case MessageOpCodePong:
                 break;
             case MessageOpCodeReserved1:
             case MessageOpCodeReserved2:
@@ -133,10 +137,8 @@
     return self.payloadData && [self.payloadData length];
 }
 
-- (NSUInteger) messageLength
-{
-    if (fragment && payloadStart) 
-    {
+- (NSUInteger) messageLength {
+    if (fragment && payloadStart) {
         return payloadStart + payloadLength;
     }
     
