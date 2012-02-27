@@ -322,7 +322,7 @@ WebSocketWaitingState waitingState;
                     NSString* textMsg = [[[NSString alloc] initWithData:aFragment.payloadData encoding:NSUTF8StringEncoding] autorelease];
                     if (textMsg) {
                         [self dispatchTextMessageReceived:textMsg];
-                    } else if (self.config.version >= WebSocketVersion10) {
+                    } else {
                         [self close:WebSocketCloseStatusInvalidUtf8 message:nil];
                     }
                 } else {
@@ -442,7 +442,8 @@ WebSocketWaitingState waitingState;
 }
 
 - (void) handlePing:(NSData*) aMessage {
-    NSLog(@"Handling Ping...");
+    // FIXME: Debug
+//    NSLog(@"Handling Ping...");
     if (!isClosing) {
         [self sendMessage:aMessage messageWithOpCode:MessageOpCodePong];
     
@@ -480,10 +481,11 @@ WebSocketWaitingState waitingState;
         if ([aData length] < consumed) consumed = [aData length];
         fragment = [RSWebSocketFragment fragmentWithData: [aData subdataWithRange:NSMakeRange(0, consumed)]];
         [pendingFragments enqueue:fragment];
-    } 
+    }
     
     // Otherwise our fragment is potentially valid.
-    NSLog(@"messageLength: %ld aDataLength:%ld fragment.length:%ld consumed:%ld", fragment.messageLength, [aData length], fragment.fragment.length,consumed);
+    // FIXME: Debug mode
+//    NSLog(@"messageLength: %ld aDataLength:%ld fragment.length:%ld consumed:%ld", fragment.messageLength, [aData length], fragment.fragment.length,consumed);
     //    [fragment.fragment writeToFile:@"/tmp/bytes.txt" atomically:TRUE];
 
     //parse the data, if possible

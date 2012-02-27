@@ -27,6 +27,7 @@
 		9B19FCDB14D61F2000D8F2CB /* RSWebSocketFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FCD514D61F2000D8F2CB /* RSWebSocketFragment.m */; };
 		9B19FCDC14D61F2000D8F2CB /* RSWebSocketMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCD614D61F2000D8F2CB /* RSWebSocketMessage.h */; };
 		9B19FCDD14D61F2000D8F2CB /* RSWebSocketMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FCD714D61F2000D8F2CB /* RSWebSocketMessage.m */; };
+		9B86596814F7FD9700DAEF16 /* RSWebSocketAutobahnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B86596714F7FD9700DAEF16 /* RSWebSocketAutobahnTests.m */; };
 		9BBE945814E08CCB006A5D21 /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BBE945614E08CCB006A5D21 /* AsyncSocket.h */; };
 		9BBE945914E08CCB006A5D21 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE945714E08CCB006A5D21 /* AsyncSocket.m */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,8 @@
 		9B19FCD514D61F2000D8F2CB /* RSWebSocketFragment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSWebSocketFragment.m; sourceTree = "<group>"; };
 		9B19FCD614D61F2000D8F2CB /* RSWebSocketMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSWebSocketMessage.h; sourceTree = "<group>"; };
 		9B19FCD714D61F2000D8F2CB /* RSWebSocketMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSWebSocketMessage.m; sourceTree = "<group>"; };
+		9B86596614F7FD9700DAEF16 /* RSWebSocketAutobahnTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSWebSocketAutobahnTests.h; sourceTree = "<group>"; };
+		9B86596714F7FD9700DAEF16 /* RSWebSocketAutobahnTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSWebSocketAutobahnTests.m; sourceTree = "<group>"; };
 		9BBE945614E08CCB006A5D21 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = CocoaAsyncSocket/RunLoop/AsyncSocket.h; sourceTree = "<group>"; };
 		9BBE945714E08CCB006A5D21 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = CocoaAsyncSocket/RunLoop/AsyncSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +171,8 @@
 			children = (
 				9B19FC9514D615E100D8F2CB /* RSWebSocketTests.h */,
 				9B19FC9614D615E100D8F2CB /* RSWebSocketTests.m */,
+				9B86596614F7FD9700DAEF16 /* RSWebSocketAutobahnTests.h */,
+				9B86596714F7FD9700DAEF16 /* RSWebSocketAutobahnTests.m */,
 				9B19FC9014D615E100D8F2CB /* Supporting Files */,
 			);
 			path = RSWebSocketTests;
@@ -343,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B19FC9714D615E100D8F2CB /* RSWebSocketTests.m in Sources */,
+				9B86596814F7FD9700DAEF16 /* RSWebSocketAutobahnTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

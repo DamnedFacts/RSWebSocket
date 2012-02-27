@@ -29,12 +29,6 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import "RSWebSocket.h"
 
-typedef enum  {
-    WSTestStateGetCounts = 0,
-    WSTestStateRunAutobahnTestCases = 1,
-    WSTestStateClosing = 2,
-} RSWebSocketTestState;
-
 
 
 
@@ -42,7 +36,6 @@ typedef enum  {
 @package
     RSWebSocket* ws;
     NSString* response;
-    RSWebSocketTestState test_states;
 }
 
 @property (nonatomic, readonly) RSWebSocket* ws;
@@ -56,12 +49,3 @@ typedef enum  {
 
 
 
-@interface RSWebSocketAutobahnTests : RSWebSocketTests {    
-    NSUInteger testSuiteIndex;
-    NSUInteger testCasesCount;
-}
-
-@property (nonatomic)           NSUInteger testSuiteIndex;
-
-- (NSUInteger) getCaseCount;
-@end

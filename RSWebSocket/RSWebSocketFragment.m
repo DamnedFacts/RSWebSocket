@@ -203,7 +203,9 @@
     self.hasRSV3  = (buffer[index] & (1 << 4)) >> 4;   // Test for Reserve bit 3
     self.opCode   = buffer[index++] & 0x0F; // Pull out Opcode, bits 4-7.
     self.hasMask  = (buffer[index] & (1 << 7)) >> 7;
-    NSLog(@"Frame header [FIN: %d] [RSV1: %d] [RSV2: %d] [RSV3: %d] [Opcode: %ld] [Mask: %d]", isFinal,hasRSV1,hasRSV2,hasRSV3,opCode,hasMask);
+    
+    // FIXME: Debug mode
+//    NSLog(@"Frame header [FIN: %d] [RSV1: %d] [RSV2: %d] [RSV3: %d] [Opcode: %ld] [Mask: %d]", isFinal,hasRSV1,hasRSV2,hasRSV3,opCode,hasMask);
        
     switch (self.opCode) {
         case MessageOpCodeText:

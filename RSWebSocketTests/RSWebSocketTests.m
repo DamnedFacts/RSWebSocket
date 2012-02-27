@@ -6,121 +6,9 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "RSWebSocketTests.h"
 #import <objc/objc-class.h>
-#import "RSWebSocketFragment.h"
-
-@implementation RSWebSocketAutobahnTests
-@synthesize testSuiteIndex;
-
-- (void) didClose:(NSUInteger) aStatusCode message:(NSString*) aMessage error:(NSError*) aError {
-    [super didClose:aStatusCode message:aMessage error:aError];
-
-    if (aStatusCode != 1000 && aStatusCode != 1005)
-        STFail(@"Autobahn test case number %ld failed with exit status %ld", testSuiteIndex, aStatusCode);
-}
-
-- (void) didReceiveTextMessage: (NSString*) aMessage {
-    [super didReceiveTextMessage:aMessage];
-    
-    switch (test_states) {
-        case WSTestStateGetCounts:
-            NSLog(@"There are %@ Autobahn test cases", aMessage);
-            testCasesCount = [aMessage intValue];
-            break;
-        case WSTestStateRunAutobahnTestCases:
-            if (aMessage){
-                response = [aMessage copy];
-            }
-            [self.ws sendText:self.response];
-            break;
-        case WSTestStateClosing:
-            break;
-    }
-}
-
-- (void)setUp {
-    return;
-}
-
-- (void)tearDown {
-    return;
-}
-
-- (id)initWithInvocation:(NSInvocation *)testInvocation 
-               testIndex: (NSUInteger) index {
-    
-    self = [super initWithInvocation:testInvocation];
-    
-    if (self) {
-        [self setTestSuiteIndex:index];
-    }
-    
-    return self;
-}
-
-+ (id)defaultTestSuite {
-    return [SenTestCase defaultTestSuite];
-}
-
-- (void) generalCaseTest {
-    test_states = WSTestStateRunAutobahnTestCases;
-    
-    if (testSuiteIndex <= 0) return;
-    
-    NSLog(@"Calling Autobahn WebSocket test case %ld", testSuiteIndex);
-    NSString *testurl = [@"ws://localhost:9001/runCase?case=" stringByAppendingFormat:@"%d&agent='RSWebSocket'",testSuiteIndex];
-    RSWebSocketConnectConfig* config = [RSWebSocketConnectConfig configWithURLString:testurl 
-                                                                              origin:nil
-                                                                           protocols:nil
-                                                                         tlsSettings:nil 
-                                                                             headers:nil 
-                                                                   verifySecurityKey:YES 
-                                                                          extensions:nil ];
-    ws = [[RSWebSocket webSocketWithConfig:config delegate:self] retain];
-    [self.ws open];
-    [self waitForSeconds:2];
-}
-
-- (NSUInteger) getCaseCount {
-    test_states = WSTestStateGetCounts;
-    
-    RSWebSocketConnectConfig* config = [RSWebSocketConnectConfig configWithURLString:@"ws://localhost:9001/getCaseCount" 
-                                                                              origin:nil
-                                                                           protocols:nil
-                                                                         tlsSettings:nil 
-                                                                             headers:nil 
-                                                                   verifySecurityKey:YES 
-                                                                          extensions:nil ];
-    config.closeTimeout = 15.0;
-    ws = [[RSWebSocket webSocketWithConfig:config delegate:self] retain];
-    [ws open];
-    [self waitForSeconds:0.5];    
-    
-    return testCasesCount;
-}
-
-- (void) testUpdateReport {
-    // We're adding this after we've added our Autobahn test units. The assumption is the order of execution
-    // is based on order of when the unit tests were added to the suite. So, this should run after all the
-    // Autobahn test cases have run.
-    NSLog(@"Updating reports");
-    RSWebSocketConnectConfig* config = [RSWebSocketConnectConfig configWithURLString:@"ws://localhost:9001/updateReports?agent='RSWebSocket'" 
-                                                                              origin:nil 
-                                                                           protocols:nil
-                                                                         tlsSettings:nil 
-                                                                             headers:nil 
-                                                                   verifySecurityKey:YES 
-                                                                          extensions:nil ];
-    ws = [[RSWebSocket webSocketWithConfig:config delegate:self] retain];
-    [self.ws open];
-    [self waitForSeconds:2.0];
-    [self.ws close:0 message:nil];
-}
-@end
-
-
-
+#import "RSWebSocketTests.h"
+#import "RSWebSocketAutobahnTests.h"
 
 @implementation RSWebSocketTests
 @synthesize ws;
@@ -132,9 +20,9 @@
 }
 
 - (void) didClose:(NSUInteger) aStatusCode message:(NSString*) aMessage error:(NSError*) aError {
-    [self.ws close:0 message:nil];
     NSLog(@"Status Code: %lu    Close Message: %@   Error: errorDesc=%@, failureReason=%@", 
-          aStatusCode, aMessage, [aError localizedDescription], [aError localizedFailureReason]);    
+          aStatusCode, aMessage, [aError localizedDescription], [aError localizedFailureReason]);
+    
 }
 
 - (void) didReceiveError: (NSError*) aError {
@@ -142,12 +30,11 @@
 }
 
 - (void) didReceiveTextMessage: (NSString*) aMessage {
-    NSLog(@"Did receive text message");
+//    NSLog(@"Did receive text message");
 }
 
 - (void) didReceiveBinaryMessage: (NSData*) aMessage {
-    NSLog(@"Did receive binary message");
-        [self.ws sendBinary: aMessage];
+//    NSLog(@"Did receive binary message");
 }
 
 
@@ -177,10 +64,10 @@
     /***************************/
     /* Add autobahn test cases */
     /***************************/
-    // Grab a list of our static test methods, first before adding our dynamic ones.
+    // Grab a list of our static test methods *first*, before adding our dynamic ones.
     NSArray *testInvocations = [RSWebSocketAutobahnTests testInvocations];
 
-    // Add dynamic Autobahn tests.
+    // Now add the dynamic Autobahn tests, before the static ones.
     RSWebSocketAutobahnTests *testUnitObj = [[RSWebSocketAutobahnTests alloc] retain];
     NSUInteger num_tests = [testUnitObj getCaseCount];
     [testUnitObj release];
