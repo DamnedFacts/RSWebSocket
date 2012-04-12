@@ -45,11 +45,12 @@ typedef NSInteger MessageOpCode;
 
 enum 
 {
-    PayloadTypeUnknown = 0,
-    PayloadTypeText = 1,
-    PayloadTypeBinary = 2
+    OpCodeTypeUnknown = 0,
+    OpCodeTypeControl = 1,
+    OpCodeTypeNonControl = 2,
+    OpCodeTypeContinuation = 3
 };
-typedef NSInteger PayloadType;
+typedef NSInteger OpCodeType;
 
 enum 
 {
@@ -59,7 +60,6 @@ enum
     PayloadLengthLong = 2
 };
 typedef NSInteger PayloadLength;
-
 
 @interface RSWebSocketFragment : NSObject {
     BOOL            isFinal;
@@ -71,33 +71,35 @@ typedef NSInteger PayloadLength;
     NSUInteger      payloadLength;
     int             mask;
     NSUInteger      payloadStart;
-    PayloadType     payloadType;
+    OpCodeType      opCodeType;
     NSData*         payloadData;
     NSMutableData*  fragment;
 }
 
-// Specific header tests
-@property (nonatomic,assign) BOOL           isFinal;
-@property (nonatomic,assign) BOOL           hasRSV1;
-@property (nonatomic,assign) BOOL           hasRSV2;
-@property (nonatomic,assign) BOOL           hasRSV3;
-@property (nonatomic,assign) MessageOpCode  opCode;
-@property (nonatomic,assign) BOOL         hasMask;
-@property (nonatomic,readonly) NSUInteger   messageLength;
-@property (nonatomic,assign) int            mask;
-@property (nonatomic,retain) NSData*        payloadData;
+// Header tests
+@property (nonatomic,assign)    BOOL                isFinal;
+@property (nonatomic,assign)    BOOL                hasRSV1;
+@property (nonatomic,assign)    BOOL                hasRSV2;
+@property (nonatomic,assign)    BOOL                hasRSV3;
+@property (nonatomic,assign)    MessageOpCode       opCode;
+@property (nonatomic,assign)    BOOL                hasMask;
+@property (nonatomic,readonly)  NSUInteger          messageLength;
+@property (nonatomic,assign)    int                 mask;
+@property (nonatomic,retain)    NSData*             payloadData;
 
-@property (nonatomic,readonly) BOOL         isControlFrame;
-@property (nonatomic,readonly) BOOL         isDataFrame;
-
-@property (nonatomic,readonly) BOOL         isValid;
-@property (nonatomic,readonly) BOOL         isHeaderValid;
-@property (nonatomic,readonly) BOOL         isDataValid;
-@property (nonatomic,readonly) BOOL         isFrameComplete;
-@property (nonatomic,readonly) BOOL         canBeParsed;
-
-@property (nonatomic,retain) NSMutableData* fragment;
-@property (nonatomic,assign) PayloadType    payloadType;
+// Header 
+@property (nonatomic,readonly)  NSUInteger          payloadLength;
+@property (nonatomic,readonly)  unsigned long long  payloadLengthExtended;
+@property (nonatomic,readonly)  unsigned long long  fullPayloadLength;
+@property (nonatomic,readonly)  BOOL                isControlFrame;
+@property (nonatomic,readonly)  BOOL                isDataFrame;
+@property (nonatomic,readonly)  BOOL                isValid;
+@property (nonatomic,readonly)  BOOL                isHeaderValid;
+@property (nonatomic,readonly)  BOOL                isDataValid;
+@property (nonatomic,readonly)  BOOL                isFrameComplete;
+@property (nonatomic,readonly)  BOOL                canBeParsed;
+@property (nonatomic,retain)    NSMutableData*      fragment;
+@property (nonatomic,assign)    OpCodeType          opCodeType;
 
 - (int) generateMask;
 - (NSData*) mask:(int) aMask data:(NSData*) aData;
@@ -109,9 +111,9 @@ typedef NSInteger PayloadLength;
 - (void) parseContent;
 - (void) buildFragment;
 
-+ (id) fragmentWithOpCode:(MessageOpCode) aOpCode isFinal:(BOOL) aIsFinal payload:(NSData*) aPayload;
++ (id) fragmentWithOpCode:(MessageOpCode) aOpCode isFinal:(BOOL) aIsFinal payload:(NSData*) aPayload mask:(BOOL) setMask;
 + (id) fragmentWithData:(NSData*) aData;
-- (id) initWithOpCode:(MessageOpCode) aOpCode isFinal:(BOOL) aIsFinal payload:(NSData*) aPayload;
+- (id) initWithOpCode:(MessageOpCode) aOpCode isFinal:(BOOL) aIsFinal payload:(NSData*) aPayload mask:(BOOL) setMask;
 - (id) initWithData:(NSData*) aData;
 
 @end

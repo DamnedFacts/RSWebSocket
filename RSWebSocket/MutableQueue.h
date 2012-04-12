@@ -21,13 +21,12 @@
 #import <Foundation/Foundation.h>
 
 
-@interface MutableQueue : NSObject
-{
+@interface MutableQueue : NSObject {
     NSMutableArray* items;
 }
 
-- (id) dequeue;
+- (id)   dequeue;
 - (void) enqueue:(id) aObject;
-- (id) lastObject;
-
+- (id)   lastObject;
+- (NSUInteger) count;
 @end

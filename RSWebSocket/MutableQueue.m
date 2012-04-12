@@ -24,46 +24,40 @@
 @implementation MutableQueue
 
 #pragma mark Queue
-- (id) dequeue 
-{
-    if ([items count] == 0) 
-    {
-        return nil;
-    }
+- (id) dequeue  {
+    if ([items count] == 0) return nil;
+    
     id headObject = [items objectAtIndex:0];
-    if (headObject != nil) 
-    {
+    if (headObject != nil) {
         [[headObject retain] autorelease]; // so it isn't dealloc'ed on remove
         [items removeObjectAtIndex:0];
     }
     return headObject;
 }
 
-- (void) enqueue:(id) aObject 
-{
+- (void) enqueue:(id) aObject {
     [items addObject:aObject];
 }
 
-- (id) lastObject
-{
+- (id) lastObject {
     return [items lastObject];
 }
 
 #pragma mark Lifecycle
-- (id) init 
-{
+- (id) init  {
     self = [super init];
-    if (self) 
-    {
+    if (self) {
         items = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
-- (void) dealloc 
-{
+- (void) dealloc  {
     [items release];
     [super dealloc];
 }
 
+- (NSUInteger) count {
+    return [items count];
+}
 @end

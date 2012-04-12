@@ -7,59 +7,12 @@
 //
 
 #import "RSWebSocket.h"
-
-//@implementation RSWebSocket
-//
-//- (id)init
-//{
-//    self = [super init];
-//    if (self) {
-//        // Initialization code here.
-//    }
-//    
-//    return self;
-//}
-//
-//@end
-
-//
-//  WebSocket.m
-//  UnittWebSocketClient
-//
-//  Created by Josh Morris on 9/26/11.
-//  Copyright 2011 UnitT Software. All rights reserved.
-//
-//  Licensed under the Apache License, Version 2.0 (the "License"); you may not
-//  use this file except in compliance with the License. You may obtain a copy of
-//  the License at
-// 
-//  http://www.apache.org/licenses/LICENSE-2.0
-// 
-//  Unless required by applicable law or agreed to in writing, software
-//  distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-//  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
-//  License for the specific language governing permissions and limitations under
-//  the License.
-//
-
-#import "RSWebSocket.h"
 #import "RSWebSocketFragment.h"
 #import "HandshakeHeader.h"
 
-
-enum 
-{
-    WebSocketWaitingStateMessage = 0, //Starting on waiting for a new message
-    WebSocketWaitingStateHeader = 1, //Waiting for the remaining header bytes
-    WebSocketWaitingStatePayload = 2, //Waiting for the remaining payload bytes
-    WebSocketWaitingStateFragment = 3 //Waiting for the next fragment
-};
-typedef NSUInteger WebSocketWaitingState;
-
-
 @interface RSWebSocket(Private)
 - (void) dispatchFailure:(NSError*) aError;
-- (void) dispatchClosed:(NSUInteger) aStatusCode message:(NSString*) aMessage error:(NSError*) aError;
+- (void) dispatchClosed;
 - (void) dispatchOpened;
 - (void) dispatchTextMessageReceived:(NSString*) aMessage;
 - (void) dispatchBinaryMessageReceived:(NSData*) aMessage;
@@ -74,7 +27,7 @@ typedef NSUInteger WebSocketWaitingState;
 - (void) sendClose:(NSUInteger) aStatusCode message:(NSString*) aMessage;
 - (void) sendMessage:(NSData*) aMessage messageWithOpCode:(MessageOpCode) aOpCode;
 - (void) sendMessage:(RSWebSocketFragment*) aFragment;
-- (void) handleMessageData:(NSData*) aData;
+- (NSData *) handleFrameData:(NSData*) aData;
 - (void) handleCompleteFragment:(RSWebSocketFragment*) aFragment;
 - (void) handleCompleteFragments;
 - (void) handleClose:(RSWebSocketFragment*) aFragment;
@@ -98,77 +51,47 @@ enum {
     TagMessage = 1
 };
 
-WebSocketWaitingState waitingState;
-
 @synthesize config;
 @synthesize delegate;
 @synthesize readystate;
 
 #pragma mark Public Interface
-- (void) open
-{
+- (void) open {
     UInt16 port = self.config.isSecure ? 443 : 80;
-    if (self.config.url.port)
-    {
-        port = [self.config.url.port intValue];
-    }
-    NSError* error = nil;
+    if (self.config.url.port) port = [self.config.url.port intValue];
     BOOL successful = false;
-    @try 
-    {
-        successful = [socket connectToHost:self.config.url.host onPort:port error:&error];
-        if (self.config.version == WebSocketVersion07)
-        {
-            closeStatusCode = WebSocketCloseStatusNormal;
-        }
-        else
-        {
-            closeStatusCode = 0;
-        }
-        closeMessage = nil;
-    }
-    @catch (NSException *exception) 
-    {
-        error = [NSError errorWithDomain:WebSocketErrorDomain code:0 userInfo:exception.userInfo]; 
-    }
-    @finally 
-    {
-        if (!successful)
-        {
-            [self dispatchClosed:WebSocketCloseStatusProtocolError message:nil error:error];
+    closingStatus.error = nil;
+    closingStatus.localCode = 0;
+    closingStatus.localMessage = nil;
+    closingStatus.remoteCode = 0;
+    closingStatus.remoteMessage = nil;
+    @try {
+        successful = [socket connectToHost:self.config.url.host onPort:port error:&closingStatus.error];
+    } @catch (NSException *exception) {
+        closingStatus.error = [NSError errorWithDomain:WebSocketErrorDomain code:0 userInfo:exception.userInfo]; 
+    } @finally {
+        if (!successful) {
+            closingStatus.localCode = WebSocketCloseStatusProtocolError;
+            [self dispatchClosed];
         }
     }
 }
 
-- (void) close
-{
+- (void) close {
     [self close:WebSocketCloseStatusNormal message:nil];
 }
 
-- (void) close:(NSUInteger) aStatusCode message:(NSString*) aMessage
-{
+- (void) close:(NSUInteger) aStatusCode message:(NSString*) aMessage {
     readystate = WebSocketReadyStateClosing;
-    //any rev before 10 does not perform a UTF8 check
-    if (self.config.version < WebSocketVersion10)
-    {
-        [self sendClose:aStatusCode message:aMessage];        
-    }
-    else
-    {
-        if (aMessage && [aMessage canBeConvertedToEncoding:NSUTF8StringEncoding])
-        {
-            [self sendClose:aStatusCode message:aMessage];
-        }
-        else
-        {
-            [self sendClose:aStatusCode message:nil];
-        }
+    if (aMessage && [aMessage canBeConvertedToEncoding:NSUTF8StringEncoding]) {
+        [self sendClose:aStatusCode message:aMessage];
+    } else {
+        [self sendClose:aStatusCode message:nil];
     }
     isClosing = YES;
 }
 
-- (void) scheduleForceCloseCheck
-{
+- (void) scheduleForceCloseCheck {
     [NSTimer scheduledTimerWithTimeInterval:self.config.closeTimeout
                                      target:self
                                    selector:@selector(checkClose:)
@@ -176,55 +99,45 @@ WebSocketWaitingState waitingState;
                                     repeats:NO];
 }
 
-- (void) checkClose:(NSTimer*) aTimer
-{
-    if (self.readystate == WebSocketReadyStateClosing)
-    {
-        [self closeSocket];
-    }
-}
+- (void) checkClose:(NSTimer*) aTimer {[self closeSocket];}
 
-- (void) sendClose:(NSUInteger) aStatusCode message:(NSString*) aMessage
-{
-    //create payload
+- (void) sendClose:(NSUInteger) aStatusCode message:(NSString*) aMessage {
     NSMutableData* payload = nil;
-    if (aStatusCode > 0)
-    {
-        closeStatusCode = aStatusCode;
-        payload = [NSMutableData data];
-        unsigned char current = (unsigned char)(aStatusCode/0x100);
+    payload = [NSMutableData data];
+    unsigned char current;
+    
+    if (aStatusCode >= 1000) { // Status codes 0-999 are not used.
+        closingStatus.localCode = aStatusCode;
+        
+        current = (unsigned char)(aStatusCode/0x100);
         [payload appendBytes:&current length:1];
+        
         current = (unsigned char)(aStatusCode%0x100);
         [payload appendBytes:&current length:1];
-        if (aMessage)
-        {
-            closeMessage = aMessage;
+
+        if (aMessage) {
+            closingStatus.localMessage = aMessage;
             [payload appendData:[aMessage dataUsingEncoding:NSUTF8StringEncoding]];
         }
     }
     
     //send close message
-    [self sendMessage:[RSWebSocketFragment fragmentWithOpCode:MessageOpCodeClose isFinal:YES payload:payload]];
+    [self sendMessage:[RSWebSocketFragment fragmentWithOpCode:MessageOpCodeClose isFinal:YES payload:payload mask:YES]];
     
     //schedule the force close
-    if (self.config.closeTimeout >= 0)
-    {
+    if (self.config.closeTimeout >= 0) {
         [self scheduleForceCloseCheck];
     }
 }
 
-- (void) sendText:(NSString*) aMessage {
-    // Causes a hang in xcode unit tester.
-    //NSLog(@"(DEBUG) sendText: %@",aMessage);
-    
+- (void) sendText:(NSString*) aMessage {    
     //no reason to grab data if we won't send it anyways
     if (!isClosing) {       
         //only send non-nil data
         if (aMessage) {
             if ([aMessage canBeConvertedToEncoding:NSUTF8StringEncoding]) {
                 [self sendMessage:[aMessage dataUsingEncoding:NSUTF8StringEncoding] messageWithOpCode:MessageOpCodeText];       
-            }
-            else if (self.config.version >= WebSocketVersion10) {
+            } else {
                 [self close:WebSocketCloseStatusInvalidUtf8 message:nil];
             }
         } else {
@@ -248,7 +161,7 @@ WebSocketWaitingState waitingState;
         NSUInteger messageLength = [aMessage length];
         if (messageLength <= self.config.maxPayloadSize) {
             // Our data payload (extension + application data) is <= maxPayloadSize.
-            RSWebSocketFragment* fragment = [RSWebSocketFragment fragmentWithOpCode:aOpCode isFinal:YES payload:aMessage];
+            RSWebSocketFragment* fragment = [RSWebSocketFragment fragmentWithOpCode:aOpCode isFinal:YES payload:aMessage mask:YES];
             [self sendMessage:fragment];
         } else {
             NSMutableArray* fragments = [NSMutableArray array];
@@ -262,15 +175,15 @@ WebSocketWaitingState waitingState;
                 RSWebSocketFragment* fragment = nil;
                 unsigned long fragmentLength = self.config.maxPayloadSize;
                 if (i == 0) {
-                    fragment = [RSWebSocketFragment fragmentWithOpCode:aOpCode isFinal:NO payload:[aMessage subdataWithRange:NSMakeRange(i * self.config.maxPayloadSize, fragmentLength)]];
+                    fragment = [RSWebSocketFragment fragmentWithOpCode:aOpCode isFinal:NO payload:[aMessage subdataWithRange:NSMakeRange(i * self.config.maxPayloadSize, fragmentLength)] mask:YES];
                 } else if (i == fragmentCount - 1) {
                     fragmentLength = messageLength % self.config.maxPayloadSize;
                     if (fragmentLength == 0) {
                         fragmentLength = self.config.maxPayloadSize;
                     }
-                    fragment = [RSWebSocketFragment fragmentWithOpCode:MessageOpCodeContinuation isFinal:YES payload:[aMessage subdataWithRange:NSMakeRange(i * self.config.maxPayloadSize, fragmentLength)]];
+                    fragment = [RSWebSocketFragment fragmentWithOpCode:MessageOpCodeContinuation isFinal:YES payload:[aMessage subdataWithRange:NSMakeRange(i * self.config.maxPayloadSize, fragmentLength)] mask:YES];
                 } else {
-                    fragment = [RSWebSocketFragment fragmentWithOpCode:MessageOpCodeContinuation isFinal:NO payload:[aMessage subdataWithRange:NSMakeRange(i * self.config.maxPayloadSize, fragmentLength)]];
+                    fragment = [RSWebSocketFragment fragmentWithOpCode:MessageOpCodeContinuation isFinal:NO payload:[aMessage subdataWithRange:NSMakeRange(i * self.config.maxPayloadSize, fragmentLength)] mask:YES];
                 }
                 [fragments addObject:fragment];
             }
@@ -283,8 +196,9 @@ WebSocketWaitingState waitingState;
     }
 }
 
-- (void) sendMessage:(RSWebSocketFragment*) aFragment
-{
+- (void) sendMessage:(RSWebSocketFragment*) aFragment {
+//    NSLog(@"Before sending pausing");
+    
     if (!isClosing || aFragment.opCode == MessageOpCodeClose) {
         [socket writeData:aFragment.fragment withTimeout:self.config.timeout tag:TagMessage];
     }
@@ -292,32 +206,32 @@ WebSocketWaitingState waitingState;
 
 
 #pragma mark Internal Web Socket Logic
-- (void) continueReadingMessageStream 
-{
+- (void) continueReadingMessageStream {
     [socket readDataWithTimeout:self.config.timeout tag:TagMessage];
 }
 
-- (void) closeSocket
-{
+- (void) closeSocket {
     readystate = WebSocketReadyStateClosing;
     [socket disconnectAfterWriting];
 }
 
-- (void) handleCompleteFragment:(RSWebSocketFragment*) aFragment {
-    //if we are not in continuation and its final, dequeue
-//    if (aFragment.isFinal && aFragment.opCode != MessageOpCodeContinuation) {
-//        // Final frame in our received fragments
-//        [pendingFragments dequeue];
-//    }
-    
+- (void) handleCompleteFragment:(RSWebSocketFragment*) aFragment {    
     //continue to process
     switch (aFragment.opCode)  {
         case MessageOpCodeContinuation:
-            if (aFragment.isFinal) [self handleCompleteFragments];
-            else [self close:WebSocketCloseStatusProtocolError message:nil];
+            if (contstate == WebSocketContinuationInProgress && aFragment.isFinal) {
+                // Final state opcode zero, final bit set
+                // Change of state before handling fragment is necessary
+                contstate = WebSocketContinuationNone;
+                [self handleCompleteFragments];
+            } else if (contstate == WebSocketContinuationNone) {
+                [self close:WebSocketCloseStatusProtocolError
+                    message:@"Bad frame continuation, closing"];
+            }
+            // Else we are in continuation state with fin still clear.
             break;
         case MessageOpCodeText:
-            if (aFragment.isFinal) {
+            if (contstate == WebSocketContinuationNone && aFragment.isFinal) {
                 if (aFragment.payloadData.length) {
                     NSString* textMsg = [[[NSString alloc] initWithData:aFragment.payloadData encoding:NSUTF8StringEncoding] autorelease];
                     if (textMsg) {
@@ -329,10 +243,22 @@ WebSocketWaitingState waitingState;
                     NSString* textMsg = [[[NSString alloc] initWithUTF8String:""] autorelease];
                     [self dispatchTextMessageReceived:textMsg];
                 }
-            }
+            } else if (contstate == WebSocketContinuationNone && !aFragment.isFinal) {
+                contstate = WebSocketContinuationInProgress;
+            } else {
+                [self close:WebSocketCloseStatusProtocolError 
+                    message:@"All data frames after the initial data frame must have opcode 0"];
+            }                
             break;
         case MessageOpCodeBinary:
-            if (aFragment.isFinal) [self dispatchBinaryMessageReceived:aFragment.payloadData];
+            if (contstate == WebSocketContinuationNone && aFragment.isFinal) {
+                [self dispatchBinaryMessageReceived:aFragment.payloadData];
+            } else if (contstate == WebSocketContinuationNone && !aFragment.isFinal) {
+                contstate = WebSocketContinuationInProgress;
+            } else {
+                [self close:WebSocketCloseStatusProtocolError 
+                    message:@"All data frames after the initial data frame must have opcode 0"];
+            }            
             break;
         case MessageOpCodeClose:
             [self handleClose:aFragment];
@@ -346,104 +272,81 @@ WebSocketWaitingState waitingState;
             // A Pong frame sent in response to a Ping frame must have identical
             // "Application data" as found in the message body of the Ping frame
             // being replied to.
+            NSLog(@"We got a pong. Now what?");
             break;
     }
 }
 
-- (void) handleCompleteFragments {
+- (void) handleCompleteFragments {    
+    NSMutableData* messageData = [NSMutableData data];
     RSWebSocketFragment* fragment = [pendingFragments dequeue];
     
     if (fragment != nil) {
-        //init
-        NSMutableData* messageData = [NSMutableData data];
         MessageOpCode messageOpCode = fragment.opCode;
-        
         //loop through, constructing single message
+        
         while (fragment != nil) {
-            /*    
-             first fragment:  would have an opcode of 0x1 and a FIN bit clear
-             second fragment: would have an opcode of 0x0 and a FIN bit clear
-             third fragment:  would have an opcode of 0x0 and a FIN bit
-             FIXME: This does not allow for any multiplexing.
-                    It simply filters out unfragmented frames.
-             */
-            if ((messageOpCode != MessageOpCodeContinuation && !fragment.isFinal) ||
-                (fragment.opCode == MessageOpCodeContinuation))
+            // FIXME: What mechanism requires us to check for control frames here? They seem to be handled above first, but 
+            // not dequeued?
+            if (!fragment.isControlFrame)
                 [messageData appendData:fragment.payloadData];
             fragment = [pendingFragments dequeue];
         }
-        
-        //handle final message contents        
-        switch (messageOpCode) {
-            case MessageOpCodeContinuation:
-                // First fragment cannot have a continuation opcode.
-                [self close:WebSocketCloseStatusProtocolError message:nil];
-                break;
-            case MessageOpCodeText:
-                if (messageData.length) {
-                    NSString* textMsg = [[[NSString alloc] initWithData:messageData encoding:NSUTF8StringEncoding] autorelease];
-                    if (textMsg) {
-                        [self dispatchTextMessageReceived:textMsg];
-                    } else if (self.config.version >= WebSocketVersion10) {
-                        [self close:WebSocketCloseStatusInvalidUtf8 message:nil];
-                    }
-                }
-                break;
-            case MessageOpCodeBinary:
-                [self dispatchBinaryMessageReceived:messageData];
-                break;
-        }
+
+        fragment = [RSWebSocketFragment fragmentWithOpCode:messageOpCode isFinal:YES payload:messageData mask:YES];
+        [self handleCompleteFragment: fragment];
     }
 }
 
-- (void) handleClose:(RSWebSocketFragment*) aFragment
-{
-    //close status & message
-    BOOL invalidUTF8 = NO;
-    if (aFragment.payloadData)
-    {
+- (void) handleClose:(RSWebSocketFragment*) aFragment {
+    if (isClosing) {
+        [self closeSocket];
+        return;
+    } else {
+        isClosing = YES;
+    
         NSUInteger length = aFragment.payloadData.length;
-        if (length >= 2)
-        {
+        if (length > 1) {
             //get status code
             unsigned char buffer[2];
             [aFragment.payloadData getBytes:&buffer length:2];
-            closeStatusCode = buffer[0] << 8 | buffer[1];
+            closingStatus.remoteCode = buffer[0] << 8 | buffer[1];
             
-            //get message
-            if (length > 2)
-            {
-                closeMessage = [[NSString alloc] initWithData:[aFragment.payloadData subdataWithRange:NSMakeRange(2, length - 2)] encoding:NSUTF8StringEncoding];
-                if (!closeMessage)
-                {
-                    invalidUTF8 = YES;
-                }
+            switch (closingStatus.remoteCode) {
+                case 1004:
+                case 1005:
+                case 1006:
+                case 1012:
+                case 1013:
+                case 1014:
+                case 1015:
+                case 1016:
+                case 1100:
+                case 2000:
+                case 2999:
+                    [self close:WebSocketCloseStatusProtocolError message:nil];
+                    return;
+                default:
+                    //get message
+                    if (length > 2) {
+                        closingStatus.remoteMessage = [[NSString alloc] initWithData:[aFragment.payloadData subdataWithRange:NSMakeRange(2, length - 2)] encoding:NSUTF8StringEncoding];
+                        if (!closingStatus.remoteMessage) {
+                            [self close:WebSocketCloseStatusInvalidUtf8 message:nil];
+                            return;
+                        }
+                    }
             }
         }
-    }
-    
-    //handle close
-    if (isClosing)
-    {
-        [self closeSocket];
-    }
-    else
-    {
-        isClosing = YES;
-        if (!invalidUTF8 || self.config.version < WebSocketVersion10)
-        {
-            [self close:0 message:nil];
-        }
-        else
-        {
-            [self close:WebSocketCloseStatusInvalidUtf8 message:nil];
-        }
+        
+        [self close:closingStatus.remoteCode message:nil]; // Send the remote code back
+        return;
     }
 }
 
 - (void) handlePing:(NSData*) aMessage {
     // FIXME: Debug
-//    NSLog(@"Handling Ping...");
+//    NSLog(@"Handling ping");
+
     if (!isClosing) {
         [self sendMessage:aMessage messageWithOpCode:MessageOpCodePong];
     
@@ -453,57 +356,128 @@ WebSocketWaitingState waitingState;
     }
 }
 
-- (void) handleMessageData:(NSData*) aData {
-    /* 
-     There is a queued fragment that hasn't received complete data yet (it isn't valid); append to it
-     
-     If the received data (aData) is greater fragment size we are constructing, only copy the bytes we require
-     The remaining bytes are passed back for futher frame construction.
-     Otherwise, if aData doesn't have all the bytes we require, consume all that we received in hopes of more later!
-    
-     If we don't have a a queued fragment to work with, so we need to make a create a new fragment.
-     If the size of aData exceeds the bytes we require, only consume up to that amount we need.
-     Otherwise, add the whole thing to our new fragment.
-    */
+- (void) handleFrameDataNew {
+//    NSLog(@"handleFrameDataNew");
+    // Make a new, empty frame fragment. fragment is expected to be nil.
+    RSWebSocketFragment *fragment = [RSWebSocketFragment fragmentWithData:[[NSMutableData alloc] initWithLength:0]]; 
+    [pendingFragments enqueue:fragment];
+    framestate = WebSocketFramePriHeaderFilling;
+}
 
-    NSUInteger consumed = 0;
+- (NSData *) handleFrameDataPrimaryHeaderFill: (NSData *)aData {
+//    NSLog(@"handleFrameDataPrimaryHeaderFill");
+    RSWebSocketFragment *fragment = [pendingFragments lastObject]; // Grab last fragment; use if not complete
+    NSUInteger needToConsume = 0; // Important it stays at zero.
 
-    // Grab last fragment; use if not complete
-    RSWebSocketFragment* fragment = [pendingFragments lastObject];
-    
-    if (fragment && !fragment.isFrameComplete) {
-        consumed = fragment.messageLength - fragment.fragment.length; 
-        if ([aData length] < consumed) consumed = [aData length];
-        [fragment.fragment appendData: [aData subdataWithRange:NSMakeRange(0, consumed)]];
-    } else {
-        fragment = [RSWebSocketFragment fragmentWithData:aData];
-        consumed = fragment.messageLength;
-        if ([aData length] < consumed) consumed = [aData length];
-        fragment = [RSWebSocketFragment fragmentWithData: [aData subdataWithRange:NSMakeRange(0, consumed)]];
-        [pendingFragments enqueue:fragment];
+    // 7-bit payload length specified within first 2 bytes of (primary) header
+    if (fragment.fragment.length < 2 && [aData length] >= 1) {
+        if      (fragment.fragment.length == 0) needToConsume = ([aData length] <= 1) ? 1 : 2;
+        else if (fragment.fragment.length == 1) needToConsume = 1;
+        else NSLog(@"handleFrameDataPrimaryHeaderFill: What state are we in here?");
+        [fragment.fragment appendData: [aData subdataWithRange:NSMakeRange(0, needToConsume)]];
+    }
+
+    if (fragment.fragment.length == 2) {
+        [fragment parseHeader]; // Re-parse frame
+        framestate = WebSocketFrameExtHeaderFilling;
     }
     
-    // Otherwise our fragment is potentially valid.
-    // FIXME: Debug mode
-//    NSLog(@"messageLength: %ld aDataLength:%ld fragment.length:%ld consumed:%ld", fragment.messageLength, [aData length], fragment.fragment.length,consumed);
-    //    [fragment.fragment writeToFile:@"/tmp/bytes.txt" atomically:TRUE];
+    return (needToConsume >= [aData length]) ? nil:[aData subdataWithRange:NSMakeRange(needToConsume, [aData length] - needToConsume)];
+}
 
-    //parse the data, if possible
-    if (fragment.canBeParsed) {
-        [fragment parseContent];
-        if (fragment.isValid) {
-            [self handleCompleteFragment:fragment];
-            if (isClosing) return; // Failure condition, return immediately.
-        } else {
+- (NSData *) handleFrameDataExtendedHeaderFill: (NSData *) aData {
+//    NSLog(@"handleFrameDataExtendedHeaderFill");
+    RSWebSocketFragment *fragment = [pendingFragments lastObject]; // Grab last fragment; use if not complete
+
+    NSUInteger needToConsume = 0; // Important it initializes to zero.
+
+    if (fragment.payloadLength == 127 && fragment.fragment.length < 10) {
+        // 64-bit payload length specified within first 10 bytes of header
+        needToConsume = 10 - fragment.fragment.length;
+    } else if (fragment.payloadLength == 126 && fragment.fragment.length < 4) {
+        // 16-bit payload length specified within first 4 bytes of header
+        needToConsume = 4 - fragment.fragment.length;
+    } else if (fragment.payloadLength <= 125) {
+        needToConsume = 0;
+    } else {
+//        NSLog(@"handleFrameDataExtendedHeaderFill: What state are we in here?");
+//        NSLog(@"Error: WebSocketCloseStatusProtocolError during frame extended header construction");
+//        [self close:WebSocketCloseStatusProtocolError message:nil];
+//        return nil; // Failure condition, return immediately.
+    }
+
+    needToConsume = (needToConsume > [aData length]) ? [aData length] : needToConsume;
+
+    if (needToConsume == 0) {
+        if (![fragment isHeaderValid]) 
             [self close:WebSocketCloseStatusProtocolError message:nil];
+        [fragment parseHeader]; // Re-parse frame
+        framestate = WebSocketFrameDataFilling;
+    } else {           
+        [fragment.fragment appendData: [aData subdataWithRange:NSMakeRange(0, needToConsume)]];
+    }
+    return (needToConsume >= [aData length]) ? nil:[aData subdataWithRange:NSMakeRange(needToConsume, [aData length] - needToConsume)];
+}
+
+- (NSData *) handleFrameDataPayloadFill: (NSData *) aData {
+//    NSLog(@"handleFrameDataPayloadFill\n");
+    RSWebSocketFragment *fragment = [pendingFragments lastObject]; // Grab last fragment; use if not complete
+    NSUInteger needToConsume = 0; // Important it stays at zero.
+
+    if (fragment && !fragment.isFrameComplete) {
+        needToConsume = fragment.messageLength - fragment.fragment.length;
+        needToConsume = (needToConsume > [aData length]) ? [aData length] : needToConsume;
+//        NSLog(@"WebSocketFrameDataFilling: fragment.messageLength: %ld fragment.fragment.length: %ld aData: %ld needToConsume: %ld\n",
+//              fragment.messageLength, fragment.fragment.length, [aData length], needToConsume);
+        [fragment.fragment appendData: [aData subdataWithRange:NSMakeRange(0, needToConsume)]];
+    }
+
+    if (fragment && fragment.isFrameComplete) {
+        framestate = WebSocketFrameComplete;
+    }
+    
+    return (needToConsume >= [aData length]) ? nil:[aData subdataWithRange:NSMakeRange(needToConsume, [aData length] - needToConsume)];
+}
+
+- (void) handleFrameDataComplete {
+//    NSLog(@"handleFrameDataComplete\n");
+    RSWebSocketFragment *fragment = [pendingFragments lastObject]; // Grab last fragment; use if not complete
+
+    if (fragment.canBeParsed) [fragment parseContent];
+    else NSLog(@"Error: Parsing error of frame during final frame construction");
+
+    if (fragment.isValid) {
+        framestate = WebSocketFrameComplete;
+        if (isClosing && fragment.opCode != MessageOpCodeClose) {
+            NSLog(@"Frame opcode: %ld", fragment.opCode);
+            NSLog(@"Error: WebSocket closing during final frame construction");
             return; // Failure condition, return immediately.
         }
+        [self handleCompleteFragment:fragment];
+    } else {
+        NSLog(@"Error: WebSocketCloseStatusProtocolError during final frame construction");
+        [self close:WebSocketCloseStatusProtocolError message:nil];
     }
-    
-    // If we have extra data, pass it on to a recursive call to handleMessageData.
-    if ([aData length] > consumed) {
-        [self handleMessageData:[aData subdataWithRange:NSMakeRange(consumed, [aData length] - consumed)]];
-    } 
+
+    framestate = WebSocketFrameNew;
+}
+
+- (NSData *) handleFrameData:(NSData*) aData {
+    while (aData && !isClosing) {
+        if (framestate == WebSocketFrameNew) [self handleFrameDataNew];
+        
+        if (framestate == WebSocketFramePriHeaderFilling)
+            aData = [self handleFrameDataPrimaryHeaderFill: aData];
+        
+        if (framestate == WebSocketFrameExtHeaderFilling)
+            aData =  [self handleFrameDataExtendedHeaderFill: aData];
+        
+        if (framestate == WebSocketFrameDataFilling)
+            aData = [self handleFrameDataPayloadFill: aData];
+        
+        if (framestate == WebSocketFrameComplete) [self handleFrameDataComplete];
+    }
+    return aData;
 }
 
 - (NSData*) getSHA1:(NSData*) aPlainText 
@@ -653,24 +627,13 @@ WebSocketWaitingState waitingState;
     wsSecKeyHandshake = [key copy];
 }
 
-- (HandshakeHeader*) headerForKey:(NSString*) aKey inHeaders:(NSMutableArray*) aHeaders
-{
+- (HandshakeHeader*) headerForKey:(NSString*) aKey inHeaders:(NSMutableArray*) aHeaders {
     for (HandshakeHeader* header in aHeaders)
-    {
-        if (header)
-        {
-            if ([header keyMatchesCaseInsensitiveString:aKey])
-            {
-                return header;
-            }
-        }
-    }
-    
+        if (header && [header keyMatchesCaseInsensitiveString:aKey]) return header;
     return nil;
 }
 
-- (BOOL) isUpgradeResponse: (NSString*) aResponse
-{
+- (BOOL) isUpgradeResponse: (NSString*) aResponse {
     //a HTTP 101 response is the only valid one
     if ([aResponse hasPrefix:@"HTTP/1.1 101"])
     {        
@@ -735,79 +698,50 @@ WebSocketWaitingState waitingState;
 
 
 #pragma mark Web Socket Delegate
-- (void) dispatchFailure:(NSError*) aError 
-{
-    if(delegate) 
-    {
-        [delegate didReceiveError:aError];
-    }
+- (void) dispatchFailure:(NSError*) aError {
+    if(delegate) [delegate didReceiveError:aError];
 }
 
-- (void) dispatchClosed:(NSUInteger) aStatusCode message:(NSString*) aMessage error:(NSError*) aError
-{
-    if (delegate)
-    {
-        [delegate didClose:aStatusCode message:aMessage error:aError];
-    }
+- (void) dispatchClosed {
+    if (delegate) [delegate didClose:(ClosingStatusCodes) closingStatus];
 }
 
-- (void) dispatchOpened 
-{
-    if (delegate) 
-    {
-        [delegate didOpen];
-    }
+- (void) dispatchOpened {
+    if (delegate) [delegate didOpen];
 }
 
-- (void) dispatchTextMessageReceived:(NSString*) aMessage 
-{
-    if (delegate)
-    {
-        [delegate didReceiveTextMessage:aMessage];
-    }
+- (void) dispatchTextMessageReceived:(NSString*) aMessage {
+    if (delegate) [delegate didReceiveTextMessage:aMessage];
 }
 
-- (void) dispatchBinaryMessageReceived:(NSData*) aMessage 
-{
-    if (delegate)
-    {
-        [delegate didReceiveBinaryMessage:aMessage];
-    }
+- (void) dispatchBinaryMessageReceived:(NSData*) aMessage {
+    if (delegate)[delegate didReceiveBinaryMessage:aMessage];
 }
 
 
 #pragma mark AsyncSocket Delegate
-- (void) onSocketDidDisconnect:(AsyncSocket*) aSock 
-{
+- (void) onSocketDidDisconnect:(AsyncSocket*) aSock {
     readystate = WebSocketReadyStateClosed;
-    if (self.config.version > WebSocketVersion07)
-    {
-        if (closeStatusCode == 0)
-        {
-            if (closingError != nil)
-            {
-                closeStatusCode = WebSocketCloseStatusAbnormalButMissingStatus;
-            }
-            else
-            {
-                closeStatusCode = WebSocketCloseStatusNormalButMissingStatus;
-            }
+    if (closingStatus.localCode == 0) {
+        if (!isClosing) {
+                closingStatus.localCode = WebSocketCloseStatusAbnormalButMissingStatus;
+        } else {
+                closingStatus.localCode = WebSocketCloseStatusNormalButMissingStatus;
         }
     }
-    [self dispatchClosed:closeStatusCode message:closeMessage error:closingError];
+    [self dispatchClosed];
 }
 
-- (void) onSocket:(AsyncSocket *) aSocket willDisconnectWithError:(NSError *) aError
-{
-    switch (self.readystate) 
-    {
+- (void) onSocket:(AsyncSocket *) aSocket willDisconnectWithError:(NSError *) aError {
+    switch (self.readystate) {
         case WebSocketReadyStateOpen:
         case WebSocketReadyStateConnecting:
             readystate = WebSocketReadyStateClosing;
             [self dispatchFailure:aError];
         case WebSocketReadyStateClosing:
-            closingError = [aError retain]; 
+            closingStatus.error = [aError retain];
     }
+
 }
 
 - (void) onSocket:(AsyncSocket*) aSocket didConnectToHost:(NSString*) aHost port:(UInt16) aPort 
@@ -868,10 +802,10 @@ WebSocketWaitingState waitingState;
         } else {
             [self dispatchFailure:[NSError errorWithDomain:WebSocketErrorDomain code:0 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Bad handshake", NSLocalizedDescriptionKey, response, NSLocalizedFailureReasonErrorKey, nil]]];
         }
-    } else if (aTag == TagMessage) {        
-        //handle data
-        [self handleMessageData:aData];
-
+        
+        framestate = WebSocketFrameNew; // We set our initial frame state to 'new'.
+    } else if (aTag == TagMessage) {
+        [self handleFrameData:aData];
         //keep reading
         [self continueReadingMessageStream];
     }
@@ -899,15 +833,15 @@ WebSocketWaitingState waitingState;
     return self;
 }
 
--(void) dealloc 
-{
+-(void) dealloc {
     socket.delegate = nil;
     [socket disconnect];
     [socket release];
     [delegate release];
-    [closingError release];
     [pendingFragments release];
-    [closeMessage release];
+    [closingStatus.error release];
+    [closingStatus.localMessage release];
+    [closingStatus.remoteMessage release];
     [wsSecKey release];
     [wsSecKeyHandshake release];
     [config release];

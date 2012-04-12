@@ -16,13 +16,15 @@
 
 #pragma mark WebSocketDelegate Methods
 - (void) didOpen {
-    NSLog(@"Did open connection");
+//    NSLog(@"Did open connection");
 }
 
-- (void) didClose:(NSUInteger) aStatusCode message:(NSString*) aMessage error:(NSError*) aError {
-    NSLog(@"Status Code: %lu    Close Message: %@   Error: errorDesc=%@, failureReason=%@", 
-          aStatusCode, aMessage, [aError localizedDescription], [aError localizedFailureReason]);
+- (void) didClose:(ClosingStatusCodes)cstatus {
     
+    NSLog(@"Closing Status: (%lu%@:%lu%@) %@", 
+          cstatus.localCode, (cstatus.localMessage == nil)?@"":[NSString stringWithFormat:@"/%@",cstatus.localMessage], 
+          cstatus.remoteCode, (cstatus.remoteMessage == nil)?@"":[NSString stringWithFormat:@"/%@",cstatus.remoteMessage], 
+          [cstatus.error localizedDescription]);
 }
 
 - (void) didReceiveError: (NSError*) aError {
@@ -54,7 +56,7 @@
 #pragma mark Unit Test Required
 // We override the SenTest framework's object method to insert our custom tests.
 - (id)initWithInvocation:(NSInvocation *)testInvocation {
-    return [super initWithInvocation:testInvocation];;
+    return [super initWithInvocation:testInvocation];
 }
 
 // We override the SenTest framework's class method to insert our custom tests.
@@ -65,24 +67,8 @@
     /* Add autobahn test cases */
     /***************************/
     // Grab a list of our static test methods *first*, before adding our dynamic ones.
-    NSArray *testInvocations = [RSWebSocketAutobahnTests testInvocations];
+    [self addTestsForAutobahn:testSuite];
 
-    // Now add the dynamic Autobahn tests, before the static ones.
-    RSWebSocketAutobahnTests *testUnitObj = [[RSWebSocketAutobahnTests alloc] retain];
-    NSUInteger num_tests = [testUnitObj getCaseCount];
-    [testUnitObj release];
-    
-    for (int i = 1; i<=num_tests; i++) {
-        [self addTestsForAutobahn:i toTestSuite:testSuite];
-    }
-
-    // Add static Autobahn test cases
-    for (NSInvocation *testInvocation in testInvocations) {
-        SenTestCase *test = [[RSWebSocketAutobahnTests alloc] initWithInvocation:testInvocation];
-        [testSuite addTest:test];
-        [test release];
-    }
-    
     /***************************/
     /* Add internal test cases */
     /***************************/
@@ -96,26 +82,39 @@
     return [testSuite autorelease];
 }
 
-+ (void)addTestsForAutobahn:(NSUInteger)indexValue 
-                     toTestSuite:(SenTestSuite *)testSuite {
++ (void)addTestsForAutobahn:(SenTestSuite *)testSuite {
+    NSArray *testInvocations = [RSWebSocketAutobahnTests testInvocations];
     
+    // Now add the dynamic Autobahn tests, before the static ones.
+    RSWebSocketAutobahnTests *unitTest= [[RSWebSocketAutobahnTests alloc] init];    
+    NSUInteger totalTests = [unitTest getCaseCount];
+    IMP test_case_n_imp = [unitTest methodForSelector:@selector(generalCaseTest)];
 
-    RSWebSocketAutobahnTests *testUnitObj = [[RSWebSocketAutobahnTests alloc] retain];
+    for (int i = 1; i<=totalTests; i++) {
+        // Obj-C Runtime swizzling. We're taking the method "generalCaseTest" and renaming it and
+        // parameterizing it with the index number of the Autobahn test case we want it to run.
+        SEL test_case_n_sel = NSSelectorFromString([NSString stringWithFormat:@"testCase%ld", i]);
+        class_addMethod([unitTest class], test_case_n_sel, test_case_n_imp, "v@:"); // FIXME: Check BOOL return value.
         
-    // Obj-C Runtime swizzling. We're taking the method "generalCaseTest" and renaming it and
-    // parameterizing it with the index number of the Autobahn test case we want it to run.
-    SEL test_case_n_sel = NSSelectorFromString([NSString stringWithFormat:@"testCase%ld", indexValue]);
-    IMP test_case_n_imp = [testUnitObj methodForSelector:@selector(generalCaseTest)];
-    class_addMethod([testUnitObj class], test_case_n_sel, test_case_n_imp, "v@:"); // FIXME: Check BOOL return value.
+        // Create an invocation object for this test case
+        NSMethodSignature *testSignature = [RSWebSocketAutobahnTests instanceMethodSignatureForSelector:test_case_n_sel];
+        NSInvocation *testInvocation = [NSInvocation invocationWithMethodSignature:testSignature];
+        [testInvocation setSelector:test_case_n_sel];
+        [testInvocation setTarget:unitTest];
+
+        
+        SenTestCase *test = [[[RSWebSocketAutobahnTests alloc] init] initWithInvocation:testInvocation testIndex:i];
+        [testSuite addTest:test];
+        [test release];
+    }
+    [unitTest release];
     
-    NSMethodSignature *testSignature = [RSWebSocketAutobahnTests instanceMethodSignatureForSelector:test_case_n_sel];
-    NSInvocation *testInvocation = [NSInvocation invocationWithMethodSignature:testSignature];
-    [testInvocation setSelector:test_case_n_sel];
-    [testInvocation setTarget:testUnitObj];
-    
-    SenTestCase *test = [testUnitObj initWithInvocation:testInvocation testIndex:indexValue];
-    [testSuite addTest:test];
-    [test release];
+    // Add static Autobahn test cases
+    for (NSInvocation *testInvocation in testInvocations) {
+        SenTestCase *test = [[[RSWebSocketAutobahnTests alloc] init] initWithInvocation:testInvocation];
+        [testSuite addTest:test];
+        [test release];
+    }
 }
 
 

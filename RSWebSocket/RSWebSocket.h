@@ -39,7 +39,7 @@
 
 
 
-
+// FIXME: How to handle extended range of error codes
 enum {
     WebSocketCloseStatusNormal = 1000,  // Indicates a normal closure, meaning whatever purpose the 
                                         // connection was established for has been fulfilled
@@ -55,19 +55,31 @@ enum {
                                                 //(e.g. an endpoint that understands only text data MAY 
                                                 //send this if it receives a binary message)
     
-    WebSocketCloseStatusMessageTooLarge = 1004, //indicates that an endpoint is terminating the connection
-                                                //because it has received a message that is too large
+    WebSocketCloseStatusReserved1004 = 1004,    // NOT USED. Reserved.  The specific meaning might be defined in the future.
     
-    WebSocketCloseStatusNormalButMissingStatus = 1005, //designated for use in applications expecting a status code 
+    WebSocketCloseStatusNormalButMissingStatus = 1005, // LOCAL ONLY. designated for use in applications expecting a status code 
                                                        //to indicate that no status code was actually present
     
-    WebSocketCloseStatusAbnormalButMissingStatus = 1006, //designated for use in	applications expecting a status code
+    WebSocketCloseStatusAbnormalButMissingStatus = 1006, // LOCAL ONLY. designated for use in	applications expecting a status code
                                                          //to indicate that the connection was closed abnormally, e.g.
                                                          //without sending or receiving a Close control frame.
     
-    WebSocketCloseStatusInvalidUtf8 = 1007 //indicates that an endpoint is terminating the connection because it has 
+    WebSocketCloseStatusInvalidUtf8 = 1007, //indicates that an endpoint is terminating the connection because it has 
                                            //received data that was supposed to be UTF-8 (such as in a text frame) that 
                                            //was in fact not valid UTF-8
+    
+    WebSocketCloseStatusViolatedPolicy = 1008, //indicates that an endpoint has received a message that violates its policy. 
+
+    WebSocketCloseStatusMessageTooLarge = 1009, //indicates that an endpoint is terminating the connection
+                                                //because it has received a message that is too large
+
+    WebSocketCloseStatusUnnegotiatedExtensions = 1010, // endpoint (client) is terminating the
+                                                       // connection because it has expected the server to negotiate one or
+                                                       // more extension, but the server didn't return them in the response
+                                                       // message of the WebSocket handshake. 
+    
+    WebSocketCloseStatusUnexpectedCondition = 1011 // Indicates an unexpected condition that prevented it from fulfilling the request
+
 };
 typedef NSUInteger WebSocketCloseStatus;
 
@@ -79,6 +91,31 @@ enum {
 };
 typedef NSUInteger RSWebSocketReadyState;
 
+enum {
+    WebSocketFrameNew               = 0,  // Frame is newly created
+    WebSocketFramePriHeaderFilling  = 1,  // Frame is currently being filled primary header
+    WebSocketFrameExtHeaderFilling  = 2,  // Frame is currently being filled extended header
+    WebSocketFrameDataFilling       = 3,  // Frame is currently being filled with data
+    WebSocketFrameComplete          = 4,  // Frame is filled, and complete
+};
+typedef NSUInteger RSWebSocketFrameState;
+
+enum {
+    WebSocketContinuationNone         = 0,  // Frame is newly created
+    WebSocketContinuationStart        = 1,  // Frame is newly created
+    WebSocketContinuationInProgress   = 2,  // Frame is currently being filled primary header
+    WebSocketContinuationEnd          = 3,  // Frame is currently being filled extended header
+};
+typedef NSUInteger RSWebSocketContinuationState;
+
+
+typedef struct {
+    NSError* error;
+    NSUInteger localCode;
+    NSUInteger remoteCode;
+    NSString* localMessage;
+    NSString* remoteMessage;
+} ClosingStatusCodes;
 
 @protocol RSWebSocketDelegate <NSObject>
 
@@ -90,7 +127,7 @@ typedef NSUInteger RSWebSocketReadyState;
 /**
  * Called when the web socket closes. aError will be nil if it closes cleanly.
  **/
-- (void) didClose:(NSUInteger) aStatusCode message:(NSString*) aMessage error:(NSError*) aError;
+- (void) didClose:(ClosingStatusCodes)closingStatus;
 
 /**
  * Called when the web socket receives an error. Such an error can result in the
@@ -121,16 +158,18 @@ typedef NSUInteger RSWebSocketReadyState;
 @private
     id<RSWebSocketDelegate> delegate;
     AsyncSocket* socket;
-    RSWebSocketReadyState readystate;
-    NSError* closingError;
+    RSWebSocketReadyState           readystate;
+    RSWebSocketFrameState           framestate;
+    RSWebSocketContinuationState    contstate;
     NSString* wsSecKey;
     NSString* wsSecKeyHandshake;
     MutableQueue* pendingFragments;
     BOOL isClosing;
-    NSUInteger closeStatusCode;
-    NSString* closeMessage;
-    BOOL sendCloseInfoToListener;
+    ClosingStatusCodes closingStatus;
+//    BOOL sendCloseInfoToListener;
     RSWebSocketConnectConfig* config;
+//    int i;
+
 }
 
 
@@ -163,9 +202,9 @@ typedef NSUInteger RSWebSocketReadyState;
  **/
 - (void) open;
 
-/**
- * Finish all reads/writes and close the websocket. Sends a status of WebSocketCloseStatusNormal and no message.
- **/
+///**
+// * Finish all reads/writes and close the websocket. Sends a status of WebSocketCloseStatusNormal and no message.
+// **/
 - (void) close;
 
 /**
