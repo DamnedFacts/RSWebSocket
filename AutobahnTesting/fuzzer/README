@@ -1,0 +1,8 @@
+This is the "fuzzer" used for fuzz testing against the Autobahn suite. In the case of RSWebSocket, we are using the fuzzer in a server context.
+
+To start the fuzzer server:
+	$ python fuzzing_server.py
+
+This fuzzer server is a modification of the one that comes with Autobahn to work specifically with RSWebSocket. It will run our RSWebClient unit tester through the entire Autobahn testsuite, checking the expected results of each test along the way.
+
+Currently, the fuzzer client is unmodified, and unused.
