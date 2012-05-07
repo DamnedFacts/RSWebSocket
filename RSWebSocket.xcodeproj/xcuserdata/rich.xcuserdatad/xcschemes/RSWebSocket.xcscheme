@@ -48,6 +48,12 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-NSTreatUnknownArgumentsAsOpen NO -ApplePersistenceIgnoreState YES -SenTest Self "
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
          <AdditionalOption
             key = "DYLD_INSERT_LIBRARIES"
