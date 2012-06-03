@@ -56,6 +56,10 @@ enum {
 @synthesize readystate;
 
 #pragma mark Public Interface
+- (BOOL) isConnectionOpen {
+    return [socket isConnected];
+}
+
 - (void) open {
     UInt16 port = self.config.isSecure ? 443 : 80;
     if (self.config.url.port) port = [self.config.url.port intValue];
@@ -505,14 +509,11 @@ enum {
     return hash;
 }
 
-- (NSString*) getRequest: (NSString*) aRequestPath
-{
+- (NSString*) getRequest: (NSString*) aRequestPath {
     //create headers if they are missing
     NSMutableArray* headers = self.config.headers;
-    if (headers == nil)
-    {
-        headers = [NSMutableArray array];
-        self.config.headers = headers;
+    if (headers == nil) {
+        self.config.headers = headers = [NSMutableArray array];
     }
     
     //handle security keys
@@ -529,43 +530,35 @@ enum {
     [headers addObject:[HandshakeHeader headerWithValue:[NSString stringWithFormat:@"%i",self.config.version] forKey:@"Sec-WebSocket-Version"]];
     
     //handle protocol
-    if (self.config.protocols && self.config.protocols.count > 0)
-    {
+    if (self.config.protocols && self.config.protocols.count > 0) {
         //build protocol fragment
         NSMutableString* protocolFragment = [NSMutableString string];
-        for (NSString* item in self.config.protocols)
-        {
-            if ([protocolFragment length] > 0) 
-            {
+        for (NSString* item in self.config.protocols) {
+            if ([protocolFragment length] > 0) {
                 [protocolFragment appendString:@", "];
             }
             [protocolFragment appendString:item];
         }
         
         //include protocols, if any
-        if ([protocolFragment length] > 0)
-        {
+        if ([protocolFragment length] > 0) {
             [headers addObject:[HandshakeHeader headerWithValue:protocolFragment forKey:@"Sec-WebSocket-Protocol"]];
         }
     }
     
     //handle extensions
-    if (self.config.extensions && self.config.extensions.count > 0)
-    {
+    if (self.config.extensions && self.config.extensions.count > 0) {
         //build extensions fragment
         NSMutableString* extensionFragment = [NSMutableString string];
-        for (NSString* item in self.config.extensions)
-        {
-            if ([extensionFragment length] > 0) 
-            {
+        for (NSString* item in self.config.extensions) {
+            if ([extensionFragment length] > 0) {
                 [extensionFragment appendString:@", "];
             }
             [extensionFragment appendString:item];
         }
         
         //return request with extensions
-        if ([extensionFragment length] > 0)
-        {
+        if ([extensionFragment length] > 0) {
             [headers addObject:[HandshakeHeader headerWithValue:extensionFragment forKey:@"Sec-WebSocket-Extensions"]];
         }
     }
@@ -744,8 +737,7 @@ enum {
 
 }
 
-- (void) onSocket:(AsyncSocket*) aSocket didConnectToHost:(NSString*) aHost port:(UInt16) aPort 
-{
+- (void) onSocket:(AsyncSocket*) aSocket didConnectToHost:(NSString*) aHost port:(UInt16) aPort {
     //start TLS if this is a secure websocket
     if (self.config.isSecure)
     {
@@ -763,8 +755,7 @@ enum {
     
     //continue with handshake
     NSString *requestPath = self.config.url.path;
-    if (self.config.url.query) 
-    {
+    if (self.config.url.query) {
         requestPath = [requestPath stringByAppendingFormat:@"?%@", self.config.url.query];
     }
     NSString* getRequest = [self getRequest: requestPath];

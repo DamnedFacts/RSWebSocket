@@ -124,6 +124,7 @@ typedef struct {
  **/
 - (void) didOpen;
 
+
 /**
  * Called when the web socket closes. aError will be nil if it closes cleanly.
  **/
@@ -201,6 +202,9 @@ typedef struct {
  * Connect the websocket and prepare it for reading and writing.
  **/
 - (void) open;
+
+/* Returns YES if the socket and streams are open, connected, and ready for reading and writing. */
+- (BOOL) isConnectionOpen;
 
 ///**
 // * Finish all reads/writes and close the websocket. Sends a status of WebSocketCloseStatusNormal and no message.

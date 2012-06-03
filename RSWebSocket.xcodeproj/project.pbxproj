@@ -29,26 +29,27 @@
 		9B19FCDD14D61F2000D8F2CB /* RSWebSocketMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FCD714D61F2000D8F2CB /* RSWebSocketMessage.m */; };
 		9B73AC7A153E4DD40070CF67 /* RSWebSocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B19FC7014D615E100D8F2CB /* RSWebSocket.framework */; };
 		9B86596814F7FD9700DAEF16 /* RSWebSocketAutobahnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B86596714F7FD9700DAEF16 /* RSWebSocketAutobahnTests.m */; };
+		9BB625231559CD74002CF2D4 /* RSWebSocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B19FC7014D615E100D8F2CB /* RSWebSocket.framework */; };
 		9BBE945814E08CCB006A5D21 /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BBE945614E08CCB006A5D21 /* AsyncSocket.h */; };
 		9BBE945914E08CCB006A5D21 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE945714E08CCB006A5D21 /* AsyncSocket.m */; };
 		9BC6FF01150FAA0F004F211B /* DebugSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6FF00150FAA0F004F211B /* DebugSupport.m */; };
 		9BC6FF04150FAA25004F211B /* DebugSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BC6FF03150FAA25004F211B /* DebugSupport.h */; };
+		9BDC0BE5156C167700DB4232 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC0BD9156C167700DB4232 /* AppDelegate.m */; };
+		9BDC0BE7156C167700DB4232 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9BDC0BDC156C167700DB4232 /* Credits.rtf */; };
+		9BDC0BE8156C167700DB4232 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BDC0BDE156C167700DB4232 /* InfoPlist.strings */; };
+		9BDC0BE9156C167700DB4232 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BDC0BE0156C167700DB4232 /* MainMenu.xib */; };
+		9BDC0BEA156C167700DB4232 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC0BE2156C167700DB4232 /* main.m */; };
+		9BDC0BEB156C167700DB4232 /* octest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC0BE4156C167700DB4232 /* octest.m */; };
+		9BDC0BF8156C168200DB4232 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC0BEE156C168200DB4232 /* AppDelegate.m */; };
+		9BDC0BFA156C168200DB4232 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9BDC0BF1156C168200DB4232 /* Credits.rtf */; };
+		9BDC0BFB156C168200DB4232 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BDC0BF3156C168200DB4232 /* InfoPlist.strings */; };
+		9BDC0BFC156C168200DB4232 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BDC0BF5156C168200DB4232 /* MainMenu.xib */; };
+		9BDC0BFD156C168200DB4232 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC0BF7156C168200DB4232 /* main.m */; };
 		9BFC9C7B153E02C00025E6A6 /* RSWebSocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B19FC7014D615E100D8F2CB /* RSWebSocket.framework */; };
 		9BFC9C7D153E4AA20025E6A6 /* RSWebSocketTests.octest in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B19FC8814D615E100D8F2CB /* RSWebSocketTests.octest */; };
 		9BFD3A971537793000F9A1F2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B19FC7314D615E100D8F2CB /* Cocoa.framework */; };
-		9BFD3A9D1537793000F9A1F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD3A9B1537793000F9A1F2 /* InfoPlist.strings */; };
-		9BFD3A9F1537793000F9A1F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD3A9E1537793000F9A1F2 /* main.m */; };
-		9BFD3AA31537793000F9A1F2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD3AA11537793000F9A1F2 /* Credits.rtf */; };
-		9BFD3AA61537793000F9A1F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD3AA51537793000F9A1F2 /* AppDelegate.m */; };
-		9BFD3AA91537793000F9A1F2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD3AA71537793000F9A1F2 /* MainMenu.xib */; };
 		9BFD3AAF153779B300F9A1F2 /* RSWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B19FC7014D615E100D8F2CB /* RSWebSocket.framework */; };
 		9BFD3AB61537D5D100F9A1F2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B19FC7314D615E100D8F2CB /* Cocoa.framework */; };
-		9BFD3ABC1537D5D200F9A1F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD3ABA1537D5D200F9A1F2 /* InfoPlist.strings */; };
-		9BFD3ABE1537D5D200F9A1F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD3ABD1537D5D200F9A1F2 /* main.m */; };
-		9BFD3AC21537D5D200F9A1F2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD3AC01537D5D200F9A1F2 /* Credits.rtf */; };
-		9BFD3AC51537D5D200F9A1F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD3AC41537D5D200F9A1F2 /* AppDelegate.m */; };
-		9BFD3AC81537D5D200F9A1F2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD3AC61537D5D200F9A1F2 /* MainMenu.xib */; };
-		9BFD3ACE1537D61100F9A1F2 /* octest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD3ACD1537D61100F9A1F2 /* octest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		9BB625211559CD6E002CF2D4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9BB625231559CD74002CF2D4 /* RSWebSocket.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BFC9C7A153E02BB0025E6A6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,26 +154,26 @@
 		9BBE945714E08CCB006A5D21 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = CocoaAsyncSocket/RunLoop/AsyncSocket.m; sourceTree = "<group>"; };
 		9BC6FF00150FAA0F004F211B /* DebugSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugSupport.m; sourceTree = "<group>"; };
 		9BC6FF03150FAA25004F211B /* DebugSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugSupport.h; sourceTree = "<group>"; };
+		9BDC0BD8156C167700DB4232 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9BDC0BD9156C167700DB4232 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9BDC0BDA156C167700DB4232 /* AutobahnTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AutobahnTests-Info.plist"; sourceTree = "<group>"; };
+		9BDC0BDB156C167700DB4232 /* AutobahnTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AutobahnTests-Prefix.pch"; sourceTree = "<group>"; };
+		9BDC0BDD156C167700DB4232 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		9BDC0BDF156C167700DB4232 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BDC0BE1156C167700DB4232 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9BDC0BE2156C167700DB4232 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9BDC0BE3156C167700DB4232 /* octest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = octest.h; sourceTree = "<group>"; };
+		9BDC0BE4156C167700DB4232 /* octest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = octest.m; sourceTree = "<group>"; };
+		9BDC0BED156C168200DB4232 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9BDC0BEE156C168200DB4232 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9BDC0BEF156C168200DB4232 /* Echo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Echo-Info.plist"; sourceTree = "<group>"; };
+		9BDC0BF0156C168200DB4232 /* Echo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Echo-Prefix.pch"; sourceTree = "<group>"; };
+		9BDC0BF2156C168200DB4232 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		9BDC0BF4156C168200DB4232 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BDC0BF6156C168200DB4232 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9BDC0BF7156C168200DB4232 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9BFD3A951537793000F9A1F2 /* Echo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Echo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BFD3A9A1537793000F9A1F2 /* Echo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Echo-Info.plist"; sourceTree = "<group>"; };
-		9BFD3A9C1537793000F9A1F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9BFD3A9E1537793000F9A1F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9BFD3AA01537793000F9A1F2 /* Echo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Echo-Prefix.pch"; sourceTree = "<group>"; };
-		9BFD3AA21537793000F9A1F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		9BFD3AA41537793000F9A1F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9BFD3AA51537793000F9A1F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9BFD3AA81537793000F9A1F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9BFD3AB41537D5D100F9A1F2 /* AutobahnTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutobahnTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BFD3AB91537D5D200F9A1F2 /* AutobahnTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AutobahnTests-Info.plist"; sourceTree = "<group>"; };
-		9BFD3ABB1537D5D200F9A1F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9BFD3ABD1537D5D200F9A1F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9BFD3ABF1537D5D200F9A1F2 /* AutobahnTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutobahnTests-Prefix.pch"; sourceTree = "<group>"; };
-		9BFD3AC11537D5D200F9A1F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		9BFD3AC31537D5D200F9A1F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9BFD3AC41537D5D200F9A1F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9BFD3AC71537D5D200F9A1F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		9BFD3ACC1537D61100F9A1F2 /* octest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = octest.h; sourceTree = "<group>"; };
-		9BFD3ACD1537D61100F9A1F2 /* octest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = octest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,7 +220,7 @@
 			children = (
 				9B19FC7914D615E100D8F2CB /* RSWebSocket */,
 				9B19FC8F14D615E100D8F2CB /* RSWebSocketTests */,
-				9BFD3A8F1536196B00F9A1F2 /* Sample Apps */,
+				9BFD3A8F1536196B00F9A1F2 /* Examples */,
 				9B19FC7214D615E100D8F2CB /* Frameworks */,
 				9B19FC7114D615E100D8F2CB /* Products */,
 			);
@@ -319,61 +330,47 @@
 			name = Server;
 			sourceTree = "<group>";
 		};
-		9BFD3A8F1536196B00F9A1F2 /* Sample Apps */ = {
+		9BDC0BD7156C167700DB4232 /* AutobahnTests */ = {
 			isa = PBXGroup;
 			children = (
-				9BFD3AB71537D5D100F9A1F2 /* AutobahnTests */,
-				9BFD3A981537793000F9A1F2 /* Echo */,
+				9BDC0BD8156C167700DB4232 /* AppDelegate.h */,
+				9BDC0BD9156C167700DB4232 /* AppDelegate.m */,
+				9BDC0BDA156C167700DB4232 /* AutobahnTests-Info.plist */,
+				9BDC0BDB156C167700DB4232 /* AutobahnTests-Prefix.pch */,
+				9BDC0BDC156C167700DB4232 /* Credits.rtf */,
+				9BDC0BDE156C167700DB4232 /* InfoPlist.strings */,
+				9BDC0BE0156C167700DB4232 /* MainMenu.xib */,
+				9BDC0BE2156C167700DB4232 /* main.m */,
+				9BDC0BE3156C167700DB4232 /* octest.h */,
+				9BDC0BE4156C167700DB4232 /* octest.m */,
 			);
-			name = "Sample Apps";
+			name = AutobahnTests;
+			path = Examples/AutobahnTests;
 			sourceTree = "<group>";
 		};
-		9BFD3A981537793000F9A1F2 /* Echo */ = {
+		9BDC0BEC156C168200DB4232 /* Echo */ = {
 			isa = PBXGroup;
 			children = (
-				9BFD3AA41537793000F9A1F2 /* AppDelegate.h */,
-				9BFD3AA51537793000F9A1F2 /* AppDelegate.m */,
-				9BFD3AA71537793000F9A1F2 /* MainMenu.xib */,
-				9BFD3A991537793000F9A1F2 /* Supporting Files */,
+				9BDC0BED156C168200DB4232 /* AppDelegate.h */,
+				9BDC0BEE156C168200DB4232 /* AppDelegate.m */,
+				9BDC0BEF156C168200DB4232 /* Echo-Info.plist */,
+				9BDC0BF0156C168200DB4232 /* Echo-Prefix.pch */,
+				9BDC0BF1156C168200DB4232 /* Credits.rtf */,
+				9BDC0BF3156C168200DB4232 /* InfoPlist.strings */,
+				9BDC0BF5156C168200DB4232 /* MainMenu.xib */,
+				9BDC0BF7156C168200DB4232 /* main.m */,
 			);
-			path = Echo;
+			name = Echo;
+			path = Examples/Echo;
 			sourceTree = "<group>";
 		};
-		9BFD3A991537793000F9A1F2 /* Supporting Files */ = {
+		9BFD3A8F1536196B00F9A1F2 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
-				9BFD3A9A1537793000F9A1F2 /* Echo-Info.plist */,
-				9BFD3A9B1537793000F9A1F2 /* InfoPlist.strings */,
-				9BFD3A9E1537793000F9A1F2 /* main.m */,
-				9BFD3AA01537793000F9A1F2 /* Echo-Prefix.pch */,
-				9BFD3AA11537793000F9A1F2 /* Credits.rtf */,
+				9BDC0BEC156C168200DB4232 /* Echo */,
+				9BDC0BD7156C167700DB4232 /* AutobahnTests */,
 			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9BFD3AB71537D5D100F9A1F2 /* AutobahnTests */ = {
-			isa = PBXGroup;
-			children = (
-				9BFD3AC31537D5D200F9A1F2 /* AppDelegate.h */,
-				9BFD3AC41537D5D200F9A1F2 /* AppDelegate.m */,
-				9BFD3AC61537D5D200F9A1F2 /* MainMenu.xib */,
-				9BFD3AB81537D5D200F9A1F2 /* Supporting Files */,
-				9BFD3ACC1537D61100F9A1F2 /* octest.h */,
-				9BFD3ACD1537D61100F9A1F2 /* octest.m */,
-			);
-			path = AutobahnTests;
-			sourceTree = "<group>";
-		};
-		9BFD3AB81537D5D200F9A1F2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9BFD3AB91537D5D200F9A1F2 /* AutobahnTests-Info.plist */,
-				9BFD3ABA1537D5D200F9A1F2 /* InfoPlist.strings */,
-				9BFD3ABD1537D5D200F9A1F2 /* main.m */,
-				9BFD3ABF1537D5D200F9A1F2 /* AutobahnTests-Prefix.pch */,
-				9BFD3AC01537D5D200F9A1F2 /* Credits.rtf */,
-			);
-			name = "Supporting Files";
+			name = Examples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +439,7 @@
 				9BFD3A911537793000F9A1F2 /* Sources */,
 				9BFD3A921537793000F9A1F2 /* Frameworks */,
 				9BFD3A931537793000F9A1F2 /* Resources */,
+				9BB625211559CD6E002CF2D4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -522,9 +520,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFD3A9D1537793000F9A1F2 /* InfoPlist.strings in Resources */,
-				9BFD3AA31537793000F9A1F2 /* Credits.rtf in Resources */,
-				9BFD3AA91537793000F9A1F2 /* MainMenu.xib in Resources */,
+				9BDC0BFA156C168200DB4232 /* Credits.rtf in Resources */,
+				9BDC0BFB156C168200DB4232 /* InfoPlist.strings in Resources */,
+				9BDC0BFC156C168200DB4232 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,9 +530,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFD3ABC1537D5D200F9A1F2 /* InfoPlist.strings in Resources */,
-				9BFD3AC21537D5D200F9A1F2 /* Credits.rtf in Resources */,
-				9BFD3AC81537D5D200F9A1F2 /* MainMenu.xib in Resources */,
+				9BDC0BE7156C167700DB4232 /* Credits.rtf in Resources */,
+				9BDC0BE8156C167700DB4232 /* InfoPlist.strings in Resources */,
+				9BDC0BE9156C167700DB4232 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,8 +584,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFD3A9F1537793000F9A1F2 /* main.m in Sources */,
-				9BFD3AA61537793000F9A1F2 /* AppDelegate.m in Sources */,
+				9BDC0BF8156C168200DB4232 /* AppDelegate.m in Sources */,
+				9BDC0BFD156C168200DB4232 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,9 +593,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFD3ABE1537D5D200F9A1F2 /* main.m in Sources */,
-				9BFD3AC51537D5D200F9A1F2 /* AppDelegate.m in Sources */,
-				9BFD3ACE1537D61100F9A1F2 /* octest.m in Sources */,
+				9BDC0BE5156C167700DB4232 /* AppDelegate.m in Sources */,
+				9BDC0BEA156C167700DB4232 /* main.m in Sources */,
+				9BDC0BEB156C167700DB4232 /* octest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,50 +636,50 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		9BFD3A9B1537793000F9A1F2 /* InfoPlist.strings */ = {
+		9BDC0BDC156C167700DB4232 /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9BFD3A9C1537793000F9A1F2 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		9BFD3AA11537793000F9A1F2 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9BFD3AA21537793000F9A1F2 /* en */,
+				9BDC0BDD156C167700DB4232 /* en */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		9BFD3AA71537793000F9A1F2 /* MainMenu.xib */ = {
+		9BDC0BDE156C167700DB4232 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9BFD3AA81537793000F9A1F2 /* en */,
+				9BDC0BDF156C167700DB4232 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9BDC0BE0156C167700DB4232 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BDC0BE1156C167700DB4232 /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
-		9BFD3ABA1537D5D200F9A1F2 /* InfoPlist.strings */ = {
+		9BDC0BF1156C168200DB4232 /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9BFD3ABB1537D5D200F9A1F2 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		9BFD3AC01537D5D200F9A1F2 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9BFD3AC11537D5D200F9A1F2 /* en */,
+				9BDC0BF2156C168200DB4232 /* en */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		9BFD3AC61537D5D200F9A1F2 /* MainMenu.xib */ = {
+		9BDC0BF3156C168200DB4232 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9BFD3AC71537D5D200F9A1F2 /* en */,
+				9BDC0BF4156C168200DB4232 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9BDC0BF5156C168200DB4232 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BDC0BF6156C168200DB4232 /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -810,9 +808,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Echo/Echo-Prefix.pch";
+				GCC_PREFIX_HEADER = "Examples/Echo/Echo-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "Echo/Echo-Info.plist";
+				INFOPLIST_FILE = "Examples/Echo/Echo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -822,9 +820,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Echo/Echo-Prefix.pch";
+				GCC_PREFIX_HEADER = "Examples/Echo/Echo-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "Echo/Echo-Info.plist";
+				INFOPLIST_FILE = "Examples/Echo/Echo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -835,9 +833,9 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AutobahnTests/AutobahnTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "Examples/AutobahnTests/AutobahnTests-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "AutobahnTests/AutobahnTests-Info.plist";
+				INFOPLIST_FILE = "Examples/AutobahnTests/AutobahnTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -849,9 +847,9 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AutobahnTests/AutobahnTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "Examples/AutobahnTests/AutobahnTests-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "AutobahnTests/AutobahnTests-Info.plist";
+				INFOPLIST_FILE = "Examples/AutobahnTests/AutobahnTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
