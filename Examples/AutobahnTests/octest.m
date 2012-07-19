@@ -1,16 +1,6 @@
-//
-//  octest.m
-//  RSWebSocket
-//
-//  Created by Richard Sarkis on 4/12/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
-
-
-
 //*$Id: SenTestTool.m,v 1.11 2005/04/02 03:18:24 phink Exp $*/
+// Copyright (c) 2012 Richard Emile Sarkis. All rights reserved.
 // Copyright (c) 1997-2003 Sente SA.  All rights reserved.
-//
 // Copyright (c) 1997-2005, Sen:te (Sente SA).  All rights reserved.
 //
 // Use of this source code is governed by the following license:

@@ -1,8 +1,35 @@
-This is the "fuzzer" used for fuzz testing against the Autobahn suite. In the case of RSWebSocket, we are using the fuzzer in a server context.
+//
+//  README
+//  AutobahnTesting
+//
+//  Copyright 2012 Richard Emile Sarkis
+//
+//  Licensed under the Apache License, Version 2.0 (the "License"); you may not
+//  use this file except in compliance with the License. You may obtain a copy of
+//  the License at
+// 
+//  http://www.apache.org/licenses/LICENSE-2.0
+// 
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+//  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+//  License for the specific language governing permissions and limitations under
+//  the License.
+//
+
+This is the "fuzzer" used for fuzz testing against the Autobahn suite. 
+In the case of RSWebSocket, we are using the fuzzer in a server context.
 
 To start the fuzzer server:
 	$ python fuzzing_server.py
 
-This fuzzer server is a modification of the one that comes with Autobahn to work specifically with RSWebSocket. It will run our RSWebClient unit tester through the entire Autobahn testsuite, checking the expected results of each test along the way.
+This fuzzer server is a modification of the one that comes with Autobahn (http://autobahn.ws/) 
+to work specifically with RSWebSocket. It will require that you have the Autobahn Websocket 
+Python modules installed (version 0.5.1, currently). It will run our RSWebSocket unit tester through
+the entire Autobahn testsuite, checking the expected results of each test along the way.
 
-Currently, the fuzzer client is unmodified, and unused.
+To run RSWebSocket unit tests against the fuzzer:
+With the RSWebSocket XCode project open, and with the above fuzzing_server.py running, you can 
+then run the unit tests by invoking Command-U or the Product->Test menu item. You can then type 
+Command-7 to go to the Log Navigator to see each unit test execute against the fuzzer.
+

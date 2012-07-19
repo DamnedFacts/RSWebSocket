@@ -2,16 +2,8 @@
 //  RSWebSocket.h
 //  RSWebSocket
 //
-//  Created by Richard Sarkis on 1/29/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
-
-//
-//  WebSocket.h
-//  UnittWebSocketClient
-//
-//  Created by Josh Morris on 9/26/11.
-//  Copyright 2011 UnitT Software. All rights reserved.
+//  Copyright 2012 Richard Emile Sarkis
+//  Copyright 2011 UnitT Software
 //
 //  Licensed under the Apache License, Version 2.0 (the "License"); you may not
 //  use this file except in compliance with the License. You may obtain a copy of
@@ -29,7 +21,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import "AsyncSocket.h"
+#import <RSWebSocket/AsyncSocket.h>
 #import <Security/Security.h>
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h>

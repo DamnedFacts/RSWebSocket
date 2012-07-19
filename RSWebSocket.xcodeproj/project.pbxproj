@@ -15,25 +15,26 @@
 		9B19FC8E14D615E100D8F2CB /* RSWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B19FC7014D615E100D8F2CB /* RSWebSocket.framework */; };
 		9B19FC9414D615E100D8F2CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B19FC9214D615E100D8F2CB /* InfoPlist.strings */; };
 		9B19FC9714D615E100D8F2CB /* RSWebSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FC9614D615E100D8F2CB /* RSWebSocketTests.m */; };
-		9B19FCB414D6168C00D8F2CB /* HandshakeHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCA614D6168B00D8F2CB /* HandshakeHeader.h */; };
+		9B19FCB414D6168C00D8F2CB /* HandshakeHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCA614D6168B00D8F2CB /* HandshakeHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B19FCB514D6168C00D8F2CB /* HandshakeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FCA714D6168B00D8F2CB /* HandshakeHeader.m */; };
-		9B19FCB614D6168C00D8F2CB /* MutableQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCA814D6168B00D8F2CB /* MutableQueue.h */; };
+		9B19FCB614D6168C00D8F2CB /* MutableQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCA814D6168B00D8F2CB /* MutableQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B19FCB714D6168C00D8F2CB /* MutableQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FCA914D6168B00D8F2CB /* MutableQueue.m */; };
-		9B19FCB814D6168C00D8F2CB /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCAA14D6168B00D8F2CB /* NSData+Base64.h */; };
+		9B19FCB814D6168C00D8F2CB /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCAA14D6168B00D8F2CB /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B19FCB914D6168C00D8F2CB /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FCAB14D6168C00D8F2CB /* NSData+Base64.m */; };
-		9B19FCD814D61F2000D8F2CB /* RSWebSocketConnectConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCD214D61F2000D8F2CB /* RSWebSocketConnectConfig.h */; };
+		9B19FCD814D61F2000D8F2CB /* RSWebSocketConnectConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCD214D61F2000D8F2CB /* RSWebSocketConnectConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B19FCD914D61F2000D8F2CB /* RSWebSocketConnectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FCD314D61F2000D8F2CB /* RSWebSocketConnectConfig.m */; };
-		9B19FCDA14D61F2000D8F2CB /* RSWebSocketFragment.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCD414D61F2000D8F2CB /* RSWebSocketFragment.h */; };
+		9B19FCDA14D61F2000D8F2CB /* RSWebSocketFragment.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCD414D61F2000D8F2CB /* RSWebSocketFragment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B19FCDB14D61F2000D8F2CB /* RSWebSocketFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FCD514D61F2000D8F2CB /* RSWebSocketFragment.m */; };
-		9B19FCDC14D61F2000D8F2CB /* RSWebSocketMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCD614D61F2000D8F2CB /* RSWebSocketMessage.h */; };
+		9B19FCDC14D61F2000D8F2CB /* RSWebSocketMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FCD614D61F2000D8F2CB /* RSWebSocketMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B19FCDD14D61F2000D8F2CB /* RSWebSocketMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FCD714D61F2000D8F2CB /* RSWebSocketMessage.m */; };
 		9B73AC7A153E4DD40070CF67 /* RSWebSocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B19FC7014D615E100D8F2CB /* RSWebSocket.framework */; };
 		9B86596814F7FD9700DAEF16 /* RSWebSocketAutobahnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B86596714F7FD9700DAEF16 /* RSWebSocketAutobahnTests.m */; };
+		9BA0D36E158EACCF000FE9D0 /* RSWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FC8014D615E100D8F2CB /* RSWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9BB625231559CD74002CF2D4 /* RSWebSocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B19FC7014D615E100D8F2CB /* RSWebSocket.framework */; };
-		9BBE945814E08CCB006A5D21 /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BBE945614E08CCB006A5D21 /* AsyncSocket.h */; };
+		9BBE945814E08CCB006A5D21 /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BBE945614E08CCB006A5D21 /* AsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9BBE945914E08CCB006A5D21 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBE945714E08CCB006A5D21 /* AsyncSocket.m */; };
 		9BC6FF01150FAA0F004F211B /* DebugSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6FF00150FAA0F004F211B /* DebugSupport.m */; };
-		9BC6FF04150FAA25004F211B /* DebugSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BC6FF03150FAA25004F211B /* DebugSupport.h */; };
+		9BC6FF04150FAA25004F211B /* DebugSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BC6FF03150FAA25004F211B /* DebugSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9BDC0BE5156C167700DB4232 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDC0BD9156C167700DB4232 /* AppDelegate.m */; };
 		9BDC0BE7156C167700DB4232 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9BDC0BDC156C167700DB4232 /* Credits.rtf */; };
 		9BDC0BE8156C167700DB4232 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BDC0BDE156C167700DB4232 /* InfoPlist.strings */; };
@@ -120,6 +121,319 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B0BE82715B8B0330080ADC7 /* echo_server.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = echo_server.py; sourceTree = "<group>"; };
+		9B0BE82A15B8B0330080ADC7 /* test_autobahn.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_autobahn.py; sourceTree = "<group>"; };
+		9B0BE82B15B8B0330080ADC7 /* test_browser.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = test_browser.html; sourceTree = "<group>"; };
+		9B0BE82E15B8B0330080ADC7 /* fuzzing_server.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = fuzzing_server.py; sourceTree = "<group>"; };
+		9B0BE82F15B8B0330080ADC7 /* fuzzing_server_spec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fuzzing_server_spec.json; sourceTree = "<group>"; };
+		9B0BE83015B8B0330080ADC7 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		9B0BE83115B8B0330080ADC7 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		9B0BE87F15B8B0330080ADC7 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		9B0BE88015B8B0330080ADC7 /* rswebsocket_case_10_1_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_10_1_1.html; sourceTree = "<group>"; };
+		9B0BE88115B8B0330080ADC7 /* rswebsocket_case_1_1_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_1_1.html; sourceTree = "<group>"; };
+		9B0BE88215B8B0330080ADC7 /* rswebsocket_case_1_1_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_1_2.html; sourceTree = "<group>"; };
+		9B0BE88315B8B0330080ADC7 /* rswebsocket_case_1_1_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_1_3.html; sourceTree = "<group>"; };
+		9B0BE88415B8B0330080ADC7 /* rswebsocket_case_1_1_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_1_4.html; sourceTree = "<group>"; };
+		9B0BE88515B8B0330080ADC7 /* rswebsocket_case_1_1_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_1_5.html; sourceTree = "<group>"; };
+		9B0BE88615B8B0330080ADC7 /* rswebsocket_case_1_1_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_1_6.html; sourceTree = "<group>"; };
+		9B0BE88715B8B0330080ADC7 /* rswebsocket_case_1_1_7.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_1_7.html; sourceTree = "<group>"; };
+		9B0BE88815B8B0330080ADC7 /* rswebsocket_case_1_1_8.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_1_8.html; sourceTree = "<group>"; };
+		9B0BE88915B8B0330080ADC7 /* rswebsocket_case_1_2_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_2_1.html; sourceTree = "<group>"; };
+		9B0BE88A15B8B0330080ADC7 /* rswebsocket_case_1_2_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_2_2.html; sourceTree = "<group>"; };
+		9B0BE88B15B8B0330080ADC7 /* rswebsocket_case_1_2_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_2_3.html; sourceTree = "<group>"; };
+		9B0BE88C15B8B0330080ADC7 /* rswebsocket_case_1_2_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_2_4.html; sourceTree = "<group>"; };
+		9B0BE88D15B8B0330080ADC7 /* rswebsocket_case_1_2_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_2_5.html; sourceTree = "<group>"; };
+		9B0BE88E15B8B0330080ADC7 /* rswebsocket_case_1_2_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_2_6.html; sourceTree = "<group>"; };
+		9B0BE88F15B8B0330080ADC7 /* rswebsocket_case_1_2_7.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_2_7.html; sourceTree = "<group>"; };
+		9B0BE89015B8B0330080ADC7 /* rswebsocket_case_1_2_8.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_1_2_8.html; sourceTree = "<group>"; };
+		9B0BE89115B8B0330080ADC7 /* rswebsocket_case_2_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_2_1.html; sourceTree = "<group>"; };
+		9B0BE89215B8B0330080ADC7 /* rswebsocket_case_2_10.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_2_10.html; sourceTree = "<group>"; };
+		9B0BE89315B8B0330080ADC7 /* rswebsocket_case_2_11.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_2_11.html; sourceTree = "<group>"; };
+		9B0BE89415B8B0330080ADC7 /* rswebsocket_case_2_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_2_2.html; sourceTree = "<group>"; };
+		9B0BE89515B8B0330080ADC7 /* rswebsocket_case_2_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_2_3.html; sourceTree = "<group>"; };
+		9B0BE89615B8B0330080ADC7 /* rswebsocket_case_2_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_2_4.html; sourceTree = "<group>"; };
+		9B0BE89715B8B0330080ADC7 /* rswebsocket_case_2_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_2_5.html; sourceTree = "<group>"; };
+		9B0BE89815B8B0330080ADC7 /* rswebsocket_case_2_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_2_6.html; sourceTree = "<group>"; };
+		9B0BE89915B8B0330080ADC7 /* rswebsocket_case_2_7.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_2_7.html; sourceTree = "<group>"; };
+		9B0BE89A15B8B0330080ADC7 /* rswebsocket_case_2_8.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_2_8.html; sourceTree = "<group>"; };
+		9B0BE89B15B8B0330080ADC7 /* rswebsocket_case_2_9.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_2_9.html; sourceTree = "<group>"; };
+		9B0BE89C15B8B0330080ADC7 /* rswebsocket_case_3_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_3_1.html; sourceTree = "<group>"; };
+		9B0BE89D15B8B0330080ADC7 /* rswebsocket_case_3_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_3_2.html; sourceTree = "<group>"; };
+		9B0BE89E15B8B0330080ADC7 /* rswebsocket_case_3_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_3_3.html; sourceTree = "<group>"; };
+		9B0BE89F15B8B0330080ADC7 /* rswebsocket_case_3_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_3_4.html; sourceTree = "<group>"; };
+		9B0BE8A015B8B0330080ADC7 /* rswebsocket_case_3_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_3_5.html; sourceTree = "<group>"; };
+		9B0BE8A115B8B0330080ADC7 /* rswebsocket_case_3_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_3_6.html; sourceTree = "<group>"; };
+		9B0BE8A215B8B0330080ADC7 /* rswebsocket_case_3_7.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_3_7.html; sourceTree = "<group>"; };
+		9B0BE8A315B8B0330080ADC7 /* rswebsocket_case_4_1_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_4_1_1.html; sourceTree = "<group>"; };
+		9B0BE8A415B8B0330080ADC7 /* rswebsocket_case_4_1_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_4_1_2.html; sourceTree = "<group>"; };
+		9B0BE8A515B8B0330080ADC7 /* rswebsocket_case_4_1_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_4_1_3.html; sourceTree = "<group>"; };
+		9B0BE8A615B8B0330080ADC7 /* rswebsocket_case_4_1_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_4_1_4.html; sourceTree = "<group>"; };
+		9B0BE8A715B8B0330080ADC7 /* rswebsocket_case_4_1_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_4_1_5.html; sourceTree = "<group>"; };
+		9B0BE8A815B8B0330080ADC7 /* rswebsocket_case_4_2_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_4_2_1.html; sourceTree = "<group>"; };
+		9B0BE8A915B8B0330080ADC7 /* rswebsocket_case_4_2_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_4_2_2.html; sourceTree = "<group>"; };
+		9B0BE8AA15B8B0330080ADC7 /* rswebsocket_case_4_2_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_4_2_3.html; sourceTree = "<group>"; };
+		9B0BE8AB15B8B0330080ADC7 /* rswebsocket_case_4_2_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_4_2_4.html; sourceTree = "<group>"; };
+		9B0BE8AC15B8B0330080ADC7 /* rswebsocket_case_4_2_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_4_2_5.html; sourceTree = "<group>"; };
+		9B0BE8AD15B8B0330080ADC7 /* rswebsocket_case_5_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_1.html; sourceTree = "<group>"; };
+		9B0BE8AE15B8B0330080ADC7 /* rswebsocket_case_5_10.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_10.html; sourceTree = "<group>"; };
+		9B0BE8AF15B8B0330080ADC7 /* rswebsocket_case_5_11.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_11.html; sourceTree = "<group>"; };
+		9B0BE8B015B8B0330080ADC7 /* rswebsocket_case_5_12.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_12.html; sourceTree = "<group>"; };
+		9B0BE8B115B8B0330080ADC7 /* rswebsocket_case_5_13.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_13.html; sourceTree = "<group>"; };
+		9B0BE8B215B8B0330080ADC7 /* rswebsocket_case_5_14.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_14.html; sourceTree = "<group>"; };
+		9B0BE8B315B8B0330080ADC7 /* rswebsocket_case_5_15.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_15.html; sourceTree = "<group>"; };
+		9B0BE8B415B8B0330080ADC7 /* rswebsocket_case_5_16.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_16.html; sourceTree = "<group>"; };
+		9B0BE8B515B8B0330080ADC7 /* rswebsocket_case_5_17.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_17.html; sourceTree = "<group>"; };
+		9B0BE8B615B8B0330080ADC7 /* rswebsocket_case_5_18.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_18.html; sourceTree = "<group>"; };
+		9B0BE8B715B8B0330080ADC7 /* rswebsocket_case_5_19.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_19.html; sourceTree = "<group>"; };
+		9B0BE8B815B8B0330080ADC7 /* rswebsocket_case_5_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_2.html; sourceTree = "<group>"; };
+		9B0BE8B915B8B0330080ADC7 /* rswebsocket_case_5_20.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_20.html; sourceTree = "<group>"; };
+		9B0BE8BA15B8B0330080ADC7 /* rswebsocket_case_5_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_3.html; sourceTree = "<group>"; };
+		9B0BE8BB15B8B0330080ADC7 /* rswebsocket_case_5_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_4.html; sourceTree = "<group>"; };
+		9B0BE8BC15B8B0330080ADC7 /* rswebsocket_case_5_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_5.html; sourceTree = "<group>"; };
+		9B0BE8BD15B8B0330080ADC7 /* rswebsocket_case_5_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_6.html; sourceTree = "<group>"; };
+		9B0BE8BE15B8B0330080ADC7 /* rswebsocket_case_5_7.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_7.html; sourceTree = "<group>"; };
+		9B0BE8BF15B8B0330080ADC7 /* rswebsocket_case_5_8.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_8.html; sourceTree = "<group>"; };
+		9B0BE8C015B8B0330080ADC7 /* rswebsocket_case_5_9.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_5_9.html; sourceTree = "<group>"; };
+		9B0BE8C115B8B0330080ADC7 /* rswebsocket_case_6_10_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_10_1.html; sourceTree = "<group>"; };
+		9B0BE8C215B8B0330080ADC7 /* rswebsocket_case_6_10_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_10_2.html; sourceTree = "<group>"; };
+		9B0BE8C315B8B0330080ADC7 /* rswebsocket_case_6_10_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_10_3.html; sourceTree = "<group>"; };
+		9B0BE8C415B8B0330080ADC7 /* rswebsocket_case_6_11_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_11_1.html; sourceTree = "<group>"; };
+		9B0BE8C515B8B0330080ADC7 /* rswebsocket_case_6_11_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_11_2.html; sourceTree = "<group>"; };
+		9B0BE8C615B8B0330080ADC7 /* rswebsocket_case_6_11_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_11_3.html; sourceTree = "<group>"; };
+		9B0BE8C715B8B0330080ADC7 /* rswebsocket_case_6_11_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_11_4.html; sourceTree = "<group>"; };
+		9B0BE8C815B8B0330080ADC7 /* rswebsocket_case_6_11_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_11_5.html; sourceTree = "<group>"; };
+		9B0BE8C915B8B0330080ADC7 /* rswebsocket_case_6_12_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_12_1.html; sourceTree = "<group>"; };
+		9B0BE8CA15B8B0330080ADC7 /* rswebsocket_case_6_12_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_12_2.html; sourceTree = "<group>"; };
+		9B0BE8CB15B8B0330080ADC7 /* rswebsocket_case_6_12_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_12_3.html; sourceTree = "<group>"; };
+		9B0BE8CC15B8B0330080ADC7 /* rswebsocket_case_6_12_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_12_4.html; sourceTree = "<group>"; };
+		9B0BE8CD15B8B0330080ADC7 /* rswebsocket_case_6_12_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_12_5.html; sourceTree = "<group>"; };
+		9B0BE8CE15B8B0330080ADC7 /* rswebsocket_case_6_12_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_12_6.html; sourceTree = "<group>"; };
+		9B0BE8CF15B8B0330080ADC7 /* rswebsocket_case_6_12_7.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_12_7.html; sourceTree = "<group>"; };
+		9B0BE8D015B8B0330080ADC7 /* rswebsocket_case_6_12_8.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_12_8.html; sourceTree = "<group>"; };
+		9B0BE8D115B8B0330080ADC7 /* rswebsocket_case_6_13_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_13_1.html; sourceTree = "<group>"; };
+		9B0BE8D215B8B0330080ADC7 /* rswebsocket_case_6_13_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_13_2.html; sourceTree = "<group>"; };
+		9B0BE8D315B8B0330080ADC7 /* rswebsocket_case_6_13_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_13_3.html; sourceTree = "<group>"; };
+		9B0BE8D415B8B0330080ADC7 /* rswebsocket_case_6_13_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_13_4.html; sourceTree = "<group>"; };
+		9B0BE8D515B8B0330080ADC7 /* rswebsocket_case_6_13_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_13_5.html; sourceTree = "<group>"; };
+		9B0BE8D615B8B0330080ADC7 /* rswebsocket_case_6_14_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_14_1.html; sourceTree = "<group>"; };
+		9B0BE8D715B8B0330080ADC7 /* rswebsocket_case_6_14_10.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_14_10.html; sourceTree = "<group>"; };
+		9B0BE8D815B8B0330080ADC7 /* rswebsocket_case_6_14_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_14_2.html; sourceTree = "<group>"; };
+		9B0BE8D915B8B0330080ADC7 /* rswebsocket_case_6_14_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_14_3.html; sourceTree = "<group>"; };
+		9B0BE8DA15B8B0330080ADC7 /* rswebsocket_case_6_14_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_14_4.html; sourceTree = "<group>"; };
+		9B0BE8DB15B8B0330080ADC7 /* rswebsocket_case_6_14_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_14_5.html; sourceTree = "<group>"; };
+		9B0BE8DC15B8B0330080ADC7 /* rswebsocket_case_6_14_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_14_6.html; sourceTree = "<group>"; };
+		9B0BE8DD15B8B0330080ADC7 /* rswebsocket_case_6_14_7.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_14_7.html; sourceTree = "<group>"; };
+		9B0BE8DE15B8B0330080ADC7 /* rswebsocket_case_6_14_8.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_14_8.html; sourceTree = "<group>"; };
+		9B0BE8DF15B8B0330080ADC7 /* rswebsocket_case_6_14_9.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_14_9.html; sourceTree = "<group>"; };
+		9B0BE8E015B8B0330080ADC7 /* rswebsocket_case_6_15_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_15_1.html; sourceTree = "<group>"; };
+		9B0BE8E115B8B0330080ADC7 /* rswebsocket_case_6_16_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_16_1.html; sourceTree = "<group>"; };
+		9B0BE8E215B8B0330080ADC7 /* rswebsocket_case_6_16_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_16_2.html; sourceTree = "<group>"; };
+		9B0BE8E315B8B0330080ADC7 /* rswebsocket_case_6_16_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_16_3.html; sourceTree = "<group>"; };
+		9B0BE8E415B8B0330080ADC7 /* rswebsocket_case_6_17_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_17_1.html; sourceTree = "<group>"; };
+		9B0BE8E515B8B0330080ADC7 /* rswebsocket_case_6_17_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_17_2.html; sourceTree = "<group>"; };
+		9B0BE8E615B8B0330080ADC7 /* rswebsocket_case_6_17_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_17_3.html; sourceTree = "<group>"; };
+		9B0BE8E715B8B0330080ADC7 /* rswebsocket_case_6_17_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_17_4.html; sourceTree = "<group>"; };
+		9B0BE8E815B8B0330080ADC7 /* rswebsocket_case_6_17_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_17_5.html; sourceTree = "<group>"; };
+		9B0BE8E915B8B0330080ADC7 /* rswebsocket_case_6_18_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_18_1.html; sourceTree = "<group>"; };
+		9B0BE8EA15B8B0330080ADC7 /* rswebsocket_case_6_18_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_18_2.html; sourceTree = "<group>"; };
+		9B0BE8EB15B8B0330080ADC7 /* rswebsocket_case_6_18_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_18_3.html; sourceTree = "<group>"; };
+		9B0BE8EC15B8B0330080ADC7 /* rswebsocket_case_6_18_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_18_4.html; sourceTree = "<group>"; };
+		9B0BE8ED15B8B0330080ADC7 /* rswebsocket_case_6_18_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_18_5.html; sourceTree = "<group>"; };
+		9B0BE8EE15B8B0330080ADC7 /* rswebsocket_case_6_19_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_19_1.html; sourceTree = "<group>"; };
+		9B0BE8EF15B8B0330080ADC7 /* rswebsocket_case_6_19_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_19_2.html; sourceTree = "<group>"; };
+		9B0BE8F015B8B0330080ADC7 /* rswebsocket_case_6_19_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_19_3.html; sourceTree = "<group>"; };
+		9B0BE8F115B8B0330080ADC7 /* rswebsocket_case_6_19_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_19_4.html; sourceTree = "<group>"; };
+		9B0BE8F215B8B0330080ADC7 /* rswebsocket_case_6_19_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_19_5.html; sourceTree = "<group>"; };
+		9B0BE8F315B8B0330080ADC7 /* rswebsocket_case_6_1_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_1_1.html; sourceTree = "<group>"; };
+		9B0BE8F415B8B0330080ADC7 /* rswebsocket_case_6_1_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_1_2.html; sourceTree = "<group>"; };
+		9B0BE8F515B8B0330080ADC7 /* rswebsocket_case_6_1_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_1_3.html; sourceTree = "<group>"; };
+		9B0BE8F615B8B0330080ADC7 /* rswebsocket_case_6_20_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_20_1.html; sourceTree = "<group>"; };
+		9B0BE8F715B8B0330080ADC7 /* rswebsocket_case_6_20_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_20_2.html; sourceTree = "<group>"; };
+		9B0BE8F815B8B0330080ADC7 /* rswebsocket_case_6_20_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_20_3.html; sourceTree = "<group>"; };
+		9B0BE8F915B8B0330080ADC7 /* rswebsocket_case_6_20_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_20_4.html; sourceTree = "<group>"; };
+		9B0BE8FA15B8B0330080ADC7 /* rswebsocket_case_6_20_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_20_5.html; sourceTree = "<group>"; };
+		9B0BE8FB15B8B0330080ADC7 /* rswebsocket_case_6_20_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_20_6.html; sourceTree = "<group>"; };
+		9B0BE8FC15B8B0330080ADC7 /* rswebsocket_case_6_20_7.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_20_7.html; sourceTree = "<group>"; };
+		9B0BE8FD15B8B0330080ADC7 /* rswebsocket_case_6_21_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_21_1.html; sourceTree = "<group>"; };
+		9B0BE8FE15B8B0330080ADC7 /* rswebsocket_case_6_21_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_21_2.html; sourceTree = "<group>"; };
+		9B0BE8FF15B8B0330080ADC7 /* rswebsocket_case_6_21_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_21_3.html; sourceTree = "<group>"; };
+		9B0BE90015B8B0330080ADC7 /* rswebsocket_case_6_21_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_21_4.html; sourceTree = "<group>"; };
+		9B0BE90115B8B0330080ADC7 /* rswebsocket_case_6_21_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_21_5.html; sourceTree = "<group>"; };
+		9B0BE90215B8B0330080ADC7 /* rswebsocket_case_6_21_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_21_6.html; sourceTree = "<group>"; };
+		9B0BE90315B8B0330080ADC7 /* rswebsocket_case_6_21_7.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_21_7.html; sourceTree = "<group>"; };
+		9B0BE90415B8B0330080ADC7 /* rswebsocket_case_6_21_8.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_21_8.html; sourceTree = "<group>"; };
+		9B0BE90515B8B0330080ADC7 /* rswebsocket_case_6_22_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_1.html; sourceTree = "<group>"; };
+		9B0BE90615B8B0330080ADC7 /* rswebsocket_case_6_22_10.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_10.html; sourceTree = "<group>"; };
+		9B0BE90715B8B0330080ADC7 /* rswebsocket_case_6_22_11.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_11.html; sourceTree = "<group>"; };
+		9B0BE90815B8B0330080ADC7 /* rswebsocket_case_6_22_12.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_12.html; sourceTree = "<group>"; };
+		9B0BE90915B8B0330080ADC7 /* rswebsocket_case_6_22_13.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_13.html; sourceTree = "<group>"; };
+		9B0BE90A15B8B0330080ADC7 /* rswebsocket_case_6_22_14.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_14.html; sourceTree = "<group>"; };
+		9B0BE90B15B8B0330080ADC7 /* rswebsocket_case_6_22_15.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_15.html; sourceTree = "<group>"; };
+		9B0BE90C15B8B0330080ADC7 /* rswebsocket_case_6_22_16.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_16.html; sourceTree = "<group>"; };
+		9B0BE90D15B8B0330080ADC7 /* rswebsocket_case_6_22_17.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_17.html; sourceTree = "<group>"; };
+		9B0BE90E15B8B0330080ADC7 /* rswebsocket_case_6_22_18.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_18.html; sourceTree = "<group>"; };
+		9B0BE90F15B8B0330080ADC7 /* rswebsocket_case_6_22_19.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_19.html; sourceTree = "<group>"; };
+		9B0BE91015B8B0330080ADC7 /* rswebsocket_case_6_22_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_2.html; sourceTree = "<group>"; };
+		9B0BE91115B8B0330080ADC7 /* rswebsocket_case_6_22_20.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_20.html; sourceTree = "<group>"; };
+		9B0BE91215B8B0330080ADC7 /* rswebsocket_case_6_22_21.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_21.html; sourceTree = "<group>"; };
+		9B0BE91315B8B0330080ADC7 /* rswebsocket_case_6_22_22.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_22.html; sourceTree = "<group>"; };
+		9B0BE91415B8B0330080ADC7 /* rswebsocket_case_6_22_23.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_23.html; sourceTree = "<group>"; };
+		9B0BE91515B8B0330080ADC7 /* rswebsocket_case_6_22_24.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_24.html; sourceTree = "<group>"; };
+		9B0BE91615B8B0330080ADC7 /* rswebsocket_case_6_22_25.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_25.html; sourceTree = "<group>"; };
+		9B0BE91715B8B0330080ADC7 /* rswebsocket_case_6_22_26.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_26.html; sourceTree = "<group>"; };
+		9B0BE91815B8B0330080ADC7 /* rswebsocket_case_6_22_27.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_27.html; sourceTree = "<group>"; };
+		9B0BE91915B8B0330080ADC7 /* rswebsocket_case_6_22_28.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_28.html; sourceTree = "<group>"; };
+		9B0BE91A15B8B0330080ADC7 /* rswebsocket_case_6_22_29.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_29.html; sourceTree = "<group>"; };
+		9B0BE91B15B8B0330080ADC7 /* rswebsocket_case_6_22_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_3.html; sourceTree = "<group>"; };
+		9B0BE91C15B8B0330080ADC7 /* rswebsocket_case_6_22_30.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_30.html; sourceTree = "<group>"; };
+		9B0BE91D15B8B0330080ADC7 /* rswebsocket_case_6_22_31.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_31.html; sourceTree = "<group>"; };
+		9B0BE91E15B8B0330080ADC7 /* rswebsocket_case_6_22_32.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_32.html; sourceTree = "<group>"; };
+		9B0BE91F15B8B0330080ADC7 /* rswebsocket_case_6_22_33.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_33.html; sourceTree = "<group>"; };
+		9B0BE92015B8B0330080ADC7 /* rswebsocket_case_6_22_34.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_34.html; sourceTree = "<group>"; };
+		9B0BE92115B8B0330080ADC7 /* rswebsocket_case_6_22_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_4.html; sourceTree = "<group>"; };
+		9B0BE92215B8B0330080ADC7 /* rswebsocket_case_6_22_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_5.html; sourceTree = "<group>"; };
+		9B0BE92315B8B0330080ADC7 /* rswebsocket_case_6_22_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_6.html; sourceTree = "<group>"; };
+		9B0BE92415B8B0330080ADC7 /* rswebsocket_case_6_22_7.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_7.html; sourceTree = "<group>"; };
+		9B0BE92515B8B0330080ADC7 /* rswebsocket_case_6_22_8.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_8.html; sourceTree = "<group>"; };
+		9B0BE92615B8B0330080ADC7 /* rswebsocket_case_6_22_9.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_22_9.html; sourceTree = "<group>"; };
+		9B0BE92715B8B0330080ADC7 /* rswebsocket_case_6_23_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_23_1.html; sourceTree = "<group>"; };
+		9B0BE92815B8B0330080ADC7 /* rswebsocket_case_6_2_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_2_1.html; sourceTree = "<group>"; };
+		9B0BE92915B8B0330080ADC7 /* rswebsocket_case_6_2_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_2_2.html; sourceTree = "<group>"; };
+		9B0BE92A15B8B0330080ADC7 /* rswebsocket_case_6_2_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_2_3.html; sourceTree = "<group>"; };
+		9B0BE92B15B8B0330080ADC7 /* rswebsocket_case_6_2_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_2_4.html; sourceTree = "<group>"; };
+		9B0BE92C15B8B0330080ADC7 /* rswebsocket_case_6_3_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_3_1.html; sourceTree = "<group>"; };
+		9B0BE92D15B8B0330080ADC7 /* rswebsocket_case_6_3_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_3_2.html; sourceTree = "<group>"; };
+		9B0BE92E15B8B0330080ADC7 /* rswebsocket_case_6_4_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_4_1.html; sourceTree = "<group>"; };
+		9B0BE92F15B8B0330080ADC7 /* rswebsocket_case_6_4_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_4_2.html; sourceTree = "<group>"; };
+		9B0BE93015B8B0330080ADC7 /* rswebsocket_case_6_4_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_4_3.html; sourceTree = "<group>"; };
+		9B0BE93115B8B0330080ADC7 /* rswebsocket_case_6_4_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_4_4.html; sourceTree = "<group>"; };
+		9B0BE93215B8B0330080ADC7 /* rswebsocket_case_6_5_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_5_1.html; sourceTree = "<group>"; };
+		9B0BE93315B8B0330080ADC7 /* rswebsocket_case_6_6_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_6_1.html; sourceTree = "<group>"; };
+		9B0BE93415B8B0330080ADC7 /* rswebsocket_case_6_6_10.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_6_10.html; sourceTree = "<group>"; };
+		9B0BE93515B8B0330080ADC7 /* rswebsocket_case_6_6_11.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_6_11.html; sourceTree = "<group>"; };
+		9B0BE93615B8B0330080ADC7 /* rswebsocket_case_6_6_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_6_2.html; sourceTree = "<group>"; };
+		9B0BE93715B8B0330080ADC7 /* rswebsocket_case_6_6_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_6_3.html; sourceTree = "<group>"; };
+		9B0BE93815B8B0330080ADC7 /* rswebsocket_case_6_6_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_6_4.html; sourceTree = "<group>"; };
+		9B0BE93915B8B0330080ADC7 /* rswebsocket_case_6_6_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_6_5.html; sourceTree = "<group>"; };
+		9B0BE93A15B8B0330080ADC7 /* rswebsocket_case_6_6_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_6_6.html; sourceTree = "<group>"; };
+		9B0BE93B15B8B0330080ADC7 /* rswebsocket_case_6_6_7.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_6_7.html; sourceTree = "<group>"; };
+		9B0BE93C15B8B0330080ADC7 /* rswebsocket_case_6_6_8.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_6_8.html; sourceTree = "<group>"; };
+		9B0BE93D15B8B0330080ADC7 /* rswebsocket_case_6_6_9.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_6_9.html; sourceTree = "<group>"; };
+		9B0BE93E15B8B0330080ADC7 /* rswebsocket_case_6_7_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_7_1.html; sourceTree = "<group>"; };
+		9B0BE93F15B8B0330080ADC7 /* rswebsocket_case_6_7_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_7_2.html; sourceTree = "<group>"; };
+		9B0BE94015B8B0330080ADC7 /* rswebsocket_case_6_7_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_7_3.html; sourceTree = "<group>"; };
+		9B0BE94115B8B0330080ADC7 /* rswebsocket_case_6_7_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_7_4.html; sourceTree = "<group>"; };
+		9B0BE94215B8B0330080ADC7 /* rswebsocket_case_6_8_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_8_1.html; sourceTree = "<group>"; };
+		9B0BE94315B8B0330080ADC7 /* rswebsocket_case_6_8_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_8_2.html; sourceTree = "<group>"; };
+		9B0BE94415B8B0330080ADC7 /* rswebsocket_case_6_9_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_9_1.html; sourceTree = "<group>"; };
+		9B0BE94515B8B0330080ADC7 /* rswebsocket_case_6_9_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_9_2.html; sourceTree = "<group>"; };
+		9B0BE94615B8B0330080ADC7 /* rswebsocket_case_6_9_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_9_3.html; sourceTree = "<group>"; };
+		9B0BE94715B8B0330080ADC7 /* rswebsocket_case_6_9_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_6_9_4.html; sourceTree = "<group>"; };
+		9B0BE94815B8B0330080ADC7 /* rswebsocket_case_7_13_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_13_1.html; sourceTree = "<group>"; };
+		9B0BE94915B8B0330080ADC7 /* rswebsocket_case_7_13_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_13_2.html; sourceTree = "<group>"; };
+		9B0BE94A15B8B0330080ADC7 /* rswebsocket_case_7_1_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_1_1.html; sourceTree = "<group>"; };
+		9B0BE94B15B8B0330080ADC7 /* rswebsocket_case_7_1_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_1_2.html; sourceTree = "<group>"; };
+		9B0BE94C15B8B0330080ADC7 /* rswebsocket_case_7_1_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_1_3.html; sourceTree = "<group>"; };
+		9B0BE94D15B8B0330080ADC7 /* rswebsocket_case_7_1_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_1_4.html; sourceTree = "<group>"; };
+		9B0BE94E15B8B0330080ADC7 /* rswebsocket_case_7_1_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_1_5.html; sourceTree = "<group>"; };
+		9B0BE94F15B8B0330080ADC7 /* rswebsocket_case_7_1_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_1_6.html; sourceTree = "<group>"; };
+		9B0BE95015B8B0330080ADC7 /* rswebsocket_case_7_3_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_3_1.html; sourceTree = "<group>"; };
+		9B0BE95115B8B0330080ADC7 /* rswebsocket_case_7_3_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_3_2.html; sourceTree = "<group>"; };
+		9B0BE95215B8B0330080ADC7 /* rswebsocket_case_7_3_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_3_3.html; sourceTree = "<group>"; };
+		9B0BE95315B8B0330080ADC7 /* rswebsocket_case_7_3_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_3_4.html; sourceTree = "<group>"; };
+		9B0BE95415B8B0330080ADC7 /* rswebsocket_case_7_3_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_3_5.html; sourceTree = "<group>"; };
+		9B0BE95515B8B0330080ADC7 /* rswebsocket_case_7_3_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_3_6.html; sourceTree = "<group>"; };
+		9B0BE95615B8B0330080ADC7 /* rswebsocket_case_7_5_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_5_1.html; sourceTree = "<group>"; };
+		9B0BE95715B8B0330080ADC7 /* rswebsocket_case_7_7_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_7_1.html; sourceTree = "<group>"; };
+		9B0BE95815B8B0330080ADC7 /* rswebsocket_case_7_7_10.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_7_10.html; sourceTree = "<group>"; };
+		9B0BE95915B8B0330080ADC7 /* rswebsocket_case_7_7_11.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_7_11.html; sourceTree = "<group>"; };
+		9B0BE95A15B8B0330080ADC7 /* rswebsocket_case_7_7_12.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_7_12.html; sourceTree = "<group>"; };
+		9B0BE95B15B8B0330080ADC7 /* rswebsocket_case_7_7_13.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_7_13.html; sourceTree = "<group>"; };
+		9B0BE95C15B8B0330080ADC7 /* rswebsocket_case_7_7_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_7_2.html; sourceTree = "<group>"; };
+		9B0BE95D15B8B0330080ADC7 /* rswebsocket_case_7_7_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_7_3.html; sourceTree = "<group>"; };
+		9B0BE95E15B8B0330080ADC7 /* rswebsocket_case_7_7_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_7_4.html; sourceTree = "<group>"; };
+		9B0BE95F15B8B0330080ADC7 /* rswebsocket_case_7_7_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_7_5.html; sourceTree = "<group>"; };
+		9B0BE96015B8B0330080ADC7 /* rswebsocket_case_7_7_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_7_6.html; sourceTree = "<group>"; };
+		9B0BE96115B8B0330080ADC7 /* rswebsocket_case_7_7_7.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_7_7.html; sourceTree = "<group>"; };
+		9B0BE96215B8B0330080ADC7 /* rswebsocket_case_7_7_8.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_7_8.html; sourceTree = "<group>"; };
+		9B0BE96315B8B0330080ADC7 /* rswebsocket_case_7_7_9.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_7_9.html; sourceTree = "<group>"; };
+		9B0BE96415B8B0330080ADC7 /* rswebsocket_case_7_9_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_9_1.html; sourceTree = "<group>"; };
+		9B0BE96515B8B0330080ADC7 /* rswebsocket_case_7_9_10.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_9_10.html; sourceTree = "<group>"; };
+		9B0BE96615B8B0330080ADC7 /* rswebsocket_case_7_9_11.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_9_11.html; sourceTree = "<group>"; };
+		9B0BE96715B8B0330080ADC7 /* rswebsocket_case_7_9_12.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_9_12.html; sourceTree = "<group>"; };
+		9B0BE96815B8B0330080ADC7 /* rswebsocket_case_7_9_13.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_9_13.html; sourceTree = "<group>"; };
+		9B0BE96915B8B0330080ADC7 /* rswebsocket_case_7_9_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_9_2.html; sourceTree = "<group>"; };
+		9B0BE96A15B8B0330080ADC7 /* rswebsocket_case_7_9_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_9_3.html; sourceTree = "<group>"; };
+		9B0BE96B15B8B0330080ADC7 /* rswebsocket_case_7_9_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_9_4.html; sourceTree = "<group>"; };
+		9B0BE96C15B8B0330080ADC7 /* rswebsocket_case_7_9_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_9_5.html; sourceTree = "<group>"; };
+		9B0BE96D15B8B0330080ADC7 /* rswebsocket_case_7_9_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_9_6.html; sourceTree = "<group>"; };
+		9B0BE96E15B8B0330080ADC7 /* rswebsocket_case_7_9_7.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_9_7.html; sourceTree = "<group>"; };
+		9B0BE96F15B8B0330080ADC7 /* rswebsocket_case_7_9_8.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_9_8.html; sourceTree = "<group>"; };
+		9B0BE97015B8B0330080ADC7 /* rswebsocket_case_7_9_9.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_7_9_9.html; sourceTree = "<group>"; };
+		9B0BE97115B8B0330080ADC7 /* rswebsocket_case_9_1_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_1_1.html; sourceTree = "<group>"; };
+		9B0BE97215B8B0330080ADC7 /* rswebsocket_case_9_1_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_1_2.html; sourceTree = "<group>"; };
+		9B0BE97315B8B0330080ADC7 /* rswebsocket_case_9_1_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_1_3.html; sourceTree = "<group>"; };
+		9B0BE97415B8B0330080ADC7 /* rswebsocket_case_9_1_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_1_4.html; sourceTree = "<group>"; };
+		9B0BE97515B8B0330080ADC7 /* rswebsocket_case_9_1_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_1_5.html; sourceTree = "<group>"; };
+		9B0BE97615B8B0330080ADC7 /* rswebsocket_case_9_1_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_1_6.html; sourceTree = "<group>"; };
+		9B0BE97715B8B0330080ADC7 /* rswebsocket_case_9_2_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_2_1.html; sourceTree = "<group>"; };
+		9B0BE97815B8B0330080ADC7 /* rswebsocket_case_9_2_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_2_2.html; sourceTree = "<group>"; };
+		9B0BE97915B8B0330080ADC7 /* rswebsocket_case_9_2_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_2_3.html; sourceTree = "<group>"; };
+		9B0BE97A15B8B0330080ADC7 /* rswebsocket_case_9_2_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_2_4.html; sourceTree = "<group>"; };
+		9B0BE97B15B8B0330080ADC7 /* rswebsocket_case_9_2_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_2_5.html; sourceTree = "<group>"; };
+		9B0BE97C15B8B0330080ADC7 /* rswebsocket_case_9_2_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_2_6.html; sourceTree = "<group>"; };
+		9B0BE97D15B8B0330080ADC7 /* rswebsocket_case_9_3_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_3_1.html; sourceTree = "<group>"; };
+		9B0BE97E15B8B0330080ADC7 /* rswebsocket_case_9_3_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_3_2.html; sourceTree = "<group>"; };
+		9B0BE97F15B8B0330080ADC7 /* rswebsocket_case_9_3_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_3_3.html; sourceTree = "<group>"; };
+		9B0BE98015B8B0330080ADC7 /* rswebsocket_case_9_3_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_3_4.html; sourceTree = "<group>"; };
+		9B0BE98115B8B0330080ADC7 /* rswebsocket_case_9_3_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_3_5.html; sourceTree = "<group>"; };
+		9B0BE98215B8B0330080ADC7 /* rswebsocket_case_9_3_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_3_6.html; sourceTree = "<group>"; };
+		9B0BE98315B8B0330080ADC7 /* rswebsocket_case_9_3_7.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_3_7.html; sourceTree = "<group>"; };
+		9B0BE98415B8B0330080ADC7 /* rswebsocket_case_9_3_8.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_3_8.html; sourceTree = "<group>"; };
+		9B0BE98515B8B0330080ADC7 /* rswebsocket_case_9_3_9.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_3_9.html; sourceTree = "<group>"; };
+		9B0BE98615B8B0330080ADC7 /* rswebsocket_case_9_4_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_4_1.html; sourceTree = "<group>"; };
+		9B0BE98715B8B0330080ADC7 /* rswebsocket_case_9_4_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_4_2.html; sourceTree = "<group>"; };
+		9B0BE98815B8B0330080ADC7 /* rswebsocket_case_9_4_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_4_3.html; sourceTree = "<group>"; };
+		9B0BE98915B8B0330080ADC7 /* rswebsocket_case_9_4_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_4_4.html; sourceTree = "<group>"; };
+		9B0BE98A15B8B0330080ADC7 /* rswebsocket_case_9_4_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_4_5.html; sourceTree = "<group>"; };
+		9B0BE98B15B8B0330080ADC7 /* rswebsocket_case_9_4_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_4_6.html; sourceTree = "<group>"; };
+		9B0BE98C15B8B0330080ADC7 /* rswebsocket_case_9_4_7.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_4_7.html; sourceTree = "<group>"; };
+		9B0BE98D15B8B0330080ADC7 /* rswebsocket_case_9_4_8.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_4_8.html; sourceTree = "<group>"; };
+		9B0BE98E15B8B0330080ADC7 /* rswebsocket_case_9_4_9.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_4_9.html; sourceTree = "<group>"; };
+		9B0BE98F15B8B0330080ADC7 /* rswebsocket_case_9_5_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_5_1.html; sourceTree = "<group>"; };
+		9B0BE99015B8B0330080ADC7 /* rswebsocket_case_9_5_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_5_2.html; sourceTree = "<group>"; };
+		9B0BE99115B8B0330080ADC7 /* rswebsocket_case_9_5_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_5_3.html; sourceTree = "<group>"; };
+		9B0BE99215B8B0330080ADC7 /* rswebsocket_case_9_5_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_5_4.html; sourceTree = "<group>"; };
+		9B0BE99315B8B0330080ADC7 /* rswebsocket_case_9_5_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_5_5.html; sourceTree = "<group>"; };
+		9B0BE99415B8B0330080ADC7 /* rswebsocket_case_9_5_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_5_6.html; sourceTree = "<group>"; };
+		9B0BE99515B8B0330080ADC7 /* rswebsocket_case_9_6_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_6_1.html; sourceTree = "<group>"; };
+		9B0BE99615B8B0330080ADC7 /* rswebsocket_case_9_6_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_6_2.html; sourceTree = "<group>"; };
+		9B0BE99715B8B0330080ADC7 /* rswebsocket_case_9_6_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_6_3.html; sourceTree = "<group>"; };
+		9B0BE99815B8B0330080ADC7 /* rswebsocket_case_9_6_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_6_4.html; sourceTree = "<group>"; };
+		9B0BE99915B8B0330080ADC7 /* rswebsocket_case_9_6_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_6_5.html; sourceTree = "<group>"; };
+		9B0BE99A15B8B0330080ADC7 /* rswebsocket_case_9_6_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_6_6.html; sourceTree = "<group>"; };
+		9B0BE99B15B8B0330080ADC7 /* rswebsocket_case_9_7_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_7_1.html; sourceTree = "<group>"; };
+		9B0BE99C15B8B0330080ADC7 /* rswebsocket_case_9_7_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_7_2.html; sourceTree = "<group>"; };
+		9B0BE99D15B8B0330080ADC7 /* rswebsocket_case_9_7_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_7_3.html; sourceTree = "<group>"; };
+		9B0BE99E15B8B0330080ADC7 /* rswebsocket_case_9_7_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_7_4.html; sourceTree = "<group>"; };
+		9B0BE99F15B8B0330080ADC7 /* rswebsocket_case_9_7_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_7_5.html; sourceTree = "<group>"; };
+		9B0BE9A015B8B0330080ADC7 /* rswebsocket_case_9_7_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_7_6.html; sourceTree = "<group>"; };
+		9B0BE9A115B8B0330080ADC7 /* rswebsocket_case_9_8_1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_8_1.html; sourceTree = "<group>"; };
+		9B0BE9A215B8B0330080ADC7 /* rswebsocket_case_9_8_2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_8_2.html; sourceTree = "<group>"; };
+		9B0BE9A315B8B0330080ADC7 /* rswebsocket_case_9_8_3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_8_3.html; sourceTree = "<group>"; };
+		9B0BE9A415B8B0330080ADC7 /* rswebsocket_case_9_8_4.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_8_4.html; sourceTree = "<group>"; };
+		9B0BE9A515B8B0330080ADC7 /* rswebsocket_case_9_8_5.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_8_5.html; sourceTree = "<group>"; };
+		9B0BE9A615B8B0330080ADC7 /* rswebsocket_case_9_8_6.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = rswebsocket_case_9_8_6.html; sourceTree = "<group>"; };
+		9B0BE9AF15B8B0330080ADC7 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		9B0BE9B015B8B0330080ADC7 /* server.crt */ = {isa = PBXFileReference; lastKnownFileType = text; path = server.crt; sourceTree = "<group>"; };
+		9B0BE9B115B8B0330080ADC7 /* server.csr */ = {isa = PBXFileReference; lastKnownFileType = text; path = server.csr; sourceTree = "<group>"; };
+		9B0BE9B215B8B0330080ADC7 /* server.key */ = {isa = PBXFileReference; lastKnownFileType = text; path = server.key; sourceTree = "<group>"; };
+		9B0BE9B315B8B0330080ADC7 /* server.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = server.pem; sourceTree = "<group>"; };
+		9B0BE9B415B8B0330080ADC7 /* test_autobahn.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_autobahn.py; sourceTree = "<group>"; };
+		9B0BE9B515B8B0330080ADC7 /* test_autobahn_wss.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_autobahn_wss.py; sourceTree = "<group>"; };
+		9B0BE9B615B8B6E70080ADC7 /* NOTICE */ = {isa = PBXFileReference; lastKnownFileType = text; path = NOTICE; sourceTree = "<group>"; };
+		9B0BE9B715B8B9E30080ADC7 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9B0BE9B815B8BB8C0080ADC7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		9B19FC7014D615E100D8F2CB /* RSWebSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RSWebSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B19FC7314D615E100D8F2CB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9B19FC7614D615E100D8F2CB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -128,7 +442,7 @@
 		9B19FC7B14D615E100D8F2CB /* RSWebSocket-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RSWebSocket-Info.plist"; sourceTree = "<group>"; };
 		9B19FC7D14D615E100D8F2CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9B19FC7F14D615E100D8F2CB /* RSWebSocket-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSWebSocket-Prefix.pch"; sourceTree = "<group>"; };
-		9B19FC8014D615E100D8F2CB /* RSWebSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RSWebSocket.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		9B19FC8014D615E100D8F2CB /* RSWebSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RSWebSocket.h; sourceTree = "<group>"; };
 		9B19FC8114D615E100D8F2CB /* RSWebSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSWebSocket.m; sourceTree = "<group>"; };
 		9B19FC8814D615E100D8F2CB /* RSWebSocketTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSWebSocketTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B19FC8914D615E100D8F2CB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -215,9 +529,386 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B0BE82315B8B0330080ADC7 /* AutobahnTesting */ = {
+			isa = PBXGroup;
+			children = (
+				9B0BE82415B8B0330080ADC7 /* echo */,
+				9B0BE82815B8B0330080ADC7 /* fuzzer */,
+			);
+			path = AutobahnTesting;
+			sourceTree = "<group>";
+		};
+		9B0BE82415B8B0330080ADC7 /* echo */ = {
+			isa = PBXGroup;
+			children = (
+				9B0BE82715B8B0330080ADC7 /* echo_server.py */,
+			);
+			path = echo;
+			sourceTree = "<group>";
+		};
+		9B0BE82815B8B0330080ADC7 /* fuzzer */ = {
+			isa = PBXGroup;
+			children = (
+				9B0BE82915B8B0330080ADC7 /* clients */,
+				9B0BE82E15B8B0330080ADC7 /* fuzzing_server.py */,
+				9B0BE82F15B8B0330080ADC7 /* fuzzing_server_spec.json */,
+				9B0BE83015B8B0330080ADC7 /* index.html */,
+				9B0BE83115B8B0330080ADC7 /* README */,
+				9B0BE83215B8B0330080ADC7 /* reports */,
+				9B0BE9AD15B8B0330080ADC7 /* servers */,
+			);
+			path = fuzzer;
+			sourceTree = "<group>";
+		};
+		9B0BE82915B8B0330080ADC7 /* clients */ = {
+			isa = PBXGroup;
+			children = (
+				9B0BE82A15B8B0330080ADC7 /* test_autobahn.py */,
+				9B0BE82B15B8B0330080ADC7 /* test_browser.html */,
+			);
+			path = clients;
+			sourceTree = "<group>";
+		};
+		9B0BE83215B8B0330080ADC7 /* reports */ = {
+			isa = PBXGroup;
+			children = (
+				9B0BE83315B8B0330080ADC7 /* clients */,
+			);
+			path = reports;
+			sourceTree = "<group>";
+		};
+		9B0BE83315B8B0330080ADC7 /* clients */ = {
+			isa = PBXGroup;
+			children = (
+				9B0BE87F15B8B0330080ADC7 /* index.html */,
+				9B0BE88015B8B0330080ADC7 /* rswebsocket_case_10_1_1.html */,
+				9B0BE88115B8B0330080ADC7 /* rswebsocket_case_1_1_1.html */,
+				9B0BE88215B8B0330080ADC7 /* rswebsocket_case_1_1_2.html */,
+				9B0BE88315B8B0330080ADC7 /* rswebsocket_case_1_1_3.html */,
+				9B0BE88415B8B0330080ADC7 /* rswebsocket_case_1_1_4.html */,
+				9B0BE88515B8B0330080ADC7 /* rswebsocket_case_1_1_5.html */,
+				9B0BE88615B8B0330080ADC7 /* rswebsocket_case_1_1_6.html */,
+				9B0BE88715B8B0330080ADC7 /* rswebsocket_case_1_1_7.html */,
+				9B0BE88815B8B0330080ADC7 /* rswebsocket_case_1_1_8.html */,
+				9B0BE88915B8B0330080ADC7 /* rswebsocket_case_1_2_1.html */,
+				9B0BE88A15B8B0330080ADC7 /* rswebsocket_case_1_2_2.html */,
+				9B0BE88B15B8B0330080ADC7 /* rswebsocket_case_1_2_3.html */,
+				9B0BE88C15B8B0330080ADC7 /* rswebsocket_case_1_2_4.html */,
+				9B0BE88D15B8B0330080ADC7 /* rswebsocket_case_1_2_5.html */,
+				9B0BE88E15B8B0330080ADC7 /* rswebsocket_case_1_2_6.html */,
+				9B0BE88F15B8B0330080ADC7 /* rswebsocket_case_1_2_7.html */,
+				9B0BE89015B8B0330080ADC7 /* rswebsocket_case_1_2_8.html */,
+				9B0BE89115B8B0330080ADC7 /* rswebsocket_case_2_1.html */,
+				9B0BE89215B8B0330080ADC7 /* rswebsocket_case_2_10.html */,
+				9B0BE89315B8B0330080ADC7 /* rswebsocket_case_2_11.html */,
+				9B0BE89415B8B0330080ADC7 /* rswebsocket_case_2_2.html */,
+				9B0BE89515B8B0330080ADC7 /* rswebsocket_case_2_3.html */,
+				9B0BE89615B8B0330080ADC7 /* rswebsocket_case_2_4.html */,
+				9B0BE89715B8B0330080ADC7 /* rswebsocket_case_2_5.html */,
+				9B0BE89815B8B0330080ADC7 /* rswebsocket_case_2_6.html */,
+				9B0BE89915B8B0330080ADC7 /* rswebsocket_case_2_7.html */,
+				9B0BE89A15B8B0330080ADC7 /* rswebsocket_case_2_8.html */,
+				9B0BE89B15B8B0330080ADC7 /* rswebsocket_case_2_9.html */,
+				9B0BE89C15B8B0330080ADC7 /* rswebsocket_case_3_1.html */,
+				9B0BE89D15B8B0330080ADC7 /* rswebsocket_case_3_2.html */,
+				9B0BE89E15B8B0330080ADC7 /* rswebsocket_case_3_3.html */,
+				9B0BE89F15B8B0330080ADC7 /* rswebsocket_case_3_4.html */,
+				9B0BE8A015B8B0330080ADC7 /* rswebsocket_case_3_5.html */,
+				9B0BE8A115B8B0330080ADC7 /* rswebsocket_case_3_6.html */,
+				9B0BE8A215B8B0330080ADC7 /* rswebsocket_case_3_7.html */,
+				9B0BE8A315B8B0330080ADC7 /* rswebsocket_case_4_1_1.html */,
+				9B0BE8A415B8B0330080ADC7 /* rswebsocket_case_4_1_2.html */,
+				9B0BE8A515B8B0330080ADC7 /* rswebsocket_case_4_1_3.html */,
+				9B0BE8A615B8B0330080ADC7 /* rswebsocket_case_4_1_4.html */,
+				9B0BE8A715B8B0330080ADC7 /* rswebsocket_case_4_1_5.html */,
+				9B0BE8A815B8B0330080ADC7 /* rswebsocket_case_4_2_1.html */,
+				9B0BE8A915B8B0330080ADC7 /* rswebsocket_case_4_2_2.html */,
+				9B0BE8AA15B8B0330080ADC7 /* rswebsocket_case_4_2_3.html */,
+				9B0BE8AB15B8B0330080ADC7 /* rswebsocket_case_4_2_4.html */,
+				9B0BE8AC15B8B0330080ADC7 /* rswebsocket_case_4_2_5.html */,
+				9B0BE8AD15B8B0330080ADC7 /* rswebsocket_case_5_1.html */,
+				9B0BE8AE15B8B0330080ADC7 /* rswebsocket_case_5_10.html */,
+				9B0BE8AF15B8B0330080ADC7 /* rswebsocket_case_5_11.html */,
+				9B0BE8B015B8B0330080ADC7 /* rswebsocket_case_5_12.html */,
+				9B0BE8B115B8B0330080ADC7 /* rswebsocket_case_5_13.html */,
+				9B0BE8B215B8B0330080ADC7 /* rswebsocket_case_5_14.html */,
+				9B0BE8B315B8B0330080ADC7 /* rswebsocket_case_5_15.html */,
+				9B0BE8B415B8B0330080ADC7 /* rswebsocket_case_5_16.html */,
+				9B0BE8B515B8B0330080ADC7 /* rswebsocket_case_5_17.html */,
+				9B0BE8B615B8B0330080ADC7 /* rswebsocket_case_5_18.html */,
+				9B0BE8B715B8B0330080ADC7 /* rswebsocket_case_5_19.html */,
+				9B0BE8B815B8B0330080ADC7 /* rswebsocket_case_5_2.html */,
+				9B0BE8B915B8B0330080ADC7 /* rswebsocket_case_5_20.html */,
+				9B0BE8BA15B8B0330080ADC7 /* rswebsocket_case_5_3.html */,
+				9B0BE8BB15B8B0330080ADC7 /* rswebsocket_case_5_4.html */,
+				9B0BE8BC15B8B0330080ADC7 /* rswebsocket_case_5_5.html */,
+				9B0BE8BD15B8B0330080ADC7 /* rswebsocket_case_5_6.html */,
+				9B0BE8BE15B8B0330080ADC7 /* rswebsocket_case_5_7.html */,
+				9B0BE8BF15B8B0330080ADC7 /* rswebsocket_case_5_8.html */,
+				9B0BE8C015B8B0330080ADC7 /* rswebsocket_case_5_9.html */,
+				9B0BE8C115B8B0330080ADC7 /* rswebsocket_case_6_10_1.html */,
+				9B0BE8C215B8B0330080ADC7 /* rswebsocket_case_6_10_2.html */,
+				9B0BE8C315B8B0330080ADC7 /* rswebsocket_case_6_10_3.html */,
+				9B0BE8C415B8B0330080ADC7 /* rswebsocket_case_6_11_1.html */,
+				9B0BE8C515B8B0330080ADC7 /* rswebsocket_case_6_11_2.html */,
+				9B0BE8C615B8B0330080ADC7 /* rswebsocket_case_6_11_3.html */,
+				9B0BE8C715B8B0330080ADC7 /* rswebsocket_case_6_11_4.html */,
+				9B0BE8C815B8B0330080ADC7 /* rswebsocket_case_6_11_5.html */,
+				9B0BE8C915B8B0330080ADC7 /* rswebsocket_case_6_12_1.html */,
+				9B0BE8CA15B8B0330080ADC7 /* rswebsocket_case_6_12_2.html */,
+				9B0BE8CB15B8B0330080ADC7 /* rswebsocket_case_6_12_3.html */,
+				9B0BE8CC15B8B0330080ADC7 /* rswebsocket_case_6_12_4.html */,
+				9B0BE8CD15B8B0330080ADC7 /* rswebsocket_case_6_12_5.html */,
+				9B0BE8CE15B8B0330080ADC7 /* rswebsocket_case_6_12_6.html */,
+				9B0BE8CF15B8B0330080ADC7 /* rswebsocket_case_6_12_7.html */,
+				9B0BE8D015B8B0330080ADC7 /* rswebsocket_case_6_12_8.html */,
+				9B0BE8D115B8B0330080ADC7 /* rswebsocket_case_6_13_1.html */,
+				9B0BE8D215B8B0330080ADC7 /* rswebsocket_case_6_13_2.html */,
+				9B0BE8D315B8B0330080ADC7 /* rswebsocket_case_6_13_3.html */,
+				9B0BE8D415B8B0330080ADC7 /* rswebsocket_case_6_13_4.html */,
+				9B0BE8D515B8B0330080ADC7 /* rswebsocket_case_6_13_5.html */,
+				9B0BE8D615B8B0330080ADC7 /* rswebsocket_case_6_14_1.html */,
+				9B0BE8D715B8B0330080ADC7 /* rswebsocket_case_6_14_10.html */,
+				9B0BE8D815B8B0330080ADC7 /* rswebsocket_case_6_14_2.html */,
+				9B0BE8D915B8B0330080ADC7 /* rswebsocket_case_6_14_3.html */,
+				9B0BE8DA15B8B0330080ADC7 /* rswebsocket_case_6_14_4.html */,
+				9B0BE8DB15B8B0330080ADC7 /* rswebsocket_case_6_14_5.html */,
+				9B0BE8DC15B8B0330080ADC7 /* rswebsocket_case_6_14_6.html */,
+				9B0BE8DD15B8B0330080ADC7 /* rswebsocket_case_6_14_7.html */,
+				9B0BE8DE15B8B0330080ADC7 /* rswebsocket_case_6_14_8.html */,
+				9B0BE8DF15B8B0330080ADC7 /* rswebsocket_case_6_14_9.html */,
+				9B0BE8E015B8B0330080ADC7 /* rswebsocket_case_6_15_1.html */,
+				9B0BE8E115B8B0330080ADC7 /* rswebsocket_case_6_16_1.html */,
+				9B0BE8E215B8B0330080ADC7 /* rswebsocket_case_6_16_2.html */,
+				9B0BE8E315B8B0330080ADC7 /* rswebsocket_case_6_16_3.html */,
+				9B0BE8E415B8B0330080ADC7 /* rswebsocket_case_6_17_1.html */,
+				9B0BE8E515B8B0330080ADC7 /* rswebsocket_case_6_17_2.html */,
+				9B0BE8E615B8B0330080ADC7 /* rswebsocket_case_6_17_3.html */,
+				9B0BE8E715B8B0330080ADC7 /* rswebsocket_case_6_17_4.html */,
+				9B0BE8E815B8B0330080ADC7 /* rswebsocket_case_6_17_5.html */,
+				9B0BE8E915B8B0330080ADC7 /* rswebsocket_case_6_18_1.html */,
+				9B0BE8EA15B8B0330080ADC7 /* rswebsocket_case_6_18_2.html */,
+				9B0BE8EB15B8B0330080ADC7 /* rswebsocket_case_6_18_3.html */,
+				9B0BE8EC15B8B0330080ADC7 /* rswebsocket_case_6_18_4.html */,
+				9B0BE8ED15B8B0330080ADC7 /* rswebsocket_case_6_18_5.html */,
+				9B0BE8EE15B8B0330080ADC7 /* rswebsocket_case_6_19_1.html */,
+				9B0BE8EF15B8B0330080ADC7 /* rswebsocket_case_6_19_2.html */,
+				9B0BE8F015B8B0330080ADC7 /* rswebsocket_case_6_19_3.html */,
+				9B0BE8F115B8B0330080ADC7 /* rswebsocket_case_6_19_4.html */,
+				9B0BE8F215B8B0330080ADC7 /* rswebsocket_case_6_19_5.html */,
+				9B0BE8F315B8B0330080ADC7 /* rswebsocket_case_6_1_1.html */,
+				9B0BE8F415B8B0330080ADC7 /* rswebsocket_case_6_1_2.html */,
+				9B0BE8F515B8B0330080ADC7 /* rswebsocket_case_6_1_3.html */,
+				9B0BE8F615B8B0330080ADC7 /* rswebsocket_case_6_20_1.html */,
+				9B0BE8F715B8B0330080ADC7 /* rswebsocket_case_6_20_2.html */,
+				9B0BE8F815B8B0330080ADC7 /* rswebsocket_case_6_20_3.html */,
+				9B0BE8F915B8B0330080ADC7 /* rswebsocket_case_6_20_4.html */,
+				9B0BE8FA15B8B0330080ADC7 /* rswebsocket_case_6_20_5.html */,
+				9B0BE8FB15B8B0330080ADC7 /* rswebsocket_case_6_20_6.html */,
+				9B0BE8FC15B8B0330080ADC7 /* rswebsocket_case_6_20_7.html */,
+				9B0BE8FD15B8B0330080ADC7 /* rswebsocket_case_6_21_1.html */,
+				9B0BE8FE15B8B0330080ADC7 /* rswebsocket_case_6_21_2.html */,
+				9B0BE8FF15B8B0330080ADC7 /* rswebsocket_case_6_21_3.html */,
+				9B0BE90015B8B0330080ADC7 /* rswebsocket_case_6_21_4.html */,
+				9B0BE90115B8B0330080ADC7 /* rswebsocket_case_6_21_5.html */,
+				9B0BE90215B8B0330080ADC7 /* rswebsocket_case_6_21_6.html */,
+				9B0BE90315B8B0330080ADC7 /* rswebsocket_case_6_21_7.html */,
+				9B0BE90415B8B0330080ADC7 /* rswebsocket_case_6_21_8.html */,
+				9B0BE90515B8B0330080ADC7 /* rswebsocket_case_6_22_1.html */,
+				9B0BE90615B8B0330080ADC7 /* rswebsocket_case_6_22_10.html */,
+				9B0BE90715B8B0330080ADC7 /* rswebsocket_case_6_22_11.html */,
+				9B0BE90815B8B0330080ADC7 /* rswebsocket_case_6_22_12.html */,
+				9B0BE90915B8B0330080ADC7 /* rswebsocket_case_6_22_13.html */,
+				9B0BE90A15B8B0330080ADC7 /* rswebsocket_case_6_22_14.html */,
+				9B0BE90B15B8B0330080ADC7 /* rswebsocket_case_6_22_15.html */,
+				9B0BE90C15B8B0330080ADC7 /* rswebsocket_case_6_22_16.html */,
+				9B0BE90D15B8B0330080ADC7 /* rswebsocket_case_6_22_17.html */,
+				9B0BE90E15B8B0330080ADC7 /* rswebsocket_case_6_22_18.html */,
+				9B0BE90F15B8B0330080ADC7 /* rswebsocket_case_6_22_19.html */,
+				9B0BE91015B8B0330080ADC7 /* rswebsocket_case_6_22_2.html */,
+				9B0BE91115B8B0330080ADC7 /* rswebsocket_case_6_22_20.html */,
+				9B0BE91215B8B0330080ADC7 /* rswebsocket_case_6_22_21.html */,
+				9B0BE91315B8B0330080ADC7 /* rswebsocket_case_6_22_22.html */,
+				9B0BE91415B8B0330080ADC7 /* rswebsocket_case_6_22_23.html */,
+				9B0BE91515B8B0330080ADC7 /* rswebsocket_case_6_22_24.html */,
+				9B0BE91615B8B0330080ADC7 /* rswebsocket_case_6_22_25.html */,
+				9B0BE91715B8B0330080ADC7 /* rswebsocket_case_6_22_26.html */,
+				9B0BE91815B8B0330080ADC7 /* rswebsocket_case_6_22_27.html */,
+				9B0BE91915B8B0330080ADC7 /* rswebsocket_case_6_22_28.html */,
+				9B0BE91A15B8B0330080ADC7 /* rswebsocket_case_6_22_29.html */,
+				9B0BE91B15B8B0330080ADC7 /* rswebsocket_case_6_22_3.html */,
+				9B0BE91C15B8B0330080ADC7 /* rswebsocket_case_6_22_30.html */,
+				9B0BE91D15B8B0330080ADC7 /* rswebsocket_case_6_22_31.html */,
+				9B0BE91E15B8B0330080ADC7 /* rswebsocket_case_6_22_32.html */,
+				9B0BE91F15B8B0330080ADC7 /* rswebsocket_case_6_22_33.html */,
+				9B0BE92015B8B0330080ADC7 /* rswebsocket_case_6_22_34.html */,
+				9B0BE92115B8B0330080ADC7 /* rswebsocket_case_6_22_4.html */,
+				9B0BE92215B8B0330080ADC7 /* rswebsocket_case_6_22_5.html */,
+				9B0BE92315B8B0330080ADC7 /* rswebsocket_case_6_22_6.html */,
+				9B0BE92415B8B0330080ADC7 /* rswebsocket_case_6_22_7.html */,
+				9B0BE92515B8B0330080ADC7 /* rswebsocket_case_6_22_8.html */,
+				9B0BE92615B8B0330080ADC7 /* rswebsocket_case_6_22_9.html */,
+				9B0BE92715B8B0330080ADC7 /* rswebsocket_case_6_23_1.html */,
+				9B0BE92815B8B0330080ADC7 /* rswebsocket_case_6_2_1.html */,
+				9B0BE92915B8B0330080ADC7 /* rswebsocket_case_6_2_2.html */,
+				9B0BE92A15B8B0330080ADC7 /* rswebsocket_case_6_2_3.html */,
+				9B0BE92B15B8B0330080ADC7 /* rswebsocket_case_6_2_4.html */,
+				9B0BE92C15B8B0330080ADC7 /* rswebsocket_case_6_3_1.html */,
+				9B0BE92D15B8B0330080ADC7 /* rswebsocket_case_6_3_2.html */,
+				9B0BE92E15B8B0330080ADC7 /* rswebsocket_case_6_4_1.html */,
+				9B0BE92F15B8B0330080ADC7 /* rswebsocket_case_6_4_2.html */,
+				9B0BE93015B8B0330080ADC7 /* rswebsocket_case_6_4_3.html */,
+				9B0BE93115B8B0330080ADC7 /* rswebsocket_case_6_4_4.html */,
+				9B0BE93215B8B0330080ADC7 /* rswebsocket_case_6_5_1.html */,
+				9B0BE93315B8B0330080ADC7 /* rswebsocket_case_6_6_1.html */,
+				9B0BE93415B8B0330080ADC7 /* rswebsocket_case_6_6_10.html */,
+				9B0BE93515B8B0330080ADC7 /* rswebsocket_case_6_6_11.html */,
+				9B0BE93615B8B0330080ADC7 /* rswebsocket_case_6_6_2.html */,
+				9B0BE93715B8B0330080ADC7 /* rswebsocket_case_6_6_3.html */,
+				9B0BE93815B8B0330080ADC7 /* rswebsocket_case_6_6_4.html */,
+				9B0BE93915B8B0330080ADC7 /* rswebsocket_case_6_6_5.html */,
+				9B0BE93A15B8B0330080ADC7 /* rswebsocket_case_6_6_6.html */,
+				9B0BE93B15B8B0330080ADC7 /* rswebsocket_case_6_6_7.html */,
+				9B0BE93C15B8B0330080ADC7 /* rswebsocket_case_6_6_8.html */,
+				9B0BE93D15B8B0330080ADC7 /* rswebsocket_case_6_6_9.html */,
+				9B0BE93E15B8B0330080ADC7 /* rswebsocket_case_6_7_1.html */,
+				9B0BE93F15B8B0330080ADC7 /* rswebsocket_case_6_7_2.html */,
+				9B0BE94015B8B0330080ADC7 /* rswebsocket_case_6_7_3.html */,
+				9B0BE94115B8B0330080ADC7 /* rswebsocket_case_6_7_4.html */,
+				9B0BE94215B8B0330080ADC7 /* rswebsocket_case_6_8_1.html */,
+				9B0BE94315B8B0330080ADC7 /* rswebsocket_case_6_8_2.html */,
+				9B0BE94415B8B0330080ADC7 /* rswebsocket_case_6_9_1.html */,
+				9B0BE94515B8B0330080ADC7 /* rswebsocket_case_6_9_2.html */,
+				9B0BE94615B8B0330080ADC7 /* rswebsocket_case_6_9_3.html */,
+				9B0BE94715B8B0330080ADC7 /* rswebsocket_case_6_9_4.html */,
+				9B0BE94815B8B0330080ADC7 /* rswebsocket_case_7_13_1.html */,
+				9B0BE94915B8B0330080ADC7 /* rswebsocket_case_7_13_2.html */,
+				9B0BE94A15B8B0330080ADC7 /* rswebsocket_case_7_1_1.html */,
+				9B0BE94B15B8B0330080ADC7 /* rswebsocket_case_7_1_2.html */,
+				9B0BE94C15B8B0330080ADC7 /* rswebsocket_case_7_1_3.html */,
+				9B0BE94D15B8B0330080ADC7 /* rswebsocket_case_7_1_4.html */,
+				9B0BE94E15B8B0330080ADC7 /* rswebsocket_case_7_1_5.html */,
+				9B0BE94F15B8B0330080ADC7 /* rswebsocket_case_7_1_6.html */,
+				9B0BE95015B8B0330080ADC7 /* rswebsocket_case_7_3_1.html */,
+				9B0BE95115B8B0330080ADC7 /* rswebsocket_case_7_3_2.html */,
+				9B0BE95215B8B0330080ADC7 /* rswebsocket_case_7_3_3.html */,
+				9B0BE95315B8B0330080ADC7 /* rswebsocket_case_7_3_4.html */,
+				9B0BE95415B8B0330080ADC7 /* rswebsocket_case_7_3_5.html */,
+				9B0BE95515B8B0330080ADC7 /* rswebsocket_case_7_3_6.html */,
+				9B0BE95615B8B0330080ADC7 /* rswebsocket_case_7_5_1.html */,
+				9B0BE95715B8B0330080ADC7 /* rswebsocket_case_7_7_1.html */,
+				9B0BE95815B8B0330080ADC7 /* rswebsocket_case_7_7_10.html */,
+				9B0BE95915B8B0330080ADC7 /* rswebsocket_case_7_7_11.html */,
+				9B0BE95A15B8B0330080ADC7 /* rswebsocket_case_7_7_12.html */,
+				9B0BE95B15B8B0330080ADC7 /* rswebsocket_case_7_7_13.html */,
+				9B0BE95C15B8B0330080ADC7 /* rswebsocket_case_7_7_2.html */,
+				9B0BE95D15B8B0330080ADC7 /* rswebsocket_case_7_7_3.html */,
+				9B0BE95E15B8B0330080ADC7 /* rswebsocket_case_7_7_4.html */,
+				9B0BE95F15B8B0330080ADC7 /* rswebsocket_case_7_7_5.html */,
+				9B0BE96015B8B0330080ADC7 /* rswebsocket_case_7_7_6.html */,
+				9B0BE96115B8B0330080ADC7 /* rswebsocket_case_7_7_7.html */,
+				9B0BE96215B8B0330080ADC7 /* rswebsocket_case_7_7_8.html */,
+				9B0BE96315B8B0330080ADC7 /* rswebsocket_case_7_7_9.html */,
+				9B0BE96415B8B0330080ADC7 /* rswebsocket_case_7_9_1.html */,
+				9B0BE96515B8B0330080ADC7 /* rswebsocket_case_7_9_10.html */,
+				9B0BE96615B8B0330080ADC7 /* rswebsocket_case_7_9_11.html */,
+				9B0BE96715B8B0330080ADC7 /* rswebsocket_case_7_9_12.html */,
+				9B0BE96815B8B0330080ADC7 /* rswebsocket_case_7_9_13.html */,
+				9B0BE96915B8B0330080ADC7 /* rswebsocket_case_7_9_2.html */,
+				9B0BE96A15B8B0330080ADC7 /* rswebsocket_case_7_9_3.html */,
+				9B0BE96B15B8B0330080ADC7 /* rswebsocket_case_7_9_4.html */,
+				9B0BE96C15B8B0330080ADC7 /* rswebsocket_case_7_9_5.html */,
+				9B0BE96D15B8B0330080ADC7 /* rswebsocket_case_7_9_6.html */,
+				9B0BE96E15B8B0330080ADC7 /* rswebsocket_case_7_9_7.html */,
+				9B0BE96F15B8B0330080ADC7 /* rswebsocket_case_7_9_8.html */,
+				9B0BE97015B8B0330080ADC7 /* rswebsocket_case_7_9_9.html */,
+				9B0BE97115B8B0330080ADC7 /* rswebsocket_case_9_1_1.html */,
+				9B0BE97215B8B0330080ADC7 /* rswebsocket_case_9_1_2.html */,
+				9B0BE97315B8B0330080ADC7 /* rswebsocket_case_9_1_3.html */,
+				9B0BE97415B8B0330080ADC7 /* rswebsocket_case_9_1_4.html */,
+				9B0BE97515B8B0330080ADC7 /* rswebsocket_case_9_1_5.html */,
+				9B0BE97615B8B0330080ADC7 /* rswebsocket_case_9_1_6.html */,
+				9B0BE97715B8B0330080ADC7 /* rswebsocket_case_9_2_1.html */,
+				9B0BE97815B8B0330080ADC7 /* rswebsocket_case_9_2_2.html */,
+				9B0BE97915B8B0330080ADC7 /* rswebsocket_case_9_2_3.html */,
+				9B0BE97A15B8B0330080ADC7 /* rswebsocket_case_9_2_4.html */,
+				9B0BE97B15B8B0330080ADC7 /* rswebsocket_case_9_2_5.html */,
+				9B0BE97C15B8B0330080ADC7 /* rswebsocket_case_9_2_6.html */,
+				9B0BE97D15B8B0330080ADC7 /* rswebsocket_case_9_3_1.html */,
+				9B0BE97E15B8B0330080ADC7 /* rswebsocket_case_9_3_2.html */,
+				9B0BE97F15B8B0330080ADC7 /* rswebsocket_case_9_3_3.html */,
+				9B0BE98015B8B0330080ADC7 /* rswebsocket_case_9_3_4.html */,
+				9B0BE98115B8B0330080ADC7 /* rswebsocket_case_9_3_5.html */,
+				9B0BE98215B8B0330080ADC7 /* rswebsocket_case_9_3_6.html */,
+				9B0BE98315B8B0330080ADC7 /* rswebsocket_case_9_3_7.html */,
+				9B0BE98415B8B0330080ADC7 /* rswebsocket_case_9_3_8.html */,
+				9B0BE98515B8B0330080ADC7 /* rswebsocket_case_9_3_9.html */,
+				9B0BE98615B8B0330080ADC7 /* rswebsocket_case_9_4_1.html */,
+				9B0BE98715B8B0330080ADC7 /* rswebsocket_case_9_4_2.html */,
+				9B0BE98815B8B0330080ADC7 /* rswebsocket_case_9_4_3.html */,
+				9B0BE98915B8B0330080ADC7 /* rswebsocket_case_9_4_4.html */,
+				9B0BE98A15B8B0330080ADC7 /* rswebsocket_case_9_4_5.html */,
+				9B0BE98B15B8B0330080ADC7 /* rswebsocket_case_9_4_6.html */,
+				9B0BE98C15B8B0330080ADC7 /* rswebsocket_case_9_4_7.html */,
+				9B0BE98D15B8B0330080ADC7 /* rswebsocket_case_9_4_8.html */,
+				9B0BE98E15B8B0330080ADC7 /* rswebsocket_case_9_4_9.html */,
+				9B0BE98F15B8B0330080ADC7 /* rswebsocket_case_9_5_1.html */,
+				9B0BE99015B8B0330080ADC7 /* rswebsocket_case_9_5_2.html */,
+				9B0BE99115B8B0330080ADC7 /* rswebsocket_case_9_5_3.html */,
+				9B0BE99215B8B0330080ADC7 /* rswebsocket_case_9_5_4.html */,
+				9B0BE99315B8B0330080ADC7 /* rswebsocket_case_9_5_5.html */,
+				9B0BE99415B8B0330080ADC7 /* rswebsocket_case_9_5_6.html */,
+				9B0BE99515B8B0330080ADC7 /* rswebsocket_case_9_6_1.html */,
+				9B0BE99615B8B0330080ADC7 /* rswebsocket_case_9_6_2.html */,
+				9B0BE99715B8B0330080ADC7 /* rswebsocket_case_9_6_3.html */,
+				9B0BE99815B8B0330080ADC7 /* rswebsocket_case_9_6_4.html */,
+				9B0BE99915B8B0330080ADC7 /* rswebsocket_case_9_6_5.html */,
+				9B0BE99A15B8B0330080ADC7 /* rswebsocket_case_9_6_6.html */,
+				9B0BE99B15B8B0330080ADC7 /* rswebsocket_case_9_7_1.html */,
+				9B0BE99C15B8B0330080ADC7 /* rswebsocket_case_9_7_2.html */,
+				9B0BE99D15B8B0330080ADC7 /* rswebsocket_case_9_7_3.html */,
+				9B0BE99E15B8B0330080ADC7 /* rswebsocket_case_9_7_4.html */,
+				9B0BE99F15B8B0330080ADC7 /* rswebsocket_case_9_7_5.html */,
+				9B0BE9A015B8B0330080ADC7 /* rswebsocket_case_9_7_6.html */,
+				9B0BE9A115B8B0330080ADC7 /* rswebsocket_case_9_8_1.html */,
+				9B0BE9A215B8B0330080ADC7 /* rswebsocket_case_9_8_2.html */,
+				9B0BE9A315B8B0330080ADC7 /* rswebsocket_case_9_8_3.html */,
+				9B0BE9A415B8B0330080ADC7 /* rswebsocket_case_9_8_4.html */,
+				9B0BE9A515B8B0330080ADC7 /* rswebsocket_case_9_8_5.html */,
+				9B0BE9A615B8B0330080ADC7 /* rswebsocket_case_9_8_6.html */,
+			);
+			path = clients;
+			sourceTree = "<group>";
+		};
+		9B0BE9AD15B8B0330080ADC7 /* servers */ = {
+			isa = PBXGroup;
+			children = (
+				9B0BE9AE15B8B0330080ADC7 /* keys */,
+				9B0BE9B415B8B0330080ADC7 /* test_autobahn.py */,
+				9B0BE9B515B8B0330080ADC7 /* test_autobahn_wss.py */,
+			);
+			path = servers;
+			sourceTree = "<group>";
+		};
+		9B0BE9AE15B8B0330080ADC7 /* keys */ = {
+			isa = PBXGroup;
+			children = (
+				9B0BE9AF15B8B0330080ADC7 /* README */,
+				9B0BE9B015B8B0330080ADC7 /* server.crt */,
+				9B0BE9B115B8B0330080ADC7 /* server.csr */,
+				9B0BE9B215B8B0330080ADC7 /* server.key */,
+				9B0BE9B315B8B0330080ADC7 /* server.pem */,
+			);
+			path = keys;
+			sourceTree = "<group>";
+		};
 		9B19FC6414D615E100D8F2CB = {
 			isa = PBXGroup;
 			children = (
+				9B0BE9B615B8B6E70080ADC7 /* NOTICE */,
+				9B0BE9B815B8BB8C0080ADC7 /* README.md */,
+				9B0BE9B715B8B9E30080ADC7 /* LICENSE */,
+				9B0BE82315B8B0330080ADC7 /* AutobahnTesting */,
 				9B19FC7914D615E100D8F2CB /* RSWebSocket */,
 				9B19FC8F14D615E100D8F2CB /* RSWebSocketTests */,
 				9BFD3A8F1536196B00F9A1F2 /* Examples */,
@@ -260,7 +951,6 @@
 		9B19FC7914D615E100D8F2CB /* RSWebSocket */ = {
 			isa = PBXGroup;
 			children = (
-				9B19FCA114D6162100D8F2CB /* Server */,
 				9B19FCA014D6161600D8F2CB /* Client */,
 				9B19FC7A14D615E100D8F2CB /* Supporting Files */,
 			);
@@ -323,13 +1013,6 @@
 			name = Client;
 			sourceTree = "<group>";
 		};
-		9B19FCA114D6162100D8F2CB /* Server */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Server;
-			sourceTree = "<group>";
-		};
 		9BDC0BD7156C167700DB4232 /* AutobahnTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,14 +1063,22 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B19FCB414D6168C00D8F2CB /* HandshakeHeader.h in Headers */,
+				9BA0D36E158EACCF000FE9D0 /* RSWebSocket.h in Headers */,
+				9BBE945814E08CCB006A5D21 /* AsyncSocket.h in Headers */,
 				9B19FCB614D6168C00D8F2CB /* MutableQueue.h in Headers */,
-				9B19FCB814D6168C00D8F2CB /* NSData+Base64.h in Headers */,
-				9B19FCD814D61F2000D8F2CB /* RSWebSocketConnectConfig.h in Headers */,
 				9B19FCDA14D61F2000D8F2CB /* RSWebSocketFragment.h in Headers */,
 				9B19FCDC14D61F2000D8F2CB /* RSWebSocketMessage.h in Headers */,
-				9BBE945814E08CCB006A5D21 /* AsyncSocket.h in Headers */,
+				9B19FCB414D6168C00D8F2CB /* HandshakeHeader.h in Headers */,
+				9B19FCD814D61F2000D8F2CB /* RSWebSocketConnectConfig.h in Headers */,
+				9B19FCB814D6168C00D8F2CB /* NSData+Base64.h in Headers */,
 				9BC6FF04150FAA25004F211B /* DebugSupport.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA0D369158EAC71000FE9D0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +1131,7 @@
 				9BFD3A921537793000F9A1F2 /* Frameworks */,
 				9BFD3A931537793000F9A1F2 /* Resources */,
 				9BB625211559CD6E002CF2D4 /* CopyFiles */,
+				9BA0D369158EAC71000FE9D0 /* Headers */,
 			);
 			buildRules = (
 			);

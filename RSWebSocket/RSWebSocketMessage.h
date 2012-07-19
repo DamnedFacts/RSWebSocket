@@ -1,9 +1,9 @@
 //
 //  WebSocketMessage.h
-//  UnittWebSocketClient
+//  RSWebSocket
 //
-//  Created by Josh Morris on 6/12/11.
-//  Copyright 2011 UnitT Software. All rights reserved.
+//  Copyright 2012 Richard Emile Sarkis
+//  Copyright 2011 UnitT Software
 //
 //  Licensed under the Apache License, Version 2.0 (the "License"); you may not
 //  use this file except in compliance with the License. You may obtain a copy of

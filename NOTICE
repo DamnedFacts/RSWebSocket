@@ -1,0 +1,17 @@
+   ===============================================
+   ==  NOTICE file for the RSWebSocket Project  ==
+   ===============================================
+
+RSWebSocket
+Copyright 2011-2012 Richard Emile Sarkis
+
+Portions of this software were derived from AutoBahnPython (http://autobahn.ws/python) developed
+by Tobias Oberstein at Tavendo GmbH.
+
+Portions of this software were developed by UnittWebSocket (https://code.google.com/p/unitt/wiki/UnittWebSocket)
+are used under the terms of the Apache License, version 2.0.
+
+Asynchonous networking support is provided by the cocoaasyncsocket (http://code.google.com/p/cocoaasyncsocket/) 
+project which is used in this project under the terms of public domain software.
+
+NSData+Base64 is written by Matt Gallagher, more specific credits and origination unavailable.

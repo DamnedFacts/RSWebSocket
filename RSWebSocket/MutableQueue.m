@@ -1,8 +1,8 @@
 //
 //  NSMutableArray+QueueAddition.m
-//  UnittWebSocketClient
+//  RSWebSocket
 //
-//  Created by Josh Morris on 6/16/11.
+//  Copyright 2012 Richard Emile Sarkis. All rights reserved.
 //  Copyright 2011 UnitT Software. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License"); you may not
