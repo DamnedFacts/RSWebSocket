@@ -29,7 +29,7 @@
     
     id headObject = [items objectAtIndex:0];
     if (headObject != nil) {
-        [[headObject retain] autorelease]; // so it isn't dealloc'ed on remove
+         // so it isn't dealloc'ed on remove
         [items removeObjectAtIndex:0];
     }
     return headObject;
@@ -43,6 +43,10 @@
     return [items lastObject];
 }
 
+- (id) firstObject {
+    return [items objectAtIndex:0];
+}
+
 #pragma mark Lifecycle
 - (id) init  {
     self = [super init];
@@ -52,10 +56,6 @@
     return self;
 }
 
-- (void) dealloc  {
-    [items release];
-    [super dealloc];
-}
 
 - (NSUInteger) count {
     return [items count];

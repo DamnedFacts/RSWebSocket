@@ -57,12 +57,12 @@ NSString* const WebSocketConnectConfigErrorDomain = @"WebSocketConnectConfigErro
 #pragma mark Lifecycle
 + (id) config
 {
-    return [[[[self class] alloc] init] autorelease];
+    return [[[self class] alloc] init];
 }
 
 + (id) configWithURLString:(NSString*) aUrlString origin:(NSString*) aOrigin protocols:(NSArray*) aProtocols tlsSettings:(NSDictionary*) aTlsSettings headers:(NSArray*) aHeaders verifySecurityKey:(BOOL) aVerifySecurityKey extensions:(NSArray*) aExtensions
 {
-    return [[[[self class] alloc] initWithURLString:aUrlString origin:aOrigin protocols:aProtocols tlsSettings:aTlsSettings headers:aHeaders verifySecurityKey:aVerifySecurityKey extensions:aExtensions] autorelease];
+    return [[[self class] alloc] initWithURLString:aUrlString origin:aOrigin protocols:aProtocols tlsSettings:aTlsSettings headers:aHeaders verifySecurityKey:aVerifySecurityKey extensions:aExtensions];
 }
 
 - (id) initWithURLString:(NSString *) aUrlString origin:(NSString*) aOrigin protocols:(NSArray*) aProtocols tlsSettings:(NSDictionary*) aTlsSettings headers:(NSArray*) aHeaders verifySecurityKey:(BOOL) aVerifySecurityKey extensions:(NSArray*) aExtensions
@@ -134,19 +134,5 @@ NSString* const WebSocketConnectConfigErrorDomain = @"WebSocketConnectConfigErro
     return self.url.host;
 }
 
--(void) dealloc 
-{
-    [url release];
-    [origin release];
-    [host release];
-    [protocols release];
-    [serverProtocol release];
-    [tlsSettings release];
-    [extensions release];
-    [serverExtensions release];
-    [headers release];
-    [serverHeaders release];
-    [super dealloc];
-}
 
 @end

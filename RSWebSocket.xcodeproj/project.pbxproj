@@ -29,6 +29,8 @@
 		9B19FCDD14D61F2000D8F2CB /* RSWebSocketMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B19FCD714D61F2000D8F2CB /* RSWebSocketMessage.m */; };
 		9B73AC7A153E4DD40070CF67 /* RSWebSocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B19FC7014D615E100D8F2CB /* RSWebSocket.framework */; };
 		9B86596814F7FD9700DAEF16 /* RSWebSocketAutobahnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B86596714F7FD9700DAEF16 /* RSWebSocketAutobahnTests.m */; };
+		9B877E8D15DE8AD8000264F8 /* UTF8Decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B877E8C15DE8AD8000264F8 /* UTF8Decoder.h */; };
+		9B93542515D8601B006BDA4A /* UTF8Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B93542415D8601B006BDA4A /* UTF8Decoder.m */; };
 		9BA0D36E158EACCF000FE9D0 /* RSWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B19FC8014D615E100D8F2CB /* RSWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9BB625231559CD74002CF2D4 /* RSWebSocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B19FC7014D615E100D8F2CB /* RSWebSocket.framework */; };
 		9BBE945814E08CCB006A5D21 /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BBE945614E08CCB006A5D21 /* AsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -464,6 +466,8 @@
 		9B19FCD714D61F2000D8F2CB /* RSWebSocketMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSWebSocketMessage.m; sourceTree = "<group>"; };
 		9B86596614F7FD9700DAEF16 /* RSWebSocketAutobahnTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSWebSocketAutobahnTests.h; sourceTree = "<group>"; };
 		9B86596714F7FD9700DAEF16 /* RSWebSocketAutobahnTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSWebSocketAutobahnTests.m; sourceTree = "<group>"; };
+		9B877E8C15DE8AD8000264F8 /* UTF8Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UTF8Decoder.h; sourceTree = "<group>"; };
+		9B93542415D8601B006BDA4A /* UTF8Decoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UTF8Decoder.m; sourceTree = "<group>"; };
 		9BBE945614E08CCB006A5D21 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = CocoaAsyncSocket/RunLoop/AsyncSocket.h; sourceTree = "<group>"; };
 		9BBE945714E08CCB006A5D21 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = CocoaAsyncSocket/RunLoop/AsyncSocket.m; sourceTree = "<group>"; };
 		9BC6FF00150FAA0F004F211B /* DebugSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugSupport.m; sourceTree = "<group>"; };
@@ -961,6 +965,8 @@
 			isa = PBXGroup;
 			children = (
 				9BBE945614E08CCB006A5D21 /* AsyncSocket.h */,
+				9B93542415D8601B006BDA4A /* UTF8Decoder.m */,
+				9B877E8C15DE8AD8000264F8 /* UTF8Decoder.h */,
 				9BBE945714E08CCB006A5D21 /* AsyncSocket.m */,
 				9B19FCA614D6168B00D8F2CB /* HandshakeHeader.h */,
 				9B19FCA714D6168B00D8F2CB /* HandshakeHeader.m */,
@@ -1072,6 +1078,7 @@
 				9B19FCD814D61F2000D8F2CB /* RSWebSocketConnectConfig.h in Headers */,
 				9B19FCB814D6168C00D8F2CB /* NSData+Base64.h in Headers */,
 				9BC6FF04150FAA25004F211B /* DebugSupport.h in Headers */,
+				9B877E8D15DE8AD8000264F8 /* UTF8Decoder.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1169,7 +1176,7 @@
 		9B19FC6614D615E100D8F2CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 			};
 			buildConfigurationList = 9B19FC6914D615E100D8F2CB /* Build configuration list for PBXProject "RSWebSocket" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1260,6 +1267,7 @@
 				9B19FCDD14D61F2000D8F2CB /* RSWebSocketMessage.m in Sources */,
 				9BBE945914E08CCB006A5D21 /* AsyncSocket.m in Sources */,
 				9BC6FF01150FAA0F004F211B /* DebugSupport.m in Sources */,
+				9B93542515D8601B006BDA4A /* UTF8Decoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1427,10 +1435,13 @@
 		9B19FC9B14D615E100D8F2CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSWebSocket/RSWebSocket-Prefix.pch";
 				INFOPLIST_FILE = "RSWebSocket/RSWebSocket-Info.plist";
@@ -1443,10 +1454,13 @@
 		9B19FC9C14D615E100D8F2CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSWebSocket/RSWebSocket-Prefix.pch";
 				INFOPLIST_FILE = "RSWebSocket/RSWebSocket-Info.plist";
@@ -1459,10 +1473,13 @@
 		9B19FC9E14D615E100D8F2CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSWebSocket/RSWebSocket-Prefix.pch";
-				GCC_VERSION = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PROFILING_CODE = NO;
 				INFOPLIST_FILE = "RSWebSocketTests/RSWebSocketTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks @executable_path/../Frameworks";
@@ -1479,10 +1496,13 @@
 		9B19FC9F14D615E100D8F2CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSWebSocket/RSWebSocket-Prefix.pch";
-				GCC_VERSION = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PROFILING_CODE = NO;
 				INFOPLIST_FILE = "RSWebSocketTests/RSWebSocketTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks @executable_path/../Frameworks";
@@ -1499,6 +1519,9 @@
 		9BFD3AAB1537793000F9A1F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Examples/Echo/Echo-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -1511,6 +1534,9 @@
 		9BFD3AAC1537793000F9A1F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Examples/Echo/Echo-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -1523,7 +1549,9 @@
 		9BFD3ACA1537D5D200F9A1F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Examples/AutobahnTests/AutobahnTests-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -1537,7 +1565,9 @@
 		9BFD3ACB1537D5D200F9A1F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Examples/AutobahnTests/AutobahnTests-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;

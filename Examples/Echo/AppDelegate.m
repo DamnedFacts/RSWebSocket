@@ -29,11 +29,6 @@ BOOL flag = YES;
 @synthesize messageField;
 @synthesize fileButton;
 
-- (void)dealloc {
-    [response release];
-    [ws release];
-    [super dealloc];
-}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [self.connectButton setTitle:@"Connect"];
@@ -53,7 +48,7 @@ BOOL flag = YES;
                                                                              headers:nil 
                                                                    verifySecurityKey:YES 
                                                                           extensions:nil ];
-        ws = [[RSWebSocket webSocketWithConfig:config delegate:self] retain];
+        ws = [RSWebSocket webSocketWithConfig:config delegate:self];
         [self.ws open];    
     } else if (ws && ![ws isConnectionOpen]) {
         [self.ws open];    
@@ -101,16 +96,21 @@ BOOL flag = YES;
     [self.fileButton setEnabled:YES];
 }
 
-- (void) didClose:(ClosingStatusCodes)cstatus {
+-(void) didClose: (NSError *) closingStatusError 
+       localCode: (unsigned long) closingStatusLocalCode  
+    localMessage: (NSString *) closingStatusLocalMessage
+      remoteCode: (unsigned long) closingStatusRemoteCode
+   remoteMessage: (NSString *) closingStatusRemoteMessage {
+    
     [self.connectButton setTitle:@"Connect"];
     [self.messageField setEditable:NO];
     [self.fileButton setEnabled:NO];
 
     NSLog(@"Connection Closed to Echo Server");
     NSLog(@"Closing Status: (%lu%@:%lu%@) %@", 
-          cstatus.localCode, (cstatus.localMessage == nil)?@"":[NSString stringWithFormat:@"/%@",cstatus.localMessage], 
-          cstatus.remoteCode, (cstatus.remoteMessage == nil)?@"":[NSString stringWithFormat:@"/%@",cstatus.remoteMessage], 
-          [cstatus.error localizedDescription]);
+          closingStatusLocalCode, (closingStatusLocalMessage == nil)?@"":[NSString stringWithFormat:@"/%@",closingStatusLocalMessage], 
+          closingStatusRemoteCode, (closingStatusRemoteMessage == nil)?@"":[NSString stringWithFormat:@"/%@",closingStatusRemoteMessage], 
+          [closingStatusError localizedDescription]);
 }
 
 - (void) didReceiveError: (NSError*) aError {

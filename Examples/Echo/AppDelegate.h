@@ -21,18 +21,18 @@
 #import "RSWebSocket.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate,RSWebSocketDelegate> {
-    RSWebSocket* ws;
-    NSString* response;
+    RSWebSocket* __weak ws;
+    NSString*  __weak response;
 }
 
 #pragma mark Interface Builder Outlets
-@property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSTextView *textViewResults;
-@property (assign) IBOutlet NSButton *connectButton;
-@property (assign) IBOutlet NSButton *fileButton;
-@property (assign) IBOutlet NSTextField *messageField;
+@property (unsafe_unretained) IBOutlet NSWindow *window;
+@property (unsafe_unretained) IBOutlet NSTextView *textViewResults;
+@property  (weak) IBOutlet NSButton *connectButton;
+@property  (weak) IBOutlet NSButton *fileButton;
+@property  (weak) IBOutlet NSTextField *messageField;
 
 #pragma mark Internal variables
-@property (nonatomic, readonly) RSWebSocket* ws;
-@property (nonatomic, readonly) NSString* response;
+@property (weak, nonatomic, readonly) RSWebSocket* ws;
+@property (weak, nonatomic, readonly) NSString* response;
 @end

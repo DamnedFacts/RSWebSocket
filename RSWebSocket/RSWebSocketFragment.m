@@ -199,7 +199,6 @@ MessageOpCode opcode_noncontrol[] = {
 #pragma mark Parsing
 - (void) parseContent {
     if ([self canBeParsed]) {
-        //set payload
         if (self.hasMask) {
             self.payloadData = [self unmask:self.mask data:self.fragment range:NSMakeRange(payloadStart, self.fullPayloadLength)];
         } else {
@@ -429,12 +428,19 @@ MessageOpCode opcode_noncontrol[] = {
 #pragma mark Lifecycle
 + (id) fragmentWithOpCode:(MessageOpCode) aOpCode isFinal:(BOOL) aIsFinal payload:(NSData*) aPayload mask:(BOOL) setMask {
     id result = [[[self class] alloc] initWithOpCode:aOpCode isFinal:aIsFinal payload:aPayload mask:setMask];
-    return [result autorelease];
+    return result;
 }
 
 + (id) fragmentWithData:(NSData*) aData {
     id result = [[[self class] alloc] initWithData:aData];
-    return [result autorelease];
+    return result;
+}
+
++ (id) fragment {
+    RSWebSocketFragment *result = [[[self class] alloc] init];
+    result.fragment = [NSMutableData dataWithLength:0];
+    assert(result.fragment != nil);
+    return result;
 }
 
 - (id) initWithOpCode:(MessageOpCode)aOpCode isFinal:(BOOL)aIsFinal payload:(NSData*)aPayload mask:(BOOL)setMask {
@@ -456,27 +462,21 @@ MessageOpCode opcode_noncontrol[] = {
         self.opCode = MessageOpCodeIllegal;
         self.fragment = [NSMutableData dataWithData:aData];
 
-        [self parseHeader];
-        
-        if (self.messageLength <= [aData length]) [self parseContent];
+        if ([self.fragment length] > 0) {
+            [self parseHeader];
+            if (self.messageLength <= [aData length]) [self parseContent];
+        }
     }
     return self;
 }
 
 - (id) init {
     self = [super init];
-    if (self)
-    {
+    if (self) {
         self.opCode = MessageOpCodeIllegal;
     }
     return self;
 }
 
-- (void) dealloc {
-    [payloadData release];
-    [fragment release];
-    
-    [super dealloc];
-}
 
 @end

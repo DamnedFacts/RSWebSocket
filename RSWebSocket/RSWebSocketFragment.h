@@ -74,6 +74,7 @@ typedef NSInteger PayloadLength;
     OpCodeType      opCodeType;
     NSData*         payloadData;
     NSMutableData*  fragment;
+    
 }
 
 // Header tests
@@ -85,7 +86,7 @@ typedef NSInteger PayloadLength;
 @property (nonatomic,assign)    BOOL                hasMask;
 @property (nonatomic,readonly)  NSUInteger          messageLength;
 @property (nonatomic,assign)    int                 mask;
-@property (nonatomic,retain)    NSData*             payloadData;
+@property (nonatomic)           NSData*             payloadData;
 
 // Header 
 @property (nonatomic,readonly)  NSUInteger          payloadLength;
@@ -98,7 +99,7 @@ typedef NSInteger PayloadLength;
 @property (nonatomic,readonly)  BOOL                isDataValid;
 @property (nonatomic,readonly)  BOOL                isFrameComplete;
 @property (nonatomic,readonly)  BOOL                canBeParsed;
-@property (nonatomic,retain)    NSMutableData*      fragment;
+@property (nonatomic)  NSMutableData*      fragment;
 @property (nonatomic,assign)    OpCodeType          opCodeType;
 
 - (int) generateMask;
@@ -113,6 +114,7 @@ typedef NSInteger PayloadLength;
 
 + (id) fragmentWithOpCode:(MessageOpCode) aOpCode isFinal:(BOOL) aIsFinal payload:(NSData*) aPayload mask:(BOOL) setMask;
 + (id) fragmentWithData:(NSData*) aData;
++ (id) fragment;
 - (id) initWithOpCode:(MessageOpCode) aOpCode isFinal:(BOOL) aIsFinal payload:(NSData*) aPayload mask:(BOOL) setMask;
 - (id) initWithData:(NSData*) aData;
 

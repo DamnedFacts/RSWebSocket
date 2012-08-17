@@ -32,7 +32,12 @@ typedef enum  {
     RSWebSocketTestState    test_states;
     
     NSDictionary *          testCaseExpResults;
-    ClosingStatusCodes      testCaseRetResults;
+    
+    NSError  *cStatusError;
+    NSUInteger       cStatusLocalCode;
+    NSString *cStatusLocalMessage;
+    NSUInteger       cStatusRemoteCode;
+    NSString *cStatusRemoteMessage;
 }
 
 @property (nonatomic)           NSUInteger testSuiteIndex;

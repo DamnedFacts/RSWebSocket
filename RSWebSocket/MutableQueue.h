@@ -28,5 +28,6 @@
 - (id)   dequeue;
 - (void) enqueue:(id) aObject;
 - (id)   lastObject;
+- (id)   firstObject;
 - (NSUInteger) count;
 @end

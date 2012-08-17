@@ -50,7 +50,7 @@
 {
     id result = [[[self class] alloc] initWithFragment:aFragment];
     
-    return [result autorelease];
+    return result;
 }
 
 - (id) initWithFragment:(RSWebSocketFragment*) aFragment
@@ -74,11 +74,5 @@
     return self;
 }
 
-- (void) dealloc
-{
-    [fragments release];
-    
-    [super dealloc];
-}
 
 @end

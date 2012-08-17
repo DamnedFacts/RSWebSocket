@@ -29,13 +29,17 @@
 - (void) didOpen {
 //    NSLog(@"Did open connection");
 }
-
-- (void) didClose:(ClosingStatusCodes)cstatus {
+    
+- (void) didClose: (NSError *) closingStatusError 
+        localCode: (NSUInteger) closingStatusLocalCode  
+     localMessage: (NSString *) closingStatusLocalMessage
+       remoteCode: (NSUInteger) closingStatusRemoteCode
+    remoteMessage: (NSString *) closingStatusRemoteMessage {
     
     NSLog(@"Closing Status: (%lu%@:%lu%@) %@", 
-          cstatus.localCode, (cstatus.localMessage == nil)?@"":[NSString stringWithFormat:@"/%@",cstatus.localMessage], 
-          cstatus.remoteCode, (cstatus.remoteMessage == nil)?@"":[NSString stringWithFormat:@"/%@",cstatus.remoteMessage], 
-          [cstatus.error localizedDescription]);
+          closingStatusLocalCode, (closingStatusLocalMessage == nil)?@"":[NSString stringWithFormat:@"/%@",closingStatusLocalMessage], 
+          closingStatusRemoteCode, (closingStatusRemoteMessage == nil)?@"":[NSString stringWithFormat:@"/%@",closingStatusRemoteMessage], 
+          [closingStatusError localizedDescription]);
 }
 
 - (void) didReceiveError: (NSError*) aError {
@@ -58,11 +62,6 @@
     [[NSRunLoop currentRunLoop] runUntilDate:secondsFromNow];
 }
 
-- (void)dealloc {
-    [response release];
-    [ws release];
-    [super dealloc];
-}
 
 #pragma mark Unit Test Required
 // We override the SenTest framework's object method to insert our custom tests.
@@ -90,7 +89,7 @@
     //    }
     
     
-    return [testSuite autorelease];
+    return testSuite;
 }
 
 + (void)addTestsForAutobahn:(SenTestSuite *)testSuite {
@@ -104,7 +103,7 @@
     for (int i = 1; i<=totalTests; i++) {
         // Obj-C Runtime swizzling. We're taking the method "generalCaseTest" and renaming it and
         // parameterizing it with the index number of the Autobahn test case we want it to run.
-        SEL test_case_n_sel = NSSelectorFromString([NSString stringWithFormat:@"testCase%ld", i]);
+        SEL test_case_n_sel = NSSelectorFromString([NSString stringWithFormat:@"testCase%d", i]);
         class_addMethod([unitTest class], test_case_n_sel, test_case_n_imp, "v@:"); // FIXME: Check BOOL return value.
         
         // Create an invocation object for this test case
@@ -116,15 +115,12 @@
         
         SenTestCase *test = [[[RSWebSocketAutobahnTests alloc] init] initWithInvocation:testInvocation testIndex:i];
         [testSuite addTest:test];
-        [test release];
     }
-    [unitTest release];
     
     // Add static Autobahn test cases
     for (NSInvocation *testInvocation in testInvocations) {
         SenTestCase *test = [[[RSWebSocketAutobahnTests alloc] init] initWithInvocation:testInvocation];
         [testSuite addTest:test];
-        [test release];
     }
 }
 
@@ -134,8 +130,6 @@
 }
 
 - (void)tearDown {
-    [ws release];
-    [response release];
     [super tearDown];
 }
 @end

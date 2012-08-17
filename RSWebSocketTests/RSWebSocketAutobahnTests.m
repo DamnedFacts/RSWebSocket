@@ -30,44 +30,52 @@ BOOL flag = YES;
     [super didOpen];
 }
 
-- (void) didClose:(ClosingStatusCodes)closingStatus { 
-    [super didClose:closingStatus];
+- (void) didClose:(NSError *) closingStatusError 
+        localCode:(NSUInteger) closingStatusLocalCode  
+     localMessage:(NSString *) closingStatusLocalMessage
+       remoteCode:(NSUInteger) closingStatusRemoteCode
+    remoteMessage:(NSString *) closingStatusRemoteMessage {
+    
+    [super didClose:(NSError *) closingStatusError 
+          localCode:(NSUInteger) closingStatusLocalCode  
+       localMessage:(NSString *) closingStatusLocalMessage
+         remoteCode:(NSUInteger) closingStatusRemoteCode
+      remoteMessage:(NSString *) closingStatusRemoteMessage];
 
     switch (test_states) {
         case WSTestStateGetCounts:
+        {
+        }
             break;
         case WSTestStateRunAutobahnTestCases:
-            testCaseRetResults = closingStatus;
+        {
+            cStatusError = closingStatusError;
+            cStatusLocalCode = closingStatusLocalCode;
+            cStatusLocalMessage = closingStatusLocalMessage;
+            cStatusRemoteCode = closingStatusRemoteCode;
+            cStatusRemoteMessage = closingStatusRemoteMessage;
+        }
             break;
         case WSTestStateGetAutobahnTestCaseExp:
+        {
             STAssertNotNil(testCaseExpResults, @"Failed retrieving Autobahn test case expectations for case %ld", testSuiteIndex);
             NSMutableArray *closeCodes = [testCaseExpResults objectForKey:@"closeCode"];
-            NSNumber *localCode = [NSNumber numberWithInt:testCaseRetResults.localCode];
+            NSNumber *localCode = [NSNumber numberWithUnsignedLong:cStatusLocalCode];
             
             [closeCodes addObject:[NSNumber numberWithInt:WebSocketCloseStatusNormalButMissingStatus]]; // This is an ok state.
-
-//            NSNumber *remoteCode = [NSNumber numberWithInt:testCaseRetResults.remoteCode];
-//            NSNumber *closedDirection = [testCaseExpResults objectForKey:@"closedByMe"];
             
-            // "closedByMe" is from the WebSocket server's perspective.
-//            if ([closedDirection boolValue]) { // Closed on remote side
-//                if ([closeCodes indexOfObject:remoteCode] != NSNotFound) break;
-//                STFail(@"Autobahn test case %@ (%@) failed remotely. Expect close code(s): %@ but received code %ld", 
-//                       [testCaseExpResults objectForKey:@"caseId"], 
-//                       [testCaseExpResults objectForKey:@"caseIndex"],
-//                       closeCodes,
-//                       [remoteCode intValue]);
-//            } else {
-                if ([closeCodes indexOfObject:localCode] != NSNotFound) break;
-                STFail(@"Autobahn test case %@ (%@) failed. Expected local close code(s): %@ but issued code %ld", 
-                        [testCaseExpResults objectForKey:@"caseId"], 
-                        [testCaseExpResults objectForKey:@"caseIndex"],
-                        closeCodes,
-                        [localCode intValue]);
-//            }
+            if ([closeCodes indexOfObject:localCode] != NSNotFound) break;
+            STFail(@"Autobahn test case %@ (%@) failed. Expected local close code(s): %@ but issued code %ld", 
+                   [testCaseExpResults objectForKey:@"caseId"], 
+                   [testCaseExpResults objectForKey:@"caseIndex"],
+                   closeCodes,
+                   [localCode intValue]);
+        }
             break;
         case WSTestStateClosing:
-                break;
+        {
+        }
+            break;
     }
         
     flag = NO;
@@ -79,35 +87,37 @@ BOOL flag = YES;
     
     switch (test_states) {
         case WSTestStateGetCounts:
+        {
             testSuiteTotal = [aMessage intValue];
             NSAssert(testSuiteTotal > 0,@"Autobahn test cases count is zero, aborting.");
             NSLog(@"There are %ld Autobahn test cases", testSuiteTotal);
+        }   
             break;
         case WSTestStateRunAutobahnTestCases:
+        {
             if (aMessage){
                 response = [aMessage copy];
             }
             [self.ws sendText:self.response];
+        }
             break;
         case WSTestStateGetAutobahnTestCaseExp:
+        {
             NSLog(@"%@", aMessage);
             NSError *e = nil;
-            testCaseExpResults = [[NSJSONSerialization 
+            testCaseExpResults = [NSJSONSerialization 
                                   JSONObjectWithData: [aMessage dataUsingEncoding:NSUTF8StringEncoding] 
                                   options: NSJSONReadingMutableContainers 
-                                  error: &e] retain];
+                                  error: &e];
             
             if (!testCaseExpResults) {
                 NSLog(@"Error parsing JSON: %@", e);
             }
-//            } else {
-//                for (id item in testCaseExpResults) {
-//                    NSLog(@"Item: %@ of class %@", [testCaseExpResults objectForKey:item], 
-//                          [[testCaseExpResults objectForKey:item] class]);
-//                }
-//            }
+        }
             break;
         case WSTestStateClosing:
+        {
+        }
             break;
     }
 }
@@ -135,21 +145,19 @@ BOOL flag = YES;
     flag = YES;
 }
 
-//-(NSString *) description {
-//    return [NSString stringWithFormat:@"Autobahn WebSocket test case %ld", testSuiteIndex];
-//}
-
 - (void) generalCaseTest {
-//    if (testSuiteIndex == 252) DebugBreak()
-//    if (testSuiteIndex != 62) return;
-//      if (testSuiteIndex < 45 || testSuiteIndex > 64) return;
-//        if (testSuiteIndex != 206) return;
-//    if (testSuiteIndex > 240) return;
+    //    if (testSuiteIndex == 252) DebugBreak()
+//       if (testSuiteIndex != 205) return;
+//           if (testSuiteIndex != 71) return;
 
+//          if (testSuiteIndex < 70 || testSuiteIndex > 77) return;
+    //        if (testSuiteIndex != 206) return;
+    //    if (testSuiteIndex > 240) return;
+    
     test_states = WSTestStateRunAutobahnTestCases;
     if (testSuiteIndex == 0) return;
         
-    NSString *testurl = [@"ws://localhost:9001/runCase?case=" stringByAppendingFormat:@"%d&agent='RSWebSocket'",testSuiteIndex];
+    NSString *testurl = [@"ws://localhost:9001/runCase?case=" stringByAppendingFormat:@"%ld&agent='RSWebSocket'",testSuiteIndex];
     RSWebSocketConnectConfig* config = [RSWebSocketConnectConfig configWithURLString:testurl 
                                                                               origin:nil
                                                                            protocols:nil
@@ -157,16 +165,10 @@ BOOL flag = YES;
                                                                              headers:nil 
                                                                    verifySecurityKey:YES 
                                                                           extensions:nil ];
-    ws = [[RSWebSocket webSocketWithConfig:config delegate:self] retain];
+    ws = [RSWebSocket webSocketWithConfig:config delegate:self];
     [self.ws open];
     [self waitOnClose];
-//    [ws release];
 
-
-    // FIXME: Race condition that I can't trace down (see test case 49 without this timeout).
-    // A timeout is expiring, and the connection is closing before reads from our peer are finished, I think.
-
-    
     NSLog(@"Getting Autobahn WebSocket expected result for test case %ld", testSuiteIndex);
     test_states = WSTestStateGetAutobahnTestCaseExp;
     config = [RSWebSocketConnectConfig configWithURLString:@"ws://localhost:9001/getLastCaseExpectation?agent='RSWebSocket" 
@@ -176,10 +178,9 @@ BOOL flag = YES;
                                                                              headers:nil 
                                                                    verifySecurityKey:YES 
                                                                           extensions:nil ];
-    ws = [[RSWebSocket webSocketWithConfig:config delegate:self] retain];
+    ws = [RSWebSocket webSocketWithConfig:config delegate:self];
     [self.ws open];
     [self waitOnClose];
-//    [ws release];
 }
 
 - (NSUInteger) getCaseCount {
@@ -191,10 +192,9 @@ BOOL flag = YES;
                                                                              headers:nil 
                                                                    verifySecurityKey:YES 
                                                                           extensions:nil ];
-    ws = [[RSWebSocket webSocketWithConfig:config delegate:self] retain];
-    [ws open];
+    ws = [RSWebSocket webSocketWithConfig:config delegate:self];
+    [self.ws open];
     [self waitOnClose];
-//    [ws release];
 
     return testSuiteTotal;
 }
@@ -212,10 +212,9 @@ BOOL flag = YES;
                                                                              headers:nil 
                                                                    verifySecurityKey:YES 
                                                                           extensions:nil ];
-    ws = [[RSWebSocket webSocketWithConfig:config delegate:self] retain];
+    ws = [RSWebSocket webSocketWithConfig:config delegate:self];
     [self.ws open];
     [self waitOnClose];
-//    [ws release];
 }
 
 #pragma mark Initialization methods

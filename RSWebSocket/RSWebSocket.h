@@ -100,15 +100,6 @@ enum {
 };
 typedef NSUInteger RSWebSocketContinuationState;
 
-
-typedef struct {
-    NSError* error;
-    NSUInteger localCode;
-    NSUInteger remoteCode;
-    NSString* localMessage;
-    NSString* remoteMessage;
-} ClosingStatusCodes;
-
 @protocol RSWebSocketDelegate <NSObject>
 
 /**
@@ -120,7 +111,11 @@ typedef struct {
 /**
  * Called when the web socket closes. aError will be nil if it closes cleanly.
  **/
-- (void) didClose:(ClosingStatusCodes)closingStatus;
+- (void) didClose: (NSError *) closingStatusError 
+                       localCode: (NSUInteger) closingStatusLocalCode  
+                    localMessage: (NSString *) closingStatusLocalMessage
+                      remoteCode: (NSUInteger) closingStatusRemoteCode
+                   remoteMessage: (NSString *) closingStatusRemoteMessage;
 
 /**
  * Called when the web socket receives an error. Such an error can result in the
@@ -149,7 +144,7 @@ typedef struct {
 
 @interface RSWebSocket : NSObject {
 @private
-    id<RSWebSocketDelegate> delegate;
+    id<RSWebSocketDelegate> __unsafe_unretained delegate;
     AsyncSocket* socket;
     RSWebSocketReadyState           readystate;
     RSWebSocketFrameState           framestate;
@@ -158,7 +153,12 @@ typedef struct {
     NSString* wsSecKeyHandshake;
     MutableQueue* pendingFragments;
     BOOL isClosing;
-    ClosingStatusCodes closingStatus;
+    NSMutableDictionary *closingStatus;
+    NSError *closingStatusError;
+    NSUInteger closingStatusLocalCode;
+    NSString *closingStatusLocalMessage;
+    NSUInteger closingStatusRemoteCode;
+    NSString *closingStatusRemoteMessage;
 //    BOOL sendCloseInfoToListener;
     RSWebSocketConnectConfig* config;
 //    int i;
@@ -169,12 +169,12 @@ typedef struct {
 /**
  * Callback delegate for websocket events.
  **/
-@property(nonatomic,retain) id<RSWebSocketDelegate> delegate;
+@property(unsafe_unretained, nonatomic) id<RSWebSocketDelegate> delegate;
 
 /**
  * Config info for the websocket connection.
  **/
-@property(nonatomic,retain) RSWebSocketConnectConfig* config;
+@property(nonatomic) RSWebSocketConnectConfig* config;
 
 /**
  * Represents the state of the connection. It can have the following values:

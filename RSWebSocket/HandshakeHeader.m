@@ -41,12 +41,12 @@
 #pragma mark - Lifecycle
 + (id) header
 {
-    return [[[[self class] alloc] init] autorelease];
+    return [[[self class] alloc] init];
 }
 
 + (id) headerWithValue:(NSString*) aValue forKey:(NSString*) aKey
 {
-    return [[[[self class] alloc] initWithValue:aValue forKey:aKey] autorelease];
+    return [[[self class] alloc] initWithValue:aValue forKey:aKey];
 }
 
 - (id) initWithValue:(NSString*) aValue forKey:(NSString*) aKey
@@ -71,12 +71,5 @@
     return self;
 }
 
-- (void) dealloc 
-{
-    self.key = nil;
-    self.value = nil;
-    
-    [super dealloc];
-}
 
 @end

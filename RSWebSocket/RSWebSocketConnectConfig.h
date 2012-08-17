@@ -57,13 +57,13 @@ typedef NSUInteger WebSocketVersion;
  * String name/value pairs to be provided in the websocket handshake as 
  * http headers.
  **/
-@property(nonatomic,retain) NSMutableArray* headers;
+@property(nonatomic) NSMutableArray* headers;
 
 /**
  * String name/value pairs provided by the server in the websocket handshake 
  * as http headers.
  **/
-@property(nonatomic,retain) NSMutableArray* serverHeaders;
+@property(nonatomic) NSMutableArray* serverHeaders;
 
 /**
  * Version of the websocket specification.
@@ -90,7 +90,7 @@ typedef NSUInteger WebSocketVersion;
 /**
  * URL of the websocket
  **/
-@property(nonatomic,retain) NSURL* url;
+@property(nonatomic) NSURL* url;
 
 /**
  * Indicates whether the websocket will be opened over a secure connection
@@ -111,12 +111,12 @@ typedef NSUInteger WebSocketVersion;
 /**
  * The list of extensions accepted by the host.
  **/
-@property(nonatomic,retain) NSMutableArray* serverExtensions;
+@property(nonatomic) NSMutableArray* serverExtensions;
 
 /**
  * The list of extensions supported by the client.
  **/
-@property(nonatomic,retain) NSMutableArray* extensions;
+@property(nonatomic) NSMutableArray* extensions;
 
 
 /**
@@ -137,12 +137,12 @@ typedef NSUInteger WebSocketVersion;
  * 
  * If the value is nil or an empty dictionary, then the websocket cannot be secured.
  **/
-@property(nonatomic,retain) NSMutableDictionary* tlsSettings;
+@property(nonatomic) NSMutableDictionary* tlsSettings;
 
 /**
  * The subprotocols supported by the client. Each subprotocol is represented by an NSString.
  **/
-@property(nonatomic,retain) NSMutableArray* protocols;
+@property(nonatomic) NSMutableArray* protocols;
 
 /**
  * True if the client should verify the handshake security key sent by the server. Since many of
