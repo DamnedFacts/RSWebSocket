@@ -11,18 +11,20 @@
 		</dict>
 		<key>RSWebSocket.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
-		<key>Sample Apps: AutobahnTests.xcscheme</key>
+		<key>RSWebSocket: AutobahnTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>RSWebSocket: Echo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>4</integer>
-		</dict>
-		<key>Sample Apps: Echo.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>WAMPSimpleClient1.xcscheme</key>
 		<dict>

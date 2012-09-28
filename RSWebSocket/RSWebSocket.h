@@ -21,14 +21,14 @@
 
 
 #import <Foundation/Foundation.h>
-#import <RSWebSocket/AsyncSocket.h>
 #import <Security/Security.h>
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h>
-#import "NSData+Base64.h"
-#import "MutableQueue.h"
-#import "RSWebSocketConnectConfig.h"
 
+#import <RSWebSocket/NSData+Base64.h>
+#import <RSWebSocket/MutableQueue.h>
+#import <RSWebSocket/RSWebSocketConnectConfig.h>
+#import <RSWebSocket/AsyncSocket.h>
 
 
 // FIXME: How to handle extended range of error codes

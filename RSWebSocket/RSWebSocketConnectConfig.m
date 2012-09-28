@@ -83,6 +83,12 @@ NSString* const WebSocketConnectConfigErrorDomain = @"WebSocketConnectConfigErro
         if (aOrigin)
         {
             self.origin = aOrigin;
+            
+            // Per RFC 3986, the leading slash after the authority (host name and port)
+            // portion is treated as part of the path.
+            if ([self.url.path compare:@""] == NSOrderedSame) {
+                self.url = [self.url URLByAppendingPathComponent:@"/"];
+            }
         }
         else
         {
@@ -106,7 +112,7 @@ NSString* const WebSocketConnectConfigErrorDomain = @"WebSocketConnectConfigErro
             self.extensions = [NSMutableArray arrayWithArray:aExtensions];
         }
         self.verifySecurityKey = aVerifySecurityKey;
-        self.timeout = 30.0;
+        self.timeout = -1; // Don't apply timeouts during a session by default.
         self.closeTimeout = 30.0;
         self.maxPayloadSize = 32*1024;
         self.version = WebSocketVersionHybi13;
@@ -116,7 +122,8 @@ NSString* const WebSocketConnectConfigErrorDomain = @"WebSocketConnectConfigErro
 
 - (NSString*) buildOrigin
 {
-    return [NSString stringWithFormat:@"%@://%@%@", isSecure ? @"https" : @"http", [self buildHost], self.url.path ? self.url.path : @""];
+    // Per RFC 3986, the leading slash after the authority (host name and port) portion is treated as part of the path.
+    return [NSString stringWithFormat:@"%@://%@%@", isSecure ? @"https" : @"http", [self buildHost], self.url.path ? self.url.path : @"/"];
 }
 
 - (NSString*) buildHost
