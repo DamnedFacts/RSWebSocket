@@ -1176,7 +1176,7 @@
 		9B19FC6614D615E100D8F2CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = 9B19FC6914D615E100D8F2CB /* Build configuration list for PBXProject "RSWebSocket" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1445,7 +1445,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSWebSocket/RSWebSocket-Prefix.pch";
 				INFOPLIST_FILE = "RSWebSocket/RSWebSocket-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				INSTALL_PATH = "@loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1464,7 +1464,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RSWebSocket/RSWebSocket-Prefix.pch";
 				INFOPLIST_FILE = "RSWebSocket/RSWebSocket-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				INSTALL_PATH = "@loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
