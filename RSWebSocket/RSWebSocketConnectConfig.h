@@ -35,67 +35,67 @@ typedef NSUInteger WebSocketVersion;
 @interface RSWebSocketConnectConfig : NSObject
 {
 @private
-    NSURL* url;
-    NSString* origin;
-    NSString* host;
-    NSTimeInterval timeout;
-    NSMutableDictionary* tlsSettings;
-    NSMutableArray* protocols;
-    NSString* serverProtocol;
-    BOOL verifySecurityKey;
-    NSUInteger maxPayloadSize;
-    NSTimeInterval closeTimeout;
-    WebSocketVersion version;
+//    NSURL* url;
+//    NSString* origin;
+//    NSString* host;
+//    NSTimeInterval timeout;
+//    NSMutableDictionary* tlsSettings;
+//    NSMutableArray* protocols;
+//    NSString* serverProtocol;
+//    BOOL verifySecurityKey;
+//    NSUInteger maxPayloadSize;
+//    NSTimeInterval closeTimeout;
+//    WebSocketVersion version;
     BOOL isSecure;
-    NSMutableArray* headers;
-    NSMutableArray* serverHeaders;
-    NSMutableArray* extensions;
-    NSMutableArray* serverExtensions;
+//    NSMutableArray* headers;
+//    NSMutableArray* serverHeaders;
+//    NSMutableArray* extensions;
+//    NSMutableArray* serverExtensions;
 }
 
 /**
  * String name/value pairs to be provided in the websocket handshake as 
  * http headers.
  **/
-@property(nonatomic) NSMutableArray* headers;
+@property (nonatomic,retain) NSMutableArray* headers;
 
 /**
  * String name/value pairs provided by the server in the websocket handshake 
  * as http headers.
  **/
-@property(nonatomic) NSMutableArray* serverHeaders;
+@property(nonatomic,retain) NSMutableArray* serverHeaders;
 
 /**
  * Version of the websocket specification.
  **/
-@property(nonatomic,assign) WebSocketVersion version;
+@property(nonatomic) WebSocketVersion version;
 
 /**
  * Max size of the payload. Any messages larger will be sent as fragments.
  **/
-@property(nonatomic,assign) NSUInteger maxPayloadSize;
+@property(nonatomic) NSUInteger maxPayloadSize;
 
 /**
  * Timeout used for sending messages, not establishing the socket connection. A
  * value of -1 will result in no timeouts being applied.
  **/
-@property(nonatomic,assign) NSTimeInterval timeout;
+@property(nonatomic) NSTimeInterval timeout;
 
 /**
  * Timeout used for the closing handshake. If this timeout is exceeded, the socket
  * will be forced closed. A value of -1 will result in no timeouts being applied.
  **/
-@property(nonatomic,assign) NSTimeInterval closeTimeout;
+@property(nonatomic) NSTimeInterval closeTimeout;
 
 /**
  * URL of the websocket
  **/
-@property(nonatomic) NSURL* url;
+@property(nonatomic,retain) NSURL* url;
 
 /**
  * Indicates whether the websocket will be opened over a secure connection
  **/
-@property(nonatomic,assign) BOOL isSecure;
+@property(nonatomic) BOOL isSecure;
 
 /**
  * Origin is used more in a browser setting, but it is intended to prevent cross-site scripting. If
@@ -111,12 +111,12 @@ typedef NSUInteger WebSocketVersion;
 /**
  * The list of extensions accepted by the host.
  **/
-@property(nonatomic) NSMutableArray* serverExtensions;
+@property(nonatomic,retain) NSMutableArray* serverExtensions;
 
 /**
  * The list of extensions supported by the client.
  **/
-@property(nonatomic) NSMutableArray* extensions;
+@property(nonatomic,retain) NSMutableArray* extensions;
 
 
 /**
@@ -137,19 +137,19 @@ typedef NSUInteger WebSocketVersion;
  * 
  * If the value is nil or an empty dictionary, then the websocket cannot be secured.
  **/
-@property(nonatomic) NSMutableDictionary* tlsSettings;
+@property(nonatomic,retain) NSMutableDictionary* tlsSettings;
 
 /**
  * The subprotocols supported by the client. Each subprotocol is represented by an NSString.
  **/
-@property(nonatomic) NSMutableArray* protocols;
+@property(nonatomic,retain) NSMutableArray* protocols;
 
 /**
  * True if the client should verify the handshake security key sent by the server. Since many of
  * the web socket servers may not have been updated to support this, set to false to ignore
  * and simply accept the connection to the server.
  **/
-@property(nonatomic,assign) BOOL verifySecurityKey; 
+@property(nonatomic) BOOL verifySecurityKey; 
 
 /**
  * The subprotocol selected by the server, nil if none was selected

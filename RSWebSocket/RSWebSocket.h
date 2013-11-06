@@ -144,7 +144,7 @@ typedef NSUInteger RSWebSocketContinuationState;
 
 @interface RSWebSocket : NSObject {
 @private
-    id<RSWebSocketDelegate> __unsafe_unretained delegate;
+    id<RSWebSocketDelegate>  delegate;
     AsyncSocket* socket;
     RSWebSocketReadyState           readystate;
     RSWebSocketFrameState           framestate;
@@ -169,12 +169,12 @@ typedef NSUInteger RSWebSocketContinuationState;
 /**
  * Callback delegate for websocket events.
  **/
-@property(unsafe_unretained, nonatomic) id<RSWebSocketDelegate> delegate;
+@property(retain, nonatomic) id<RSWebSocketDelegate> delegate;
 
 /**
  * Config info for the websocket connection.
  **/
-@property(nonatomic) RSWebSocketConnectConfig* config;
+@property(nonatomic,retain) RSWebSocketConnectConfig* config;
 
 /**
  * Represents the state of the connection. It can have the following values:
