@@ -206,6 +206,11 @@ td.case_info {
    text-align: center;
 }
 
+td.case_unimplemented {
+   background-color: #800080;
+   text-align: center;
+}
+
 td.case_failed {
    background-color: #900;
    text-align: center;
@@ -286,7 +291,7 @@ function toggleClose() {
       <center><a href="http://autobahn.ws/testsuite" title="Autobahn WebSockets Testsuite"><img src="http://autobahn.ws/static/img/ws_protocol_test_report.png"          border="0" width="820" height="46" alt="Autobahn WebSockets Testsuite Report"></img></a></center>
       <center><a href="http://autobahn.ws"           title="Autobahn WebSockets">          <img src="http://autobahn.ws/static/img/ws_protocol_test_report_autobahn.png" border="0" width="300" height="68" alt="Autobahn WebSockets">                 </img></a></center>
       <div id="master_report_header" class="block">
-         <p id="intro">Summary report generated on 2013-07-10T21:39:06Z (UTC) by <a href="http://autobahn.ws/testsuite">Autobahn WebSockets Testsuite</a> v0.5.2/v0.5.1.</p>
+         <p id="intro">Summary report generated on 2013-12-17T16:28:44Z (UTC) by <a href="http://autobahn.ws/testsuite">Autobahn WebSockets Testsuite</a> v0.5.6/v0.6.5.</p>
 
       <table id="case_outcome_desc">
          <tr>
@@ -705,6 +710,22 @@ function toggleClose() {
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_6_5_1">Case 6.5.1</a></td>
             <td class="case_ok"><a href="rswebsocket_case_6_5_1.html">Pass</a></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_6_5_2">Case 6.5.2</a></td>
+            <td class="case_ok"><a href="rswebsocket_case_6_5_2.html">Pass</a></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_6_5_3">Case 6.5.3</a></td>
+            <td class="case_ok"><a href="rswebsocket_case_6_5_3.html">Pass</a></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_6_5_4">Case 6.5.4</a></td>
+            <td class="case_ok"><a href="rswebsocket_case_6_5_4.html">Pass</a></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_6_5_5">Case 6.5.5</a></td>
+            <td class="case_ok"><a href="rswebsocket_case_6_5_5.html">Pass</a></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="case_category_row">
             <td class="case_category">6 UTF-8 Handling</td>
@@ -1310,11 +1331,35 @@ function toggleClose() {
             <td class="agent close_flex" colspan="2">'RSWebSocket'</td>
          </tr>
          <tr class="case_subcategory_row">
-            <td class="case_subcategory" colspan="3">6.23 Unicode replacement character</td>
+            <td class="case_subcategory" colspan="3">6.23 Unicode specials (i.e. replacement char)</td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_6_23_1">Case 6.23.1</a></td>
             <td class="case_ok"><a href="rswebsocket_case_6_23_1.html">Pass</a></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_6_23_2">Case 6.23.2</a></td>
+            <td class="case_ok"><a href="rswebsocket_case_6_23_2.html">Pass</a></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_6_23_3">Case 6.23.3</a></td>
+            <td class="case_ok"><a href="rswebsocket_case_6_23_3.html">Pass</a></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_6_23_4">Case 6.23.4</a></td>
+            <td class="case_ok"><a href="rswebsocket_case_6_23_4.html">Pass</a></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_6_23_5">Case 6.23.5</a></td>
+            <td class="case_ok"><a href="rswebsocket_case_6_23_5.html">Pass</a></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_6_23_6">Case 6.23.6</a></td>
+            <td class="case_ok"><a href="rswebsocket_case_6_23_6.html">Pass</a></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_6_23_7">Case 6.23.7</a></td>
+            <td class="case_ok"><a href="rswebsocket_case_6_23_7.html">Pass</a></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="case_category_row">
             <td class="case_category">7 Close Handling</td>
@@ -1531,27 +1576,27 @@ function toggleClose() {
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_1_1">Case 9.1.1</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_1_1.html">Pass</a><br/><span class="case_duration">79 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_1_1.html">Pass</a><br/><span class="case_duration">70 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_1_2">Case 9.1.2</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_1_2.html">Pass</a><br/><span class="case_duration">286 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_1_2.html">Pass</a><br/><span class="case_duration">259 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_1_3">Case 9.1.3</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_1_3.html">Pass</a><br/><span class="case_duration">1604 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_1_3.html">Pass</a><br/><span class="case_duration">1062 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_1_4">Case 9.1.4</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_1_4.html">Pass</a><br/><span class="case_duration">4872 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_1_4.html">Pass</a><br/><span class="case_duration">4215 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_1_5">Case 9.1.5</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_1_5.html">Pass</a><br/><span class="case_duration">10242 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_1_5.html">Pass</a><br/><span class="case_duration">8401 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_1_6">Case 9.1.6</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_1_6.html">Pass</a><br/><span class="case_duration">17556 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_1_6.html">Pass</a><br/><span class="case_duration">16694 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="case_category_row">
             <td class="case_category">9 Limits/Performance</td>
@@ -1562,7 +1607,7 @@ function toggleClose() {
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_2_1">Case 9.2.1</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_2_1.html">Pass</a><br/><span class="case_duration">44 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_2_1.html">Pass</a><br/><span class="case_duration">39 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_2_2">Case 9.2.2</a></td>
@@ -1570,19 +1615,19 @@ function toggleClose() {
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_2_3">Case 9.2.3</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_2_3.html">Pass</a><br/><span class="case_duration">455 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_2_3.html">Pass</a><br/><span class="case_duration">500 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_2_4">Case 9.2.4</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_2_4.html">Pass</a><br/><span class="case_duration">1793 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_2_4.html">Pass</a><br/><span class="case_duration">1949 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_2_5">Case 9.2.5</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_2_5.html">Pass</a><br/><span class="case_duration">3563 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_2_5.html">Pass</a><br/><span class="case_duration">4016 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_2_6">Case 9.2.6</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_2_6.html">Pass</a><br/><span class="case_duration">7190 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_2_6.html">Pass</a><br/><span class="case_duration">8068 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="case_category_row">
             <td class="case_category">9 Limits/Performance</td>
@@ -1593,39 +1638,39 @@ function toggleClose() {
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_3_1">Case 9.3.1</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_3_1.html">Pass</a><br/><span class="case_duration">7116 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_3_1.html">Pass</a><br/><span class="case_duration">5812 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_3_2">Case 9.3.2</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_3_2.html">Pass</a><br/><span class="case_duration">5101 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_3_2.html">Pass</a><br/><span class="case_duration">4793 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_3_3">Case 9.3.3</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_3_3.html">Pass</a><br/><span class="case_duration">9395 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_3_3.html">Pass</a><br/><span class="case_duration">4503 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_3_4">Case 9.3.4</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_3_4.html">Pass</a><br/><span class="case_duration">4248 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_3_4.html">Pass</a><br/><span class="case_duration">4379 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_3_5">Case 9.3.5</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_3_5.html">Pass</a><br/><span class="case_duration">4214 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_3_5.html">Pass</a><br/><span class="case_duration">4350 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_3_6">Case 9.3.6</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_3_6.html">Pass</a><br/><span class="case_duration">4451 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_3_6.html">Pass</a><br/><span class="case_duration">4353 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_3_7">Case 9.3.7</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_3_7.html">Pass</a><br/><span class="case_duration">4378 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_3_7.html">Pass</a><br/><span class="case_duration">4327 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_3_8">Case 9.3.8</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_3_8.html">Pass</a><br/><span class="case_duration">4381 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_3_8.html">Pass</a><br/><span class="case_duration">5222 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_3_9">Case 9.3.9</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_3_9.html">Pass</a><br/><span class="case_duration">4100 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_3_9.html">Pass</a><br/><span class="case_duration">4751 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="case_category_row">
             <td class="case_category">9 Limits/Performance</td>
@@ -1636,39 +1681,39 @@ function toggleClose() {
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_4_1">Case 9.4.1</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_4_1.html">Pass</a><br/><span class="case_duration">3422 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_4_1.html">Pass</a><br/><span class="case_duration">3549 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_4_2">Case 9.4.2</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_4_2.html">Pass</a><br/><span class="case_duration">2236 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_4_2.html">Pass</a><br/><span class="case_duration">2534 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_4_3">Case 9.4.3</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_4_3.html">Pass</a><br/><span class="case_duration">1982 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_4_3.html">Pass</a><br/><span class="case_duration">2188 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_4_4">Case 9.4.4</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_4_4.html">Pass</a><br/><span class="case_duration">1901 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_4_4.html">Pass</a><br/><span class="case_duration">2086 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_4_5">Case 9.4.5</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_4_5.html">Pass</a><br/><span class="case_duration">1952 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_4_5.html">Pass</a><br/><span class="case_duration">2105 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_4_6">Case 9.4.6</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_4_6.html">Pass</a><br/><span class="case_duration">1876 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_4_6.html">Pass</a><br/><span class="case_duration">2193 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_4_7">Case 9.4.7</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_4_7.html">Pass</a><br/><span class="case_duration">1859 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_4_7.html">Pass</a><br/><span class="case_duration">2104 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_4_8">Case 9.4.8</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_4_8.html">Pass</a><br/><span class="case_duration">1863 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_4_8.html">Pass</a><br/><span class="case_duration">2091 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_4_9">Case 9.4.9</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_4_9.html">Pass</a><br/><span class="case_duration">1770 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_4_9.html">Pass</a><br/><span class="case_duration">1907 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="case_category_row">
             <td class="case_category">9 Limits/Performance</td>
@@ -1679,27 +1724,27 @@ function toggleClose() {
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_5_1">Case 9.5.1</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_5_1.html">Pass</a><br/><span class="case_duration">2538 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_5_1.html">Pass</a><br/><span class="case_duration">2730 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_5_2">Case 9.5.2</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_5_2.html">Pass</a><br/><span class="case_duration">1760 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_5_2.html">Pass</a><br/><span class="case_duration">1817 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_5_3">Case 9.5.3</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_5_3.html">Pass</a><br/><span class="case_duration">1342 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_5_3.html">Pass</a><br/><span class="case_duration">1431 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_5_4">Case 9.5.4</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_5_4.html">Pass</a><br/><span class="case_duration">1348 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_5_4.html">Pass</a><br/><span class="case_duration">1213 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_5_5">Case 9.5.5</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_5_5.html">Pass</a><br/><span class="case_duration">1145 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_5_5.html">Pass</a><br/><span class="case_duration">1060 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_5_6">Case 9.5.6</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_5_6.html">Pass</a><br/><span class="case_duration">1072 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_5_6.html">Pass</a><br/><span class="case_duration">1024 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="case_category_row">
             <td class="case_category">9 Limits/Performance</td>
@@ -1710,27 +1755,27 @@ function toggleClose() {
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_6_1">Case 9.6.1</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_6_1.html">Pass</a><br/><span class="case_duration">1978 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_6_1.html">Pass</a><br/><span class="case_duration">2354 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_6_2">Case 9.6.2</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_6_2.html">Pass</a><br/><span class="case_duration">1302 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_6_2.html">Pass</a><br/><span class="case_duration">1364 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_6_3">Case 9.6.3</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_6_3.html">Pass</a><br/><span class="case_duration">816 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_6_3.html">Pass</a><br/><span class="case_duration">900 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_6_4">Case 9.6.4</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_6_4.html">Pass</a><br/><span class="case_duration">721 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_6_4.html">Pass</a><br/><span class="case_duration">672 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_6_5">Case 9.6.5</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_6_5.html">Pass</a><br/><span class="case_duration">557 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_6_5.html">Pass</a><br/><span class="case_duration">564 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_6_6">Case 9.6.6</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_6_6.html">Pass</a><br/><span class="case_duration">484 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_6_6.html">Pass</a><br/><span class="case_duration">530 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="case_category_row">
             <td class="case_category">9 Limits/Performance</td>
@@ -1741,27 +1786,27 @@ function toggleClose() {
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_7_1">Case 9.7.1</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_7_1.html">Pass</a><br/><span class="case_duration">303 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_7_1.html">Pass</a><br/><span class="case_duration">333 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_7_2">Case 9.7.2</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_7_2.html">Pass</a><br/><span class="case_duration">437 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_7_2.html">Pass</a><br/><span class="case_duration">385 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_7_3">Case 9.7.3</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_7_3.html">Pass</a><br/><span class="case_duration">389 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_7_3.html">Pass</a><br/><span class="case_duration">534 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_7_4">Case 9.7.4</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_7_4.html">Pass</a><br/><span class="case_duration">712 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_7_4.html">Pass</a><br/><span class="case_duration">694 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_7_5">Case 9.7.5</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_7_5.html">Pass</a><br/><span class="case_duration">1599 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_7_5.html">Pass</a><br/><span class="case_duration">1591 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_7_6">Case 9.7.6</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_7_6.html">Pass</a><br/><span class="case_duration">4780 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_7_6.html">Pass</a><br/><span class="case_duration">4797 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="case_category_row">
             <td class="case_category">9 Limits/Performance</td>
@@ -1772,27 +1817,27 @@ function toggleClose() {
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_8_1">Case 9.8.1</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_8_1.html">Pass</a><br/><span class="case_duration">331 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_8_1.html">Pass</a><br/><span class="case_duration">325 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_8_2">Case 9.8.2</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_8_2.html">Pass</a><br/><span class="case_duration">333 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_8_2.html">Pass</a><br/><span class="case_duration">354 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_8_3">Case 9.8.3</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_8_3.html">Pass</a><br/><span class="case_duration">334 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_8_3.html">Pass</a><br/><span class="case_duration">395 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_8_4">Case 9.8.4</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_8_4.html">Pass</a><br/><span class="case_duration">465 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_8_4.html">Pass</a><br/><span class="case_duration">537 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_8_5">Case 9.8.5</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_8_5.html">Pass</a><br/><span class="case_duration">932 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_8_5.html">Pass</a><br/><span class="case_duration">958 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_9_8_6">Case 9.8.6</a></td>
-            <td class="case_ok"><a href="rswebsocket_case_9_8_6.html">Pass</a><br/><span class="case_duration">2391 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+            <td class="case_ok"><a href="rswebsocket_case_9_8_6.html">Pass</a><br/><span class="case_duration">2527 ms</span></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
          </tr>
          <tr class="case_category_row">
             <td class="case_category">10 Misc</td>
@@ -1804,6 +1849,241 @@ function toggleClose() {
          <tr class="agent_case_result_row">
             <td class="case"><a href="#case_desc_10_1_1">Case 10.1.1</a></td>
             <td class="case_ok"><a href="rswebsocket_case_10_1_1.html">Pass</a></td><td class="close close_hide case_ok"><span class="close_code">1000</span></td>
+         </tr>
+         <tr class="case_category_row">
+            <td class="case_category">12 WebSocket Compression</td>
+            <td class="agent close_flex" colspan="2">'RSWebSocket'</td>
+         </tr>
+         <tr class="case_subcategory_row">
+            <td class="case_subcategory" colspan="3">12.1 Large JSON data file (utf8, 200636 bytes)</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_1_1">Case 12.1.1</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_1_2">Case 12.1.2</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_1_3">Case 12.1.3</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_1_4">Case 12.1.4</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_1_5">Case 12.1.5</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_1_6">Case 12.1.6</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_1_7">Case 12.1.7</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_1_8">Case 12.1.8</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_1_9">Case 12.1.9</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_1_10">Case 12.1.10</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="case_category_row">
+            <td class="case_category">12 WebSocket Compression</td>
+            <td class="agent close_flex" colspan="2">'RSWebSocket'</td>
+         </tr>
+         <tr class="case_subcategory_row">
+            <td class="case_subcategory" colspan="3">12.2 Lena Picture, Bitmap 512x512 bw (binary, 263222 bytes)</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_2_1">Case 12.2.1</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_2_2">Case 12.2.2</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_2_3">Case 12.2.3</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_2_4">Case 12.2.4</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_2_5">Case 12.2.5</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_2_6">Case 12.2.6</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_2_7">Case 12.2.7</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_2_8">Case 12.2.8</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_2_9">Case 12.2.9</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_2_10">Case 12.2.10</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="case_category_row">
+            <td class="case_category">12 WebSocket Compression</td>
+            <td class="agent close_flex" colspan="2">'RSWebSocket'</td>
+         </tr>
+         <tr class="case_subcategory_row">
+            <td class="case_subcategory" colspan="3">12.3 Human readable text, Goethe's Faust I (German) (binary, 229647 bytes)</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_3_1">Case 12.3.1</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_3_2">Case 12.3.2</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_3_3">Case 12.3.3</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_3_4">Case 12.3.4</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_3_5">Case 12.3.5</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_3_6">Case 12.3.6</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_3_7">Case 12.3.7</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_3_8">Case 12.3.8</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_3_9">Case 12.3.9</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_3_10">Case 12.3.10</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="case_category_row">
+            <td class="case_category">12 WebSocket Compression</td>
+            <td class="agent close_flex" colspan="2">'RSWebSocket'</td>
+         </tr>
+         <tr class="case_subcategory_row">
+            <td class="case_subcategory" colspan="3">12.4 Large HTML file (utf8, 267781 bytes)</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_4_1">Case 12.4.1</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_4_2">Case 12.4.2</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_4_3">Case 12.4.3</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_4_4">Case 12.4.4</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_4_5">Case 12.4.5</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_4_6">Case 12.4.6</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_4_7">Case 12.4.7</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_4_8">Case 12.4.8</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_4_9">Case 12.4.9</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_4_10">Case 12.4.10</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="case_category_row">
+            <td class="case_category">12 WebSocket Compression</td>
+            <td class="agent close_flex" colspan="2">'RSWebSocket'</td>
+         </tr>
+         <tr class="case_subcategory_row">
+            <td class="case_subcategory" colspan="3">12.5 A larger PDF (binary, 1042328 bytes)</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_5_1">Case 12.5.1</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_5_2">Case 12.5.2</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_5_3">Case 12.5.3</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_5_4">Case 12.5.4</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_5_5">Case 12.5.5</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_5_6">Case 12.5.6</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_5_7">Case 12.5.7</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_5_8">Case 12.5.8</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_5_9">Case 12.5.9</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
+         </tr>
+         <tr class="agent_case_result_row">
+            <td class="case"><a href="#case_desc_12_5_10">Case 12.5.10</a></td>
+            <td class="case_unimplemented close_flex" colspan="2">Unimplemented</td>
          </tr>
       </table>
       <br/><hr/>
@@ -2246,13 +2526,13 @@ function toggleClose() {
       <a name="case_desc_6_3_1"></a>
       <h2>Case 6.3.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send invalid UTF-8 text message unfragmented.<br><br>MESSAGE:<br>Œ∫·ΩπœÉŒºŒµÌ†Äedited<br>cebae1bdb9cf83cebcceb5eda080656469746564</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send invalid UTF-8 text message unfragmented.<br><br>MESSAGE:<br>cebae1bdb9cf83cebcceb5eda080656469746564</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_3_2"></a>
       <h2>Case 6.3.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send invalid UTF-8 text message in fragments of 1 octet, resulting in frames ending on positions which are not code point ends.<br><br>MESSAGE:<br>Œ∫·ΩπœÉŒºŒµÌ†Äedited<br>cebae1bdb9cf83cebcceb5eda080656469746564</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send invalid UTF-8 text message in fragments of 1 octet, resulting in frames ending on positions which are not code point ends.<br><br>MESSAGE:<br>cebae1bdb9cf83cebcceb5eda080656469746564</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_4_1"></a>
@@ -2260,11 +2540,11 @@ function toggleClose() {
       <a class="up" href="#top">Up</a>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send invalid UTF-8 text message in 3 fragments (frames).
 First frame payload is valid, then wait, then 2nd frame which contains the payload making the sequence invalid, then wait, then 3rd frame with rest.
-Note that PART1 and PART3 are valid UTF-8 in themselves, PART2 is a 0x11000 encoded as in the UTF-8 integer encoding scheme, but the codepoint is invalid (out of range).
+Note that PART1 and PART3 are valid UTF-8 in themselves, PART2 is a 0x110000 encoded as in the UTF-8 integer encoding scheme, but the codepoint is invalid (out of range).
 <br><br>MESSAGE PARTS:<br>
-PART1 = Œ∫·ΩπœÉŒºŒµ (cebae1bdb9cf83cebcceb5)<br>
-PART2 = ÙêÄÄ (f4908080)<br>
-PART3 = edited (656469746564)<br>
+PART1 = cebae1bdb9cf83cebcceb5<br>
+PART2 = f4908080<br>
+PART3 = 656469746564<br>
 </p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The first frame is accepted, we expect to timeout on the first wait. The 2nd frame should be rejected immediately (fail fast on UTF-8). If we timeout, we expect the connection is failed at least then, since the complete message payload is not valid UTF-8.</p>
       <br/>
@@ -2273,9 +2553,9 @@ PART3 = edited (656469746564)<br>
       <a class="up" href="#top">Up</a>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Same as Case 6.4.1, but in 2nd frame, we send only up to and including the octet making the complete payload invalid.
 <br><br>MESSAGE PARTS:<br>
-PART1 = Œ∫·ΩπœÉŒºŒµÙ (cebae1bdb9cf83cebcceb5f4)<br>
-PART2 = ê (90)<br>
-PART3 = ÄÄedited (8080656469746564)<br>
+PART1 = cebae1bdb9cf83cebcceb5f4<br>
+PART2 = 90<br>
+PART3 = 8080656469746564<br>
 </p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The first frame is accepted, we expect to timeout on the first wait. The 2nd frame should be rejected immediately (fail fast on UTF-8). If we timeout, we expect the connection is failed at least then, since the complete message payload is not valid UTF-8.</p>
       <br/>
@@ -2284,9 +2564,9 @@ PART3 = ÄÄedited (8080656469746564)<br>
       <a class="up" href="#top">Up</a>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Same as Case 6.4.1, but we send message not in 3 frames, but in 3 chops of the same message frame.
 <br><br>MESSAGE PARTS:<br>
-PART1 = Œ∫·ΩπœÉŒºŒµ (cebae1bdb9cf83cebcceb5)<br>
-PART2 = ÙêÄÄ (f4908080)<br>
-PART3 = edited (656469746564)<br>
+PART1 = cebae1bdb9cf83cebcceb5<br>
+PART2 = f4908080<br>
+PART3 = 656469746564<br>
 </p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The first chop is accepted, we expect to timeout on the first wait. The 2nd chop should be rejected immediately (fail fast on UTF-8). If we timeout, we expect the connection is failed at least then, since the complete message payload is not valid UTF-8.</p>
       <br/>
@@ -2295,742 +2575,802 @@ PART3 = edited (656469746564)<br>
       <a class="up" href="#top">Up</a>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Same as Case 6.4.2, but we send message not in 3 frames, but in 3 chops of the same message frame.
 <br><br>MESSAGE PARTS:<br>
-PART1 = Œ∫·ΩπœÉŒºŒµÙ (cebae1bdb9cf83cebcceb5f4)<br>
-PART2 = ê (90)<br>
-PART3 =  ()<br>
+PART1 = cebae1bdb9cf83cebcceb5f4<br>
+PART2 = 90<br>
+PART3 = <br>
 </p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The first chop is accepted, we expect to timeout on the first wait. The 2nd chop should be rejected immediately (fail fast on UTF-8). If we timeout, we expect the connection is failed at least then, since the complete message payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_5_1"></a>
       <h2>Case 6.5.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Œ∫·ΩπœÉŒºŒµ<br>cebae1bdb9cf83cebcceb5</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0x68656c6c6f24776f726c64</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
+      <br/>
+      <a name="case_desc_6_5_2"></a>
+      <h2>Case 6.5.2</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0x68656c6c6fc2a2776f726c64</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
+      <br/>
+      <a name="case_desc_6_5_3"></a>
+      <h2>Case 6.5.3</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0x68656c6c6fe282ac776f726c64</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
+      <br/>
+      <a name="case_desc_6_5_4"></a>
+      <h2>Case 6.5.4</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0x68656c6c6ff0a4ada2776f726c64</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
+      <br/>
+      <a name="case_desc_6_5_5"></a>
+      <h2>Case 6.5.5</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xcebae1bdb9cf83cebcceb5</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_6_1"></a>
       <h2>Case 6.6.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Œ<br>ce</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xce</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_6_2"></a>
       <h2>Case 6.6.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Œ∫<br>ceba</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xceba</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_6_3"></a>
       <h2>Case 6.6.3</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Œ∫·<br>cebae1</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xcebae1</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_6_4"></a>
       <h2>Case 6.6.4</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Œ∫·Ω<br>cebae1bd</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xcebae1bd</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_6_5"></a>
       <h2>Case 6.6.5</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Œ∫·Ωπ<br>cebae1bdb9</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xcebae1bdb9</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_6_6"></a>
       <h2>Case 6.6.6</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Œ∫·Ωπœ<br>cebae1bdb9cf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xcebae1bdb9cf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_6_7"></a>
       <h2>Case 6.6.7</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Œ∫·ΩπœÉ<br>cebae1bdb9cf83</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xcebae1bdb9cf83</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_6_8"></a>
       <h2>Case 6.6.8</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Œ∫·ΩπœÉŒ<br>cebae1bdb9cf83ce</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xcebae1bdb9cf83ce</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_6_9"></a>
       <h2>Case 6.6.9</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Œ∫·ΩπœÉŒº<br>cebae1bdb9cf83cebc</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xcebae1bdb9cf83cebc</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_6_10"></a>
       <h2>Case 6.6.10</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Œ∫·ΩπœÉŒºŒ<br>cebae1bdb9cf83cebcce</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xcebae1bdb9cf83cebcce</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_6_11"></a>
       <h2>Case 6.6.11</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Œ∫·ΩπœÉŒºŒµ<br>cebae1bdb9cf83cebcceb5</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xcebae1bdb9cf83cebcceb5</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_7_1"></a>
       <h2>Case 6.7.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br> <br>00</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0x00</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_7_2"></a>
       <h2>Case 6.7.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¬Ä<br>c280</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xc280</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_7_3"></a>
       <h2>Case 6.7.3</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>‡†Ä<br>e0a080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xe0a080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_7_4"></a>
       <h2>Case 6.7.4</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>êÄÄ<br>f0908080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf0908080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_8_1"></a>
       <h2>Case 6.8.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¯àÄÄÄ<br>f888808080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xf888808080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_8_2"></a>
       <h2>Case 6.8.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¸ÑÄÄÄÄ<br>fc8480808080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xfc8480808080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_9_1"></a>
       <h2>Case 6.9.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br><br>7f</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0x7f</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_9_2"></a>
       <h2>Case 6.9.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ﬂø<br>dfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xdfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_9_3"></a>
       <h2>Case 6.9.3</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ôøø<br>efbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xefbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_9_4"></a>
       <h2>Case 6.9.4</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ùèøø<br>f48fbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf48fbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_10_1"></a>
       <h2>Case 6.10.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>˜øøø<br>f7bfbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xf7bfbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_10_2"></a>
       <h2>Case 6.10.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>˚øøøø<br>fbbfbfbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xfbbfbfbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_10_3"></a>
       <h2>Case 6.10.3</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>˝øøøøø<br>fdbfbfbfbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xfdbfbfbfbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_11_1"></a>
       <h2>Case 6.11.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ìüø<br>ed9fbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xed9fbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_11_2"></a>
       <h2>Case 6.11.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÓÄÄ<br>ee8080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xee8080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_11_3"></a>
       <h2>Case 6.11.3</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÔøΩ<br>efbfbd</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xefbfbd</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_11_4"></a>
       <h2>Case 6.11.4</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ùèøø<br>f48fbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf48fbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_11_5"></a>
       <h2>Case 6.11.5</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÙêÄÄ<br>f4908080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xf4908080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_12_1"></a>
       <h2>Case 6.12.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ä<br>80</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0x80</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_12_2"></a>
       <h2>Case 6.12.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ø<br>bf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_12_3"></a>
       <h2>Case 6.12.3</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Äø<br>80bf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0x80bf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_12_4"></a>
       <h2>Case 6.12.4</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÄøÄ<br>80bf80</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0x80bf80</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_12_5"></a>
       <h2>Case 6.12.5</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÄøÄø<br>80bf80bf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0x80bf80bf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_12_6"></a>
       <h2>Case 6.12.6</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÄøÄøÄ<br>80bf80bf80</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0x80bf80bf80</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_12_7"></a>
       <h2>Case 6.12.7</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÄøÄøÄø<br>80bf80bf80bf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0x80bf80bf80bf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_12_8"></a>
       <h2>Case 6.12.8</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÄÅÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü†°¢£§•¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂∑∏π∫ªºΩæ<br>808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0x808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_13_1"></a>
       <h2>Case 6.13.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¿ ¡ ¬ √ ƒ ≈ ∆ « » …   À Ã Õ Œ œ – — “ ” ‘ ’ ÷ ◊ ÿ Ÿ ⁄ € ‹ › ﬁ <br>c020c120c220c320c420c520c620c720c820c920ca20cb20cc20cd20ce20cf20d020d120d220d320d420d520d620d720d820d920da20db20dc20dd20de20</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xc020c120c220c320c420c520c620c720c820c920ca20cb20cc20cd20ce20cf20d020d120d220d320d420d520d620d720d820d920da20db20dc20dd20de20</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_13_2"></a>
       <h2>Case 6.13.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>‡ · ‚ „ ‰ Â Ê Á Ë È Í Î Ï Ì Ó <br>e020e120e220e320e420e520e620e720e820e920ea20eb20ec20ed20ee20</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xe020e120e220e320e420e520e620e720e820e920ea20eb20ec20ed20ee20</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_13_3"></a>
       <h2>Case 6.13.3</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br> Ò Ú Û Ù ı ˆ <br>f020f120f220f320f420f520f620</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xf020f120f220f320f420f520f620</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_13_4"></a>
       <h2>Case 6.13.4</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¯ ˘ ˙ <br>f820f920fa20</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xf820f920fa20</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_13_5"></a>
       <h2>Case 6.13.5</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¸ <br>fc20</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xfc20</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_14_1"></a>
       <h2>Case 6.14.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¿<br>c0</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xc0</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_14_2"></a>
       <h2>Case 6.14.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>‡Ä<br>e080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xe080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_14_3"></a>
       <h2>Case 6.14.3</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÄÄ<br>f08080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xf08080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_14_4"></a>
       <h2>Case 6.14.4</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¯ÄÄÄ<br>f8808080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xf8808080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_14_5"></a>
       <h2>Case 6.14.5</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¸ÄÄÄÄ<br>fc80808080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xfc80808080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_14_6"></a>
       <h2>Case 6.14.6</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ﬂ<br>df</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xdf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_14_7"></a>
       <h2>Case 6.14.7</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ôø<br>efbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xefbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_14_8"></a>
       <h2>Case 6.14.8</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>˜øø<br>f7bfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xf7bfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_14_9"></a>
       <h2>Case 6.14.9</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>˚øøø<br>fbbfbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xfbbfbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_14_10"></a>
       <h2>Case 6.14.10</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>˝øøøø<br>fdbfbfbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xfdbfbfbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_15_1"></a>
       <h2>Case 6.15.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¿‡ÄÄÄ¯ÄÄÄ¸ÄÄÄÄﬂÔø˜øø˚øøø˝øøøø<br>c0e080f08080f8808080fc80808080dfefbff7bfbffbbfbfbffdbfbfbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xc0e080f08080f8808080fc80808080dfefbff7bfbffbbfbfbffdbfbfbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_16_1"></a>
       <h2>Case 6.16.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>˛<br>fe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xfe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_16_2"></a>
       <h2>Case 6.16.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ˇ<br>ff</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xff</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_16_3"></a>
       <h2>Case 6.16.3</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>˛˛ˇˇ<br>fefeffff</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xfefeffff</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_17_1"></a>
       <h2>Case 6.17.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¿Ø<br>c0af</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xc0af</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_17_2"></a>
       <h2>Case 6.17.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>‡ÄØ<br>e080af</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xe080af</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_17_3"></a>
       <h2>Case 6.17.3</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÄÄØ<br>f08080af</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xf08080af</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_17_4"></a>
       <h2>Case 6.17.4</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¯ÄÄÄØ<br>f8808080af</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xf8808080af</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_17_5"></a>
       <h2>Case 6.17.5</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¸ÄÄÄÄØ<br>fc80808080af</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xfc80808080af</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_18_1"></a>
       <h2>Case 6.18.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¡ø<br>c1bf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xc1bf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_18_2"></a>
       <h2>Case 6.18.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>‡üø<br>e09fbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xe09fbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_18_3"></a>
       <h2>Case 6.18.3</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>èøø<br>f08fbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xf08fbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_18_4"></a>
       <h2>Case 6.18.4</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¯áøøø<br>f887bfbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xf887bfbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_18_5"></a>
       <h2>Case 6.18.5</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¸Éøøøø<br>fc83bfbfbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xfc83bfbfbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_19_1"></a>
       <h2>Case 6.19.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¿Ä<br>c080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xc080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_19_2"></a>
       <h2>Case 6.19.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>‡ÄÄ<br>e08080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xe08080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_19_3"></a>
       <h2>Case 6.19.3</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÄÄÄ<br>f0808080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xf0808080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_19_4"></a>
       <h2>Case 6.19.4</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¯ÄÄÄÄ<br>f880808080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xf880808080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_19_5"></a>
       <h2>Case 6.19.5</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>¸ÄÄÄÄÄ<br>fc8080808080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xfc8080808080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_20_1"></a>
       <h2>Case 6.20.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ì†Ä<br>eda080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xeda080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_20_2"></a>
       <h2>Case 6.20.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ì≠ø<br>edadbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xedadbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_20_3"></a>
       <h2>Case 6.20.3</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÌÆÄ<br>edae80</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xedae80</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_20_4"></a>
       <h2>Case 6.20.4</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÌØø<br>edafbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xedafbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_20_5"></a>
       <h2>Case 6.20.5</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ì∞Ä<br>edb080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xedb080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_20_6"></a>
       <h2>Case 6.20.6</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÌæÄ<br>edbe80</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xedbe80</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_20_7"></a>
       <h2>Case 6.20.7</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ìøø<br>edbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xedbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_21_1"></a>
       <h2>Case 6.21.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ì†ÄÌ∞Ä<br>eda080edb080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xeda080edb080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_21_2"></a>
       <h2>Case 6.21.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ì†ÄÌøø<br>eda080edbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xeda080edbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_21_3"></a>
       <h2>Case 6.21.3</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ì≠øÌ∞Ä<br>edadbfedb080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xedadbfedb080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_21_4"></a>
       <h2>Case 6.21.4</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ì≠øÌøø<br>edadbfedbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xedadbfedbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_21_5"></a>
       <h2>Case 6.21.5</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÌÆÄÌ∞Ä<br>edae80edb080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xedae80edb080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_21_6"></a>
       <h2>Case 6.21.6</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÌÆÄÌøø<br>edae80edbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xedae80edbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_21_7"></a>
       <h2>Case 6.21.7</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÌØøÌ∞Ä<br>edafbfedb080</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xedafbfedb080</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_21_8"></a>
       <h2>Case 6.21.8</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÌØøÌøø<br>edafbfedbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is not valid UTF-8 in one fragment.<br><br>Payload: 0xedafbfedbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The connection is failed immediately, since the payload is not valid UTF-8.</p>
       <br/>
       <a name="case_desc_6_22_1"></a>
       <h2>Case 6.22.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ôøæ<br>efbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xefbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_2"></a>
       <h2>Case 6.22.2</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ôøø<br>efbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xefbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_3"></a>
       <h2>Case 6.22.3</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>üøæ<br>f09fbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf09fbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_4"></a>
       <h2>Case 6.22.4</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>üøø<br>f09fbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf09fbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_5"></a>
       <h2>Case 6.22.5</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Øøæ<br>f0afbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf0afbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_6"></a>
       <h2>Case 6.22.6</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Øøø<br>f0afbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf0afbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_7"></a>
       <h2>Case 6.22.7</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>øøæ<br>f0bfbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf0bfbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_8"></a>
       <h2>Case 6.22.8</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>øøø<br>f0bfbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf0bfbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_9"></a>
       <h2>Case 6.22.9</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Òèøæ<br>f18fbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf18fbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_10"></a>
       <h2>Case 6.22.10</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Òèøø<br>f18fbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf18fbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_11"></a>
       <h2>Case 6.22.11</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Òüøæ<br>f19fbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf19fbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_12"></a>
       <h2>Case 6.22.12</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Òüøø<br>f19fbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf19fbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_13"></a>
       <h2>Case 6.22.13</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÒØøæ<br>f1afbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf1afbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_14"></a>
       <h2>Case 6.22.14</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÒØøø<br>f1afbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf1afbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_15"></a>
       <h2>Case 6.22.15</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Òøøæ<br>f1bfbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf1bfbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_16"></a>
       <h2>Case 6.22.16</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Òøøø<br>f1bfbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf1bfbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_17"></a>
       <h2>Case 6.22.17</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Úèøæ<br>f28fbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf28fbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_18"></a>
       <h2>Case 6.22.18</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Úèøø<br>f28fbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf28fbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_19"></a>
       <h2>Case 6.22.19</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Úüøæ<br>f29fbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf29fbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_20"></a>
       <h2>Case 6.22.20</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Úüøø<br>f29fbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf29fbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_21"></a>
       <h2>Case 6.22.21</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÚØøæ<br>f2afbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf2afbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_22"></a>
       <h2>Case 6.22.22</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÚØøø<br>f2afbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf2afbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_23"></a>
       <h2>Case 6.22.23</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Úøøæ<br>f2bfbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf2bfbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_24"></a>
       <h2>Case 6.22.24</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Úøøø<br>f2bfbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf2bfbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_25"></a>
       <h2>Case 6.22.25</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ûèøæ<br>f38fbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf38fbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_26"></a>
       <h2>Case 6.22.26</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ûèøø<br>f38fbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf38fbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_27"></a>
       <h2>Case 6.22.27</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ûüøæ<br>f39fbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf39fbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_28"></a>
       <h2>Case 6.22.28</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ûüøø<br>f39fbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf39fbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_29"></a>
       <h2>Case 6.22.29</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÛØøæ<br>f3afbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf3afbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_30"></a>
       <h2>Case 6.22.30</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÛØøø<br>f3afbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf3afbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_31"></a>
       <h2>Case 6.22.31</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ûøøæ<br>f3bfbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf3bfbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_32"></a>
       <h2>Case 6.22.32</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ûøøø<br>f3bfbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf3bfbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_33"></a>
       <h2>Case 6.22.33</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ùèøæ<br>f48fbfbe</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf48fbfbe</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_22_34"></a>
       <h2>Case 6.22.34</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>Ùèøø<br>f48fbfbf</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xf48fbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_6_23_1"></a>
       <h2>Case 6.23.1</h2>
       <a class="up" href="#top">Up</a>
-      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>MESSAGE:<br>ÔøΩ<br>efbfbd</p>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xefbfb9</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
+      <br/>
+      <a name="case_desc_6_23_2"></a>
+      <h2>Case 6.23.2</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xefbfba</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
+      <br/>
+      <a name="case_desc_6_23_3"></a>
+      <h2>Case 6.23.3</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xefbfbb</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
+      <br/>
+      <a name="case_desc_6_23_4"></a>
+      <h2>Case 6.23.4</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xefbfbc</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
+      <br/>
+      <a name="case_desc_6_23_5"></a>
+      <h2>Case 6.23.5</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xefbfbd</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
+      <br/>
+      <a name="case_desc_6_23_6"></a>
+      <h2>Case 6.23.6</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xefbfbe</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
+      <br/>
+      <a name="case_desc_6_23_7"></a>
+      <h2>Case 6.23.7</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send a text message with payload which is valid UTF-8 in one fragment.<br><br>Payload: 0xefbfbf</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>The message is echo'ed back to us.</p>
       <br/>
       <a name="case_desc_7_1_1"></a>
@@ -3608,6 +3948,306 @@ PART3 =  ()<br>
       <a class="up" href="#top">Up</a>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send text message with payload of length 65536 auto-fragmented with <b>autoFragmentSize = 1300</b>.</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed text message (with payload as sent and transmitted frame counts as expected). Clean close with normal code.</p>
+      <br/>
+      <a name="case_desc_12_1_1"></a>
+      <h2>Case 12.1.1</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 16 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 60 secs.</p>
+      <br/>
+      <a name="case_desc_12_1_2"></a>
+      <h2>Case 12.1.2</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 64 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 60 secs.</p>
+      <br/>
+      <a name="case_desc_12_1_3"></a>
+      <h2>Case 12.1.3</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 256 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 120 secs.</p>
+      <br/>
+      <a name="case_desc_12_1_4"></a>
+      <h2>Case 12.1.4</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 1024 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 240 secs.</p>
+      <br/>
+      <a name="case_desc_12_1_5"></a>
+      <h2>Case 12.1.5</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 4096 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_1_6"></a>
+      <h2>Case 12.1.6</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 8192 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_1_7"></a>
+      <h2>Case 12.1.7</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 16384 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_1_8"></a>
+      <h2>Case 12.1.8</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 32768 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_1_9"></a>
+      <h2>Case 12.1.9</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 65536 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_1_10"></a>
+      <h2>Case 12.1.10</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 131072 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_2_1"></a>
+      <h2>Case 12.2.1</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 16 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 60 secs.</p>
+      <br/>
+      <a name="case_desc_12_2_2"></a>
+      <h2>Case 12.2.2</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 64 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 60 secs.</p>
+      <br/>
+      <a name="case_desc_12_2_3"></a>
+      <h2>Case 12.2.3</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 256 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 120 secs.</p>
+      <br/>
+      <a name="case_desc_12_2_4"></a>
+      <h2>Case 12.2.4</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 1024 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 240 secs.</p>
+      <br/>
+      <a name="case_desc_12_2_5"></a>
+      <h2>Case 12.2.5</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 4096 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_2_6"></a>
+      <h2>Case 12.2.6</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 8192 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_2_7"></a>
+      <h2>Case 12.2.7</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 16384 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_2_8"></a>
+      <h2>Case 12.2.8</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 32768 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_2_9"></a>
+      <h2>Case 12.2.9</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 65536 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_2_10"></a>
+      <h2>Case 12.2.10</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 131072 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_3_1"></a>
+      <h2>Case 12.3.1</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 16 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 60 secs.</p>
+      <br/>
+      <a name="case_desc_12_3_2"></a>
+      <h2>Case 12.3.2</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 64 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 60 secs.</p>
+      <br/>
+      <a name="case_desc_12_3_3"></a>
+      <h2>Case 12.3.3</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 256 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 120 secs.</p>
+      <br/>
+      <a name="case_desc_12_3_4"></a>
+      <h2>Case 12.3.4</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 1024 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 240 secs.</p>
+      <br/>
+      <a name="case_desc_12_3_5"></a>
+      <h2>Case 12.3.5</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 4096 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_3_6"></a>
+      <h2>Case 12.3.6</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 8192 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_3_7"></a>
+      <h2>Case 12.3.7</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 16384 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_3_8"></a>
+      <h2>Case 12.3.8</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 32768 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_3_9"></a>
+      <h2>Case 12.3.9</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 65536 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_3_10"></a>
+      <h2>Case 12.3.10</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 131072 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_4_1"></a>
+      <h2>Case 12.4.1</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 16 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 60 secs.</p>
+      <br/>
+      <a name="case_desc_12_4_2"></a>
+      <h2>Case 12.4.2</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 64 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 60 secs.</p>
+      <br/>
+      <a name="case_desc_12_4_3"></a>
+      <h2>Case 12.4.3</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 256 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 120 secs.</p>
+      <br/>
+      <a name="case_desc_12_4_4"></a>
+      <h2>Case 12.4.4</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 1024 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 240 secs.</p>
+      <br/>
+      <a name="case_desc_12_4_5"></a>
+      <h2>Case 12.4.5</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 4096 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_4_6"></a>
+      <h2>Case 12.4.6</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 8192 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_4_7"></a>
+      <h2>Case 12.4.7</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 16384 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_4_8"></a>
+      <h2>Case 12.4.8</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 32768 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_4_9"></a>
+      <h2>Case 12.4.9</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 65536 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_4_10"></a>
+      <h2>Case 12.4.10</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 131072 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_5_1"></a>
+      <h2>Case 12.5.1</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 16 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 60 secs.</p>
+      <br/>
+      <a name="case_desc_12_5_2"></a>
+      <h2>Case 12.5.2</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 64 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 60 secs.</p>
+      <br/>
+      <a name="case_desc_12_5_3"></a>
+      <h2>Case 12.5.3</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 256 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 120 secs.</p>
+      <br/>
+      <a name="case_desc_12_5_4"></a>
+      <h2>Case 12.5.4</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 1024 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 240 secs.</p>
+      <br/>
+      <a name="case_desc_12_5_5"></a>
+      <h2>Case 12.5.5</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 4096 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_5_6"></a>
+      <h2>Case 12.5.6</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 8192 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_5_7"></a>
+      <h2>Case 12.5.7</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 16384 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_5_8"></a>
+      <h2>Case 12.5.8</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 32768 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_5_9"></a>
+      <h2>Case 12.5.9</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 65536 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
+      <br/>
+      <a name="case_desc_12_5_10"></a>
+      <h2>Case 12.5.10</h2>
+      <a class="up" href="#top">Up</a>
+      <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send 1000 messages of payload size 131072 to measure implementation/network RTT (round trip time) / latency.</p>
+      <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Receive echo'ed messages (with payload as sent). Timeout case after 480 secs.</p>
       </div>
       <br/><hr/>
    </body>

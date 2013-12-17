@@ -202,7 +202,7 @@ pre.wirelog_tcp_closed_by_peer {color: #fff; margin: 0; background-color: #000; 
       <center><a href="http://autobahn.ws/testsuite" title="Autobahn WebSockets Testsuite"><img src="http://autobahn.ws/static/img/ws_protocol_test_report.png"          border="0" width="820" height="46" alt="Autobahn WebSockets Testsuite Report"></img></a></center>
       <center><a href="http://autobahn.ws"           title="Autobahn WebSockets">          <img src="http://autobahn.ws/static/img/ws_protocol_test_report_autobahn.png" border="0" width="300" height="68" alt="Autobahn WebSockets">                 </img></a></center>
       <br/>
-      <p class="case case_ok">'RSWebSocket' - <span style="font-size: 1.3em;"><b>Case 7.1.4</b></span> : Pass - <span style="font-size: 0.9em;"><b>1</b> ms @ 2013-07-10T21:36:41Z</a></p>
+      <p class="case case_ok">'RSWebSocket' - <span style="font-size: 1.3em;"><b>Case 7.1.4</b></span> : Pass - <span style="font-size: 0.9em;"><b>1</b> ms @ 2013-12-17T16:26:21Z</a></p>
       <p class="case_text_block case_desc"><b>Case Description</b><br/><br/>Send text message after sending a close frame.</p>
       <p class="case_text_block case_expect"><b>Case Expectation</b><br/><br/>Clean close with normal code. Text message ignored.</p>
 
@@ -214,18 +214,18 @@ pre.wirelog_tcp_closed_by_peer {color: #fff; margin: 0; background-color: #000; 
       <p class="case_text_block case_closing_beh"><b>Case Closing Behavior</b><br/><br/>Connection was properly closed (OK)</p>
       <br/><hr/>
       <h2>Opening Handshake</h2>
-      <pre class="http_dump">GET /runCase?case=203&agent='RSWebSocket' HTTP/1.1
+      <pre class="http_dump">GET /runCase?case=213&agent='RSWebSocket' HTTP/1.1
 Upgrade: WebSocket
 Connection: Upgrade
-Sec-WebSocket-Key: Mzk1MTg1MDAxLjAxMTc3Nw==
+Sec-WebSocket-Key: NDA4OTkwMzgxLjY0MzA4MQ==
 Host: localhost:9001
 Sec-WebSocket-Origin: http://localhost:9001/runCase
 Sec-WebSocket-Version: 13</pre>
       <pre class="http_dump">HTTP/1.1 101 Switching Protocols
-Server: AutobahnTestSuite/0.5.2-0.5.1
+Server: AutobahnTestSuite/0.5.6-0.6.5
 Upgrade: WebSocket
 Connection: Upgrade
-Sec-WebSocket-Accept: CnbuhKgiY1yrYc0OHWEJLSSUyFU=</pre>
+Sec-WebSocket-Accept: VW1JYwwKYUaF8Lueng4ca+CXFMw=</pre>
       <br/><hr/>
       <h2>Closing Behavior</h2>
       <table>
@@ -276,25 +276,20 @@ Sec-WebSocket-Accept: CnbuhKgiY1yrYc0OHWEJLSSUyFU=</pre>
       <br/><hr/>
       <h2>Wire Log</h2>
       <div id="wirelog">
-         <pre class="wirelog_rx_octets">000 RX OCTETS: 474554202f72756e436173653f636173653d323033266167656e743d275253576562536f636b65742720485454502f312e31</pre>
-         <pre class="wirelog_rx_octets">               0d0a557067726164653a20576562536f636b65740d0a436f6e6e656374696f6e3a20557067726164650d0a5365632d576562</pre>
-         <pre class="wirelog_rx_octets">               536f636b65742d4b65793a204d7a6b314d5467314d4441784c6a41784d5463334e773d3d0d0a486f73743a206c6f63616c68</pre>
-         <pre class="wirelog_rx_octets">               6f73743a393030310d0a5365632d576562536f636b65742d4f726967696e3a20687474703a2f2f6c6f63616c686f73743a39</pre>
-         <pre class="wirelog_rx_octets">               3030312f72756e436173650d0a5365632d576562536f636b65742d56657273696f6e3a2031330d0a0d0a</pre>
+         <pre class="wirelog_rx_octets">000 RX OCTETS: 474554202f72756e436173653f636173653d323133266167656e743d275253576562536f636b65742720485454502f312e31</pre>
+         <pre class="wirelog_rx_octets">               0d0a557067726164653a20576562 ...</pre>
          <pre class="wirelog_tx_octets">001 TX OCTETS: 485454502f312e312031303120537769746368696e672050726f746f636f6c730d0a5365727665723a204175746f6261686e</pre>
-         <pre class="wirelog_tx_octets">               5465737453756974652f302e352e322d302e352e310d0a557067726164653a20576562536f636b65740d0a436f6e6e656374</pre>
-         <pre class="wirelog_tx_octets">               696f6e3a20557067726164650d0a5365632d576562536f636b65742d4163636570743a20436e6275684b6769593179725963</pre>
-         <pre class="wirelog_tx_octets">               304f4857454a4c5353557946553d0d0a0d0a</pre>
-         <pre class="wirelog_tx_frame">002 TX FRAME : OPCODE=8, FIN=True, RSV=0, MASK=None, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
-         <pre class="wirelog_tx_frame">               è</pre>
+         <pre class="wirelog_tx_octets">               5465737453756974652f302e352e ...</pre>
+         <pre class="wirelog_tx_frame">002 TX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASK=None, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_frame">               0x03e8</pre>
          <pre class="wirelog_tx_octets">003 TX OCTETS: 880203e8</pre>
-         <pre class="wirelog_tx_frame">004 TX FRAME : OPCODE=1, FIN=True, RSV=0, MASK=None, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
+         <pre class="wirelog_tx_frame">004 TX FRAME : OPCODE=1, FIN=True, RSV=0, PAYLOAD-LEN=12, MASK=None, PAYLOAD-REPEAT-LEN=None, CHOPSIZE=None, SYNC=False</pre>
          <pre class="wirelog_tx_frame">               Hello World!</pre>
          <pre class="wirelog_tx_octets">005 TX OCTETS: 810c48656c6c6f20576f726c6421</pre>
          <pre class="wirelog_kill_after">006 FAIL CONNECTION AFTER 1.000000 sec</pre>
-         <pre class="wirelog_rx_octets">007 RX OCTETS: 8882c7c4e344c42c</pre>
-         <pre class="wirelog_rx_frame">008 RX FRAME : OPCODE=8, FIN=True, RSV=0, MASKED=True, MASK=6337633465333434</pre>
-         <pre class="wirelog_rx_frame">               è</pre>
+         <pre class="wirelog_rx_octets">007 RX OCTETS: 8882bb6fa7c1b887</pre>
+         <pre class="wirelog_rx_frame">008 RX FRAME : OPCODE=8, FIN=True, RSV=0, PAYLOAD-LEN=2, MASKED=True, MASK=6262366661376331</pre>
+         <pre class="wirelog_rx_frame">               0x03e8</pre>
          <pre class="wirelog_tcp_closed_by_me">009 TCP DROPPED BY ME</pre>
       </div>
       <br/><hr/>
