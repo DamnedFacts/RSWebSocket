@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BA477133-F09E-4C03-8744-1A97E818AF87</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RSWebSocket</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>39A7EBEC-6436-4AD6-A446-F65F299CCAB7</key>
+		<string>https://github.com/robbiehanson/CocoaAsyncSocket.git</string>
+		<key>4CCCE223-7E2A-49E2-AD6E-9AB641ECB545</key>
+		<string>ssh://scribe.pas.rochester.edu/media/store/git/private/RSWebSocket.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RSWebSocket.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>39A7EBEC-6436-4AD6-A446-F65F299CCAB7</key>
+		<string>../../RSWebSocket/CocoaAsyncSocket</string>
+		<key>4CCCE223-7E2A-49E2-AD6E-9AB641ECB545</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://scribe.pas.rochester.edu/media/store/git/private/RSWebSocket.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4CCCE223-7E2A-49E2-AD6E-9AB641ECB545</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>39A7EBEC-6436-4AD6-A446-F65F299CCAB7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CocoaAsyncSocket</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4CCCE223-7E2A-49E2-AD6E-9AB641ECB545</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RSWebSocket</string>
+		</dict>
+	</array>
+</dict>
+</plist>
